@@ -77,6 +77,41 @@ details p{padding:0 0 17px;line-height:1.6;color:#cbbd93;font-size:17.5px}
 .ph-box{border:1.5px dashed #b98a1e;padding:22px;background:#151310}
 .ph-box p{padding:6px 0;font-size:17.5px}
 .ph-note{color:#b98a1e;font-size:15px}
+.stats3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center;padding:18px 30px 10px}
+.stats3 .n{font-size:46px;color:#b98a1e;line-height:1}
+.stats3 .l{letter-spacing:.16em;font-size:14.5px;color:#cbbd93;margin-top:5px}
+.article-col{max-width:820px;margin:0 auto;padding:8px 30px}
+.article-col p{font-size:19.5px;line-height:1.65;color:#cbbd93;margin-bottom:18px}
+.article-col h2{font-size:30px;color:#f3ead2;margin:26px 0 12px}
+.closeband{text-align:center;padding:28px 30px 42px}
+.meta-d{color:#b98a1e;font-size:14.5px;letter-spacing:.12em;margin-bottom:7px;text-transform:uppercase}
+.framed-photo{border:2px solid #b98a1e;padding:10px;position:relative;background:#151310}
+.framed-photo .cap{position:absolute;left:10px;right:10px;bottom:10px;background:rgba(10,9,7,.85);color:#e9c766;text-align:center;padding:9px 6px;letter-spacing:.12em;font-size:15.5px}
+.circ-row{display:flex;gap:26px;margin-top:26px;flex-wrap:wrap}
+.circ{text-align:center;width:104px}
+.circ .c{width:84px;height:84px;border-radius:50%;background:#141414;border:2px solid #b98a1e;display:flex;align-items:center;justify-content:center;margin:0 auto 8px}
+.circ svg{width:42px;height:42px;stroke:#d9ae4a;fill:none;stroke-width:1.5}
+.circ span{font-size:14.5px;letter-spacing:.1em}
+.faq-wrap{display:flex;gap:22px;align-items:flex-start}
+.deco-col{display:flex;flex-direction:column;gap:30px;width:86px;flex:none;padding-top:130px}
+.deco-col img{width:86px;height:150px;object-fit:cover;border:1px solid #b98a1e}
+.faq-main{flex:1;min-width:0}
+.cform-d label{text-align:center}
+.cform-d .send-wrap{text-align:center}
+.dfoot-blog{display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap;padding:4px 10px 0}
+.dfoot-blog .df-links{font-size:16px;letter-spacing:.1em;text-align:left;line-height:2;max-width:230px}
+.df-form{display:flex;gap:8px;flex-wrap:wrap}
+.df-form input{padding:11px;border:1.5px solid #b98a1e;background:transparent;color:#f3ead2;font:inherit;min-width:180px}
+.df-form button{background:linear-gradient(180deg,#d9ae4a,#b98a1e);color:#141414;border:0;font-weight:700;letter-spacing:.1em;padding:11px 20px;cursor:pointer;font-family:inherit}
+.sub-note{display:none;flex-basis:100%;color:#b98a1e;font-size:15px;text-align:left}
+.contact-head{display:flex;align-items:center;gap:18px;justify-content:center;padding:36px 30px 4px}
+.contact-head .orn{width:64px;flex:none}
+.contact-head .orn svg{width:100%;stroke:#b98a1e;fill:none;stroke-width:1.5}
+.contact-head .ch-mid{text-align:center}
+.contact-head h1{font-size:clamp(32px,4.2vw,52px);letter-spacing:.04em}
+.contact-head .sub{color:#b98a1e;font-size:19px;letter-spacing:.12em;margin-top:8px}
+@media(max-width:900px){.deco-col{display:none}}
+@media(max-width:700px){.stats3{grid-template-columns:1fr}}
 .noframe{max-width:1360px;margin:14px auto;padding:10px 26px 26px;position:relative;background:#0d0c0a}
 .script{font-family:'Great Vibes',cursive;font-size:clamp(30px,3.6vw,44px);color:#f3ead2;margin-top:2px}
 .qa-block{text-align:center;max-width:860px;margin:0 auto;padding:8px 30px 4px}
@@ -109,17 +144,15 @@ details p{padding:0 0 17px;line-height:1.6;color:#cbbd93;font-size:17.5px}
 <button class="burger" aria-label="Menu">&#9776;</button>
 <div class="topline" style="margin-top:8px"></div></header>
 
-<div class="panel"><div><img src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey box and sachet" style="width:100%"></div>
-<div class="ctr"><h2>BLACK HORSE<br>VITAL HONEY</h2>
+<div class="panel"><div><a href="product.html"><img src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey box and sachet" style="width:100%"></a></div>
+<div class="ctr"><h2><a href="product.html">BLACK HORSE<br>VITAL HONEY</a></h2>
 <div class="spec2">BOX OF 24 SACHETS</div>
 <div class="spec3">10 GRAMS x 24 SACHETS (240g TOTAL)</div>
 <div class="price-big">PRICE ON REQUEST</div>
-<a class="btn-line" href="contact.html">INQUIRE NOW</a>
-<p style="margin-top:18px;font-size:17.5px">One product, one box: 24 sachets of 10 grams each, 100% natural, with Royal Jelly, Panax Ginseng &amp; Rainforest Herbs. For single sachets, please enquire.</p>
-<a class="btn-gold" href="product.html">VIEW THE PRODUCT</a></div></div>
+<a class="btn-line" href="contact.html">INQUIRE NOW</a></div></div>
 <footer class="site"><div class="topline" style="margin:6px 0 16px"></div>
 <a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
-<div class="links">PRIVACY POLICY <b>&bull;</b> TERMS OF SERVICE <b>&bull;</b> INQUIRIES</div>
+<div class="links"><a href="contact.html">INQUIRIES</a></div>
 <div style="margin-top:8px;font-size:15.5px">&copy; BLACK HORSE VITAL HONEY. ALL RIGHTS RESERVED.</div></footer>
 </div>
 
@@ -132,10 +165,18 @@ document.addEventListener('DOMContentLoaded',function(){
  var q=document.querySelector('.qty');
  if(q){var inp=q.querySelector('input'),btns=q.querySelectorAll('button');if(inp&&btns.length==2){btns[0].addEventListener('click',function(){var v=parseInt(inp.value||'1',10);if(v>1)inp.value=v-1;});btns[1].addEventListener('click',function(){var v=parseInt(inp.value||'1',10);inp.value=v+1;});}}
  var filt=document.querySelector('.filters');
- if(filt){var cards=[].slice.call(document.querySelectorAll('.pcard'));var boxes=[].slice.call(filt.querySelectorAll('input[type=checkbox]'));
-  function apply(){var pack=[];boxes.forEach(function(x){if(x.checked&&x.getAttribute('data-f')==='pack')pack.push(x.value);});
-   cards.forEach(function(c){var show=true;if(pack.length&&pack.indexOf(c.getAttribute('data-pack'))===-1)show=false;c.style.display=show?'':'none';});}
+ if(filt){var cards=[].slice.call(document.querySelectorAll('.pcard,.hcard'));var boxes=[].slice.call(filt.querySelectorAll('input[type=checkbox]'));
+  function apply(){var groups={};boxes.forEach(function(x){var f=x.getAttribute('data-f');if(x.checked&&f){(groups[f]=groups[f]||[]).push(x.value);}});
+   cards.forEach(function(c){var show=true;Object.keys(groups).forEach(function(f){var vals=(c.getAttribute('data-'+f)||'').split(' ');if(!groups[f].some(function(v){return vals.indexOf(v)>-1;}))show=false;});c.style.display=show?'':'none';});}
   boxes.forEach(function(x){x.addEventListener('change',apply);});}
+ document.querySelectorAll('form.demo-form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var n=f.querySelector('.sub-note');if(n)n.style.display='block';f.reset();});});
+ var pills=[].slice.call(document.querySelectorAll('.pill'));
+ if(pills.length){var bcards=[].slice.call(document.querySelectorAll('[data-bcat]'));pills.forEach(function(p){p.addEventListener('click',function(){pills.forEach(function(x){x.classList.remove('on');});p.classList.add('on');var v=p.getAttribute('data-pill');bcards.forEach(function(c){c.style.display=(v==='all'||c.getAttribute('data-bcat')===v)?'':'none';});});});}
+ var fs=document.getElementById('faq-search'),fitems=[].slice.call(document.querySelectorAll('.faq-item'));
+ function faqApply(){var q=fs?fs.value.toLowerCase():'';var on=document.querySelector('.cat-rail a.on');var cv=on?on.getAttribute('data-fcat'):'all';fitems.forEach(function(it){var ok=(cv==='all'||it.getAttribute('data-fcat')===cv)&&(!q||it.textContent.toLowerCase().indexOf(q)>-1);it.style.display=ok?'':'none';});}
+ if(fs)fs.addEventListener('input',faqApply);
+ var gb=document.getElementById('faq-go');if(gb)gb.addEventListener('click',faqApply);
+ [].slice.call(document.querySelectorAll('.cat-rail a')).forEach(function(a){a.addEventListener('click',function(){[].slice.call(document.querySelectorAll('.cat-rail a')).forEach(function(x){x.classList.remove('on');});a.classList.add('on');faqApply();});});
  var sel=document.getElementById('sortsel');
  if(sel){sel.addEventListener('change',function(){var grid=sel.closest('.shop-grid,.wrap').querySelector('.pgrid4,.pgrid');if(!grid)return;var cs=[].slice.call(grid.children);if(sel.value==='az')cs.sort(function(a,b){return a.querySelector('h3').textContent.localeCompare(b.querySelector('h3').textContent);});if(sel.value==='za')cs.sort(function(a,b){return b.querySelector('h3').textContent.localeCompare(a.querySelector('h3').textContent);});cs.forEach(function(c){grid.appendChild(c);});});}
 });
