@@ -156,7 +156,7 @@ body.cream-page footer.site{background:#f6f0e2}
 .send-full{width:100%;border-radius:4px;padding:15px}
 @media(max-width:900px){.essence{grid-template-columns:1fr}}
 @media(max-width:560px){.blog-grid,.pgrid2,.range2,.ben-grid{grid-template-columns:1fr}.pgrid4{grid-template-columns:1fr !important}.fnav{justify-content:center}}
-</style></head><body>
+</style><link rel="stylesheet" href="../assets/anim-v2.css"></head><body>
 <header class="site">
 <div class="icons"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2L5 8zM9 8V6a3 3 0 0 1 6 0v2"/></svg></div>
 <a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
@@ -208,4 +208,4 @@ document.addEventListener('DOMContentLoaded',function(){
  var sel=document.getElementById('sortsel');
  if(sel){sel.addEventListener('change',function(){var grid=sel.closest('.shop-grid,.wrap').querySelector('.pgrid4,.pgrid');if(!grid)return;var cs=[].slice.call(grid.children);if(sel.value==='az')cs.sort(function(a,b){return a.querySelector('h3').textContent.localeCompare(b.querySelector('h3').textContent);});if(sel.value==='za')cs.sort(function(a,b){return b.querySelector('h3').textContent.localeCompare(a.querySelector('h3').textContent);});cs.forEach(function(c){grid.appendChild(c);});});}
 });
-</script></body></html>
+</script><script src="../assets/anim-v2.js" defer></script></body></html>

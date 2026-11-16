@@ -156,7 +156,7 @@ body.cream-page footer.site{background:#f6f0e2}
 .send-full{width:100%;border-radius:4px;padding:15px}
 @media(max-width:900px){.essence{grid-template-columns:1fr}}
 @media(max-width:560px){.blog-grid,.pgrid2,.range2,.ben-grid{grid-template-columns:1fr}.pgrid4{grid-template-columns:1fr !important}.fnav{justify-content:center}}
-</style></head><body>
+</style><link rel="stylesheet" href="../assets/anim-v2.css"></head><body>
 <header class="site splithead" style="display:flex;align-items:center;justify-content:space-between;text-align:left;padding-top:14px">
 <nav class="mainnav" style="padding:0"><a href="index.html">HOME</a><a href="shop.html">SHOP</a><a href="product.html" class=active>PRODUCT</a></nav>
 <a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo" style="margin:0"></a>
@@ -200,4 +200,4 @@ document.addEventListener('DOMContentLoaded',function(){
  var sel=document.getElementById('sortsel');
  if(sel){sel.addEventListener('change',function(){var grid=sel.closest('.shop-grid,.wrap').querySelector('.pgrid4,.pgrid');if(!grid)return;var cs=[].slice.call(grid.children);if(sel.value==='az')cs.sort(function(a,b){return a.querySelector('h3').textContent.localeCompare(b.querySelector('h3').textContent);});if(sel.value==='za')cs.sort(function(a,b){return b.querySelector('h3').textContent.localeCompare(a.querySelector('h3').textContent);});cs.forEach(function(c){grid.appendChild(c);});});}
 });
-</script></body></html>
+</script><script src="../assets/anim-v2.js" defer></script></body></html>
