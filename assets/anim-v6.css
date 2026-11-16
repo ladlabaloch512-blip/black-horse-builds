@@ -91,3 +91,55 @@ nav.mainnav a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;hei
 @media (hover:hover) and (pointer:fine){
  .burger:hover{transform:scale(1.08)}
 }
+
+/* ============ R-SNOW-4 expanded set (Snow's more-animation order, 2026-11-16) ============
+   Safety: hidden states are JS-added only; force-reveal failsafe in anim-v6.js plus the
+   html.bh-all backstop below; no reduced-motion gating anywhere. Slowest timings, black twin.
+   The Design 8 Q&A blocks stay at their all-open rest - no accordion motion. */
+/* Hero entrance: the slowest gentle rise + fade */
+.bh-hx{animation:bhHeroH6 .7s ease}
+@keyframes bhHeroH6{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.bh-hi{animation:bhFade6 .7s ease}
+@keyframes bhFade6{from{opacity:0}to{opacity:1}}
+/* Ken Burns on the hero photo, very slow */
+.hero-img img{animation:bhKB6 16s ease-in-out infinite alternate}
+@keyframes bhKB6{from{transform:scale(1)}to{transform:scale(1.03)}}
+/* Scroll reveal */
+.bh-rv{opacity:0;transform:translateY(12px)}
+.bh-rv.bh-in{opacity:1;transform:translateY(0);transition:opacity .65s ease,transform .65s ease}
+html.bh-all .bh-rv{opacity:1!important;transform:none!important}
+/* Tag glow pulse */
+.tag{animation:bhGlow6 3.6s ease-in-out infinite}
+@keyframes bhGlow6{0%,100%{box-shadow:0 0 0 rgba(199,154,36,0)}50%{box-shadow:0 0 12px rgba(199,154,36,.5)}}
+/* Touch and in-view equivalents (desktop hover forms kept above) */
+.btn-gold:active::before{left:115%}
+.btn-gold.bh-shine::before{left:115%}
+.btn-line:active{background-size:100% 100%;color:#111}
+.blend.bh-warm{animation:bhPanelGlow6 1.4s ease}
+@keyframes bhPanelGlow6{0%{box-shadow:0 0 0 rgba(199,154,36,0)}40%{box-shadow:0 0 20px rgba(199,154,36,.22)}100%{box-shadow:0 0 0 rgba(199,154,36,0)}}
+.blend.bh-warm img{animation:bhWarm6 1.4s ease}
+@keyframes bhWarm6{0%{filter:brightness(1)}40%{filter:brightness(1.22) saturate(1.15)}100%{filter:brightness(1)}}
+.circ.bh-turn .c{animation:bhTurn6 .6s ease}
+.divider.bh-bloom,.flourish.bh-bloom{animation:bhBloom6 .8s ease}
+.flourish span.bh-turnspan{animation:bhTurnSpan6 .5s ease}
+@keyframes bhTurnSpan6{0%{transform:rotate(0)}40%{transform:rotate(45deg)}100%{transform:rotate(0)}}
+/* Product gallery: the slowest slide, 500ms; active thumb gains a soft gold ring */
+[data-gal] .gal-track{transition:transform .5s ease}
+.gal-thumbs button{transition:box-shadow .3s ease}
+.gal-thumbs button.on{box-shadow:0 0 0 3px rgba(199,154,36,.35)}
+/* Add to cart: flying image clone, button confirm ring, cart count pop */
+.bh-flyer{position:fixed;z-index:600;pointer-events:none;border-radius:6px;object-fit:cover;margin:0}
+[data-add].bh-added{animation:bhAdded6 .6s ease}
+@keyframes bhAdded6{0%{box-shadow:0 0 0 rgba(199,154,36,0)}40%{box-shadow:0 0 0 6px rgba(199,154,36,.35)}100%{box-shadow:0 0 0 rgba(199,154,36,0)}}
+[data-cart-count].bh-pop{animation:bhPopCt6 .5s ease}
+@keyframes bhPopCt6{0%{transform:scale(1)}40%{transform:scale(1.4)}100%{transform:scale(1)}}
+/* Place order: progress shimmer, then the placed settle */
+#co-form button.bh-processing{position:relative;overflow:hidden;pointer-events:none}
+#co-form button.bh-processing::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.35) 50%,rgba(255,255,255,0) 70%);animation:bhProg6 .8s linear infinite}
+@keyframes bhProg6{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+#co-form button.bh-placed{animation:bhPopCt6 .45s ease}
+/* Thank-you seal: gold circle and check drawn in (SVG injected by anim-v6.js) */
+.bh-seal{display:block;margin:0 auto 14px;width:76px;height:76px}
+.bh-seal circle{fill:none;stroke:#c79a24;stroke-width:2.5;stroke-dasharray:1;stroke-dashoffset:1;animation:bhDraw6 .8s ease forwards}
+.bh-seal path{fill:none;stroke:#c79a24;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:bhDraw6 .5s ease .65s forwards}
+@keyframes bhDraw6{to{stroke-dashoffset:0}}
