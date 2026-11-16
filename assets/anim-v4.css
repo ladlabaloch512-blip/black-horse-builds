@@ -1,0 +1,117 @@
+/* Black Horse V4 (Design 7 Honeycomb Geometric) animation layer.
+   Approved set only: S1-S8 as tuned by V4 items, V4-1, V4-2, V4-5,
+   V4-6, V4-7 with S11 counters, V4-8, V4-9, V4-11.
+   V4-3 DROPPED: the honeycomb texture is one flat SVG background
+   (.hexbg), not separate cells. V4-4 DROPPED: no separate dust layer
+   exists in the build. V4-10: no pagination exists in the final build.
+   Geometric character: diagonal and downward moves, hex edge light.
+   No layout change, nothing starts hidden, no reduced-motion gating. */
+
+/* S1 nav underline sweep */
+nav.mainnav a{position:relative}
+nav.mainnav a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:2px;background:#c79a24;transform:scaleX(0);transform-origin:left;transition:transform .28s ease}
+@media (hover:hover) and (pointer:fine){
+ nav.mainnav a:hover::after{transform:scaleX(1)}
+}
+
+/* S2 shine sweep + S3 press settle on gold and hex buttons */
+.btn-gold,.btn-hex{position:relative;overflow:hidden}
+.btn-gold::before,.btn-hex::before{content:"";position:absolute;top:0;bottom:0;left:-70%;width:45%;background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,255,255,.5),rgba(255,255,255,0));transform:skewX(-18deg);transition:left .5s ease;pointer-events:none}
+.btn-gold,.btn-hex,.btn-line{transition:transform .12s ease}
+.btn-gold:active,.btn-hex:active,.btn-line:active{transform:scale(.98)}
+@media (hover:hover) and (pointer:fine){
+ .btn-gold:hover::before,.btn-hex:hover::before{left:115%}
+}
+
+/* V4-2 diagonal hero entrance: panels settle 10px along the split,
+   fully visible throughout */
+.hero-txt{animation:bhInL4 .7s ease}
+.hero-img{animation:bhInR4 .7s ease}
+@keyframes bhInL4{from{transform:translateX(-10px)}to{transform:translateX(0)}}
+@keyframes bhInR4{from{transform:translateX(10px)}to{transform:translateX(0)}}
+
+/* V4-1 hexagon badge shine sweep every 6s + hover scale.
+   The badge clip-path clips the shine to the hexagon face. */
+.badgehex,.obadge,.seal{position:relative;overflow:hidden}
+.badgehex::before,.obadge::before,.seal::before{content:"";position:absolute;top:0;bottom:0;left:-80%;width:45%;background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,255,255,.55),rgba(255,255,255,0));transform:skewX(-18deg);animation:bhHexShine4 6s ease infinite;pointer-events:none}
+@keyframes bhHexShine4{0%{left:-80%}18%{left:120%}100%{left:120%}}
+.badgehex{transition:transform .25s ease}
+@media (hover:hover) and (pointer:fine){
+ .badgehex:hover{transform:scale(1.05)}
+}
+
+/* V4-5 shield tiles: drop 4px toward the point on hover, edge light,
+   image inside scales 1.04 */
+.shield{transition:transform .3s ease,filter .3s ease}
+.shield img{transition:transform .35s ease}
+@media (hover:hover) and (pointer:fine){
+ .shield:hover{transform:translateY(4px);filter:drop-shadow(0 6px 10px rgba(199,154,36,.35))}
+ .shield:hover img{transform:scale(1.04)}
+}
+
+/* V4-6 hexagon frames: gold edge light follows the hex shape on hover
+   (drop-shadow follows the clip-path), photo settles 1.04 inside */
+.heximg,.hexframe,.hexmini{transition:filter .35s ease}
+.heximg img,.hexframe img,.hexmini img{transition:transform .4s ease}
+@media (hover:hover) and (pointer:fine){
+ .heximg:hover,.hexframe:hover,.hexmini:hover{filter:drop-shadow(0 0 7px rgba(199,154,36,.85))}
+ .heximg:hover img,.hexframe:hover img,.hexmini:hover img{transform:scale(1.04)}
+}
+
+/* S4 shop card lift (geometric, straight) */
+.pcard{transition:transform .3s ease,box-shadow .3s ease}
+@media (hover:hover) and (pointer:fine){
+ .pcard:hover{transform:translateY(-4px);box-shadow:0 12px 22px -12px rgba(0,0,0,.55)}
+}
+
+/* V4-7 hex stats pop in honeycomb order, labels visible throughout.
+   Counters inside 24 and 10g hexes are run by anim-v4.js (S11). */
+.hx{animation:bhPop4 .45s ease backwards}
+.hrow .hx:nth-child(1){animation-delay:.05s}
+.hrow .hx:nth-child(2){animation-delay:.13s}
+.hrow .hx:nth-child(3){animation-delay:.21s}
+.hrow .hx:nth-child(4){animation-delay:.29s}
+.hrow .hx:nth-child(5){animation-delay:.37s}
+.hrow .hx:nth-child(6){animation-delay:.45s}
+.hrow .hx:nth-child(7){animation-delay:.53s}
+@keyframes bhPop4{from{transform:scale(.92)}to{transform:scale(1)}}
+
+/* V4-8 angular article cards: diagonal lift, corner hex grows,
+   Read More arrow slides toward the corner */
+.bcard{transition:transform .3s ease,box-shadow .3s ease}
+.bcard .cornerhex{transition:transform .3s ease}
+.bcard .bt{transition:transform .3s ease}
+@media (hover:hover) and (pointer:fine){
+ .bcard:hover{transform:translate(3px,-3px);box-shadow:0 12px 22px -12px rgba(0,0,0,.5)}
+ .bcard:hover .cornerhex{transform:scale(1.18)}
+ .bcard:hover .bt{transform:translateX(4px)}
+}
+
+/* V4-9 FAQ cards: the build has no accordion (all answers open), so the
+   Q&A hexagon tag lights up on card hover instead of on open */
+.qa-card{transition:transform .3s ease,box-shadow .3s ease}
+.qa-badge{transition:background .3s ease,color .3s ease}
+@media (hover:hover) and (pointer:fine){
+ .qa-card:hover{box-shadow:0 10px 20px -12px rgba(0,0,0,.5)}
+ .qa-card:hover .qa-badge{background:linear-gradient(180deg,#f0d47a,#c79a24);color:#111}
+}
+
+/* V4-11 About hexagon collage: hovered hexagon emphasises, neighbours still */
+.hexphotos img{transition:transform .3s ease,filter .3s ease}
+@media (hover:hover) and (pointer:fine){
+ .hexphotos img:hover{transform:scale(1.03);filter:drop-shadow(0 0 6px rgba(199,154,36,.8)) brightness(1.05)}
+}
+
+/* S7 form focus glow */
+.cform input,.cform textarea,.cform select{transition:border-color .25s ease,box-shadow .25s ease}
+.cform input:focus,.cform textarea:focus,.cform select:focus{border-color:#c79a24;box-shadow:0 0 0 3px rgba(199,154,36,.25);outline:none}
+
+/* S8 icon micro feedback */
+.hicons-c svg,.hicons-c a{transition:transform .2s ease}
+.burger{transition:transform .2s ease}
+.csocials a{transition:transform .2s ease}
+@media (hover:hover) and (pointer:fine){
+ .hicons-c svg:hover{transform:scale(1.12)}
+ .burger:hover{transform:scale(1.12)}
+ .csocials a:hover{transform:translateY(-2px)}
+}
