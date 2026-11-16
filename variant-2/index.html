@@ -104,6 +104,18 @@ details p{padding:0 0 18px;line-height:1.65;color:#55534a}
 .ph-box{border:1.5px dashed #c79a24;padding:22px;background:#faf6ec}
 .ph-box p{padding:6px 0;font-size:16px}
 .ph-note{color:#c79a24;font-size:13.5px}
+.stats3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center;padding:30px 0 34px;border-top:1.5px solid #cbb26a;border-bottom:1.5px solid #cbb26a;margin:36px 0 6px}
+.stats3 .n{font-family:'Playfair Display',serif;font-size:42px;color:#c79a24}
+.stats3 .l{letter-spacing:.14em;font-size:14px;color:#55534a;margin-top:5px}
+.showcase{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center;padding:46px 0 10px}
+.showcase h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,38px);font-weight:600;margin-bottom:14px}
+.showcase p{line-height:1.7;color:#55534a;margin-bottom:14px;font-size:17px}
+.closeband{text-align:center;background:#faf6ec;padding:52px 24px 56px;margin:46px 0 60px}
+.closeband h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3.6vw,42px);font-weight:600}
+.article-col{max-width:800px;margin:0 auto;padding:6px 0 10px}
+.article-col p{font-size:18px;line-height:1.75;color:#55534a;margin-bottom:18px}
+.article-col h2{font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:#161616;margin:26px 0 12px}
+@media(max-width:900px){.showcase{grid-template-columns:1fr}.stats3{grid-template-columns:1fr}}
 @media(max-width:1000px){.pgrid4{grid-template-columns:1fr 1fr}}
 @media(max-width:900px){
  .hero,.home-cols,.prod,.split,.contact-grid{grid-template-columns:1fr}
@@ -116,6 +128,33 @@ details p{padding:0 0 18px;line-height:1.65;color:#55534a}
  .hero-txt{padding:40px 24px}
 }
 @media(max-width:900px){.splithead{flex-wrap:wrap;justify-content:center !important;gap:8px}.splithead .icons{display:none}.sortrow{flex-wrap:wrap;justify-content:flex-start}}
+body.cream-page{background:#f6f0e2}
+body.cream-page header.site{background:#f6f0e2}
+body.cream-page footer.site{background:#f6f0e2}
+.foot-line{display:flex;justify-content:space-between;align-items:center;gap:16px;max-width:1100px;margin:0 auto;flex-wrap:wrap;font-size:14.5px;color:#55534a}
+.foot-line .grp{display:flex;gap:22px;flex-wrap:wrap}
+.foot-centre{text-align:center}
+.foot-centre .logo img{height:44px}
+.priv-line{letter-spacing:.14em;font-size:13.5px;color:#55534a;margin-top:8px}
+.bsocials{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;flex-wrap:wrap;gap:10px}
+.foot-bottom .bsocials{margin-top:0}
+.bsocials span{width:34px;height:34px;border-radius:50%;background:linear-gradient(180deg,#e9c766,#c79a24);display:flex;align-items:center;justify-content:center}
+.bsocials svg{width:17px;height:17px;fill:#111}
+.bcat{color:#c79a24;font-size:13px;letter-spacing:.14em;margin-bottom:7px;text-transform:uppercase}
+.framed-img{border:1.5px solid #cbb26a;padding:12px;background:#ffffff}
+.essence{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:6px 0 60px;text-align:left}
+.essence .eic{width:54px;height:54px}
+.essence svg{width:54px;height:54px;stroke:#c79a24;fill:none;stroke-width:1.4}
+.essence h3{letter-spacing:.1em;font-size:18px;margin:12px 0 7px}
+.essence p{color:#55534a;line-height:1.6;font-size:16px}
+.eyebrow2{color:#c79a24;letter-spacing:.24em;font-size:14.5px;font-weight:600}
+.touch{font-family:'Playfair Display',serif;font-size:clamp(32px,3.6vw,44px);font-weight:600;margin:10px 0 26px}
+.supp{letter-spacing:.12em;font-size:17px;margin:24px 0 8px}
+.contact-grid p.cp{color:#55534a;line-height:1.7;font-size:16.5px;max-width:440px}
+.uform input.ul{border:0;border-bottom:1.5px solid #cbb26a;border-radius:0;background:transparent;padding:10px 2px}
+.send-full{width:100%;border-radius:4px;padding:15px}
+@media(max-width:900px){.essence{grid-template-columns:1fr}}
 @media(max-width:560px){.blog-grid,.pgrid2,.range2,.ben-grid{grid-template-columns:1fr}.pgrid4{grid-template-columns:1fr !important}.fnav{justify-content:center}}
 </style></head><body>
 <header class="site">
@@ -138,15 +177,36 @@ details p{padding:0 0 18px;line-height:1.65;color:#55534a}
 </div><div class="hero-img"><img src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey box with honey and ginseng"></div></section>
 <div class="wrap"><div class="home-cols">
 <div><h2 class="sec">OUR RANGE</h2><div class="range2">
-<div class="rcard"><img src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey box of 24 sachets"><h3>100% Natural - Box of 24 Sachets (10g)</h3><div class="pr">Price on request</div></div>
-<div class="rcard"><img src="../assets/sachet-web.jpg" alt="Black Horse Vital Honey single sachets"><h3>Single Sachets (10g)</h3><div class="pr">Price on request</div></div>
+<div class="rcard"><a href="product.html"><img src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey box of 24 sachets"></a><h3><a href="product.html">100% Natural - Box of 24 Sachets (10g)</a></h3><div class="pr">Price on request</div></div>
+<div class="rcard"><a href="product.html"><img src="../assets/sachet-web.jpg" alt="Black Horse Vital Honey single sachets"></a><h3><a href="product.html">Box of 24 Sachets (10g) - Sachet View</a></h3><div class="pr">Price on request</div></div>
 </div></div>
 <div><h2 class="sec">THE BLEND</h2><div class="ben-grid">
-<div class="ben"><h3>100% NATURAL</h3><p>Pure and authentic ingredients.</p></div>
-<div class="ben"><h3>ROYAL JELLY</h3><p>High-grade natural source.</p></div>
-<div class="ben"><h3>PANAX GINSENG</h3><p>A time-tested root in the blend.</p></div>
-<div class="ben"><h3>RAINFOREST HERBS</h3><p>Traditional rich botanicals.</p></div>
+<div class="ben"><h3>100% NATURAL</h3><p>The blend is 100% natural.</p></div>
+<div class="ben"><h3>ROYAL JELLY</h3><p>A natural ingredient named on the box.</p></div>
+<div class="ben"><h3>PANAX GINSENG</h3><p>A root named on the box.</p></div>
+<div class="ben"><h3>RAINFOREST HERBS</h3><p>Botanicals named on the box.</p></div>
 </div></div></div></div>
+<div class="wrap"><div class="showcase">
+<div><a href="product.html"><img src="../assets/sachet-web.jpg" alt="Black Horse Vital Honey sachets from the box of 24"></a></div>
+<div><h2>One Box, One Blend</h2>
+<p>Black Horse Vital Honey comes in one box only: 24 sachets, each holding 10 grams of the blend named on the box, natural honey with Royal Jelly, Panax Ginseng and Rainforest Herbs.</p>
+<ul class="ben2"><li>100% Natural</li><li>Royal Jelly</li><li>Panax Ginseng</li><li>Rainforest Herbs</li><li>Box of 24 sachets (10g each)</li></ul>
+<div style="margin-top:16px"><span style="font-size:20px;letter-spacing:.06em">PRICE ON REQUEST</span><br><a class="btn-line" href="product.html" style="margin-top:12px">SEE THE PRODUCT</a></div>
+</div></div>
+<div class="stats3">
+<div><div class="n">24</div><div class="l">SACHETS IN EVERY BOX</div></div>
+<div><div class="n">10g</div><div class="l">IN EVERY SACHET</div></div>
+<div><div class="n">100%</div><div class="l">NATURAL, AS PRINTED ON THE BOX</div></div>
+</div>
+<h2 class="sec" style="text-align:center;margin-top:46px">FROM THE JOURNAL</h2>
+<div class="blog-grid"><div class="bcard"><a href="article.html"><img src="../assets/comb-web.jpg" alt="About Royal Jelly"></a><div class="bt"><h3><a href="article.html">About Royal Jelly</a></h3><p>Royal Jelly is one of the key ingredients named on the box. This article explains what it is and its place in the Black Horse blend.</p><a href="article.html">Read more &gt;</a></div></div><div class="bcard"><a href="article.html"><img src="../assets/boxes-web.jpg" alt="Inside the Blend: Panax Ginseng"></a><div class="bt"><h3><a href="article.html">Inside the Blend: Panax Ginseng</a></h3><p>Panax Ginseng is one of the ingredients named on the box. A simple look at its place in Black Horse Vital Honey.</p><a href="article.html">Read more &gt;</a></div></div><div class="bcard"><a href="article.html"><img src="../assets/sachet-web.jpg" alt="What 100% Natural Means"></a><div class="bt"><h3><a href="article.html">What 100% Natural Means</a></h3><p>Black Horse Vital Honey is 100% natural. Here is what that means for the blend in every sachet.</p><a href="article.html">Read more &gt;</a></div></div></div>
+<h2 class="sec" style="text-align:center">QUESTIONS, ANSWERED PLAINLY</h2>
+<div class="faq-narrow" style="padding-bottom:4px"><div class="fq-item"><h3>What is Black Horse Vital Honey?<span class="mark">&#8722;</span></h3><p>Black Horse Vital Honey is a 100% natural honey blend with Royal Jelly, Panax Ginseng and Rainforest Herbs. It comes in sachets of 10 grams each.</p></div><div class="fq-item"><h3>How many sachets are in one box?<span class="mark">+</span></h3><p>One box holds 24 sachets, and each sachet is 10 grams.</p></div><div class="fq-item"><h3>What are the main ingredients?<span class="mark">+</span></h3><p>The blend is made with Royal Jelly, Panax Ginseng and Rainforest Herbs, in a 100% natural honey base.</p></div></div>
+<p style="text-align:center"><a class="btn-line" href="faq.html">VIEW ALL QUESTIONS</a></p>
+<div class="closeband"><h2>BLACK HORSE VITAL HONEY</h2>
+<p style="margin:12px 0 18px;letter-spacing:.1em">10 GRAMS x 24 SACHETS &bull; 100% NATURAL &bull; PRICE ON REQUEST</p>
+<a class="btn-line" href="contact.html">ENQUIRE NOW</a></div>
+</div>
 <footer class="site"><div class="fnav">
 <div class="grp"><a href="index.html">HOME</a><a href="shop.html">SHOP</a><a href="product.html">PRODUCT</a><a href="about.html">ABOUT</a></div>
 <a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
@@ -162,10 +222,18 @@ document.addEventListener('DOMContentLoaded',function(){
  var q=document.querySelector('.qty');
  if(q){var inp=q.querySelector('input'),btns=q.querySelectorAll('button');if(inp&&btns.length==2){btns[0].addEventListener('click',function(){var v=parseInt(inp.value||'1',10);if(v>1)inp.value=v-1;});btns[1].addEventListener('click',function(){var v=parseInt(inp.value||'1',10);inp.value=v+1;});}}
  var filt=document.querySelector('.filters');
- if(filt){var cards=[].slice.call(document.querySelectorAll('.pcard'));var boxes=[].slice.call(filt.querySelectorAll('input[type=checkbox]'));
-  function apply(){var pack=[];boxes.forEach(function(x){if(x.checked&&x.getAttribute('data-f')==='pack')pack.push(x.value);});
-   cards.forEach(function(c){var show=true;if(pack.length&&pack.indexOf(c.getAttribute('data-pack'))===-1)show=false;c.style.display=show?'':'none';});}
+ if(filt){var cards=[].slice.call(document.querySelectorAll('.pcard,.hcard'));var boxes=[].slice.call(filt.querySelectorAll('input[type=checkbox]'));
+  function apply(){var groups={};boxes.forEach(function(x){var f=x.getAttribute('data-f');if(x.checked&&f){(groups[f]=groups[f]||[]).push(x.value);}});
+   cards.forEach(function(c){var show=true;Object.keys(groups).forEach(function(f){var vals=(c.getAttribute('data-'+f)||'').split(' ');if(!groups[f].some(function(v){return vals.indexOf(v)>-1;}))show=false;});c.style.display=show?'':'none';});}
   boxes.forEach(function(x){x.addEventListener('change',apply);});}
+ document.querySelectorAll('form.demo-form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var n=f.querySelector('.sub-note');if(n)n.style.display='block';f.reset();});});
+ var pills=[].slice.call(document.querySelectorAll('.pill'));
+ if(pills.length){var bcards=[].slice.call(document.querySelectorAll('[data-bcat]'));pills.forEach(function(p){p.addEventListener('click',function(){pills.forEach(function(x){x.classList.remove('on');});p.classList.add('on');var v=p.getAttribute('data-pill');bcards.forEach(function(c){c.style.display=(v==='all'||c.getAttribute('data-bcat')===v)?'':'none';});});});}
+ var fs=document.getElementById('faq-search'),fitems=[].slice.call(document.querySelectorAll('.faq-item'));
+ function faqApply(){var q=fs?fs.value.toLowerCase():'';var on=document.querySelector('.cat-rail a.on');var cv=on?on.getAttribute('data-fcat'):'all';fitems.forEach(function(it){var ok=(cv==='all'||it.getAttribute('data-fcat')===cv)&&(!q||it.textContent.toLowerCase().indexOf(q)>-1);it.style.display=ok?'':'none';});}
+ if(fs)fs.addEventListener('input',faqApply);
+ var gb=document.getElementById('faq-go');if(gb)gb.addEventListener('click',faqApply);
+ [].slice.call(document.querySelectorAll('.cat-rail a')).forEach(function(a){a.addEventListener('click',function(){[].slice.call(document.querySelectorAll('.cat-rail a')).forEach(function(x){x.classList.remove('on');});a.classList.add('on');faqApply();});});
  var sel=document.getElementById('sortsel');
  if(sel){sel.addEventListener('change',function(){var grid=sel.closest('.shop-grid,.wrap').querySelector('.pgrid4,.pgrid');if(!grid)return;var cs=[].slice.call(grid.children);if(sel.value==='az')cs.sort(function(a,b){return a.querySelector('h3').textContent.localeCompare(b.querySelector('h3').textContent);});if(sel.value==='za')cs.sort(function(a,b){return b.querySelector('h3').textContent.localeCompare(a.querySelector('h3').textContent);});cs.forEach(function(c){grid.appendChild(c);});});}
 });
