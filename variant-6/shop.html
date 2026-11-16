@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Horse Vital Honey - Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{font-family:'Cormorant Garamond',Georgia,serif;background:#0d0c0a;color:#f3ead2}
+.frame{max-width:1360px;margin:14px auto;border:2px solid #b98a1e;outline:1px solid #b98a1e;outline-offset:5px;padding:10px 26px 26px;position:relative;background:#0d0c0a}
+.corner{position:absolute;width:64px;height:64px;color:#b98a1e;pointer-events:none}
+.corner svg{width:100%;height:100%}
+.c-tl{top:6px;left:6px}.c-tr{top:6px;right:6px;transform:scaleX(-1)}.c-bl{bottom:6px;left:6px;transform:scaleY(-1)}.c-br{bottom:6px;right:6px;transform:scale(-1)}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+header.site{text-align:center;padding-top:16px}
+header.site .logo img{height:72px;width:auto;margin:0 auto}
+.topline{border-top:3px double #b98a1e;margin:10px 40px 0}
+nav.mainnav{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;padding:16px 0 6px;font-size:19px;letter-spacing:.12em;font-weight:600}
+nav.mainnav a{padding:4px 6px}
+nav.mainnav .dot{color:#b98a1e}
+nav.mainnav a.active{color:#b98a1e;border-bottom:2px solid #b98a1e}
+.burger{display:none;background:none;border:0;color:#b98a1e;font-size:28px;cursor:pointer;margin:0 auto}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:44px 30px 30px;text-align:center}
+.hero .eyebrow{color:#b98a1e;letter-spacing:.3em;font-size:21px;font-weight:600}
+.hero h1{font-size:clamp(42px,5vw,68px);line-height:1.04;font-weight:700;margin-top:10px}
+.hero h1 .g{color:#b98a1e}
+.hero .spec{color:#b98a1e;font-size:21px;letter-spacing:.1em;font-weight:600;margin-top:14px}
+.hero p{font-size:20.5px;line-height:1.5;max-width:480px;margin:16px auto 0;color:#cbbd93}
+.btn-gold{display:inline-block;background:linear-gradient(180deg,#d9ae4a,#b98a1e);color:#141414;font-weight:700;letter-spacing:.12em;padding:14px 38px;font-size:18px;margin-top:24px;border:0;cursor:pointer;font-family:inherit}
+.btn-line{display:inline-block;border:1.5px solid #b98a1e;color:#b98a1e;font-weight:700;letter-spacing:.12em;padding:12px 30px;font-size:17px;margin-top:24px;background:transparent;cursor:pointer;font-family:inherit}
+.price-note{font-size:19px;margin-top:12px}
+.hero-img img{width:100%;height:100%;object-fit:cover;min-height:300px}
+.divider{display:flex;align-items:center;gap:18px;margin:26px 30px 0}
+.divider::before,.divider::after{content:"";flex:1;border-top:1.5px solid #b98a1e}
+.divider span{font-size:24px;letter-spacing:.18em;font-weight:700}
+.blend3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:24px 30px 10px}
+.blend{border:1.5px solid #b98a1e;padding:22px;text-align:center;background:#151310}
+.blend h3{font-size:22px;letter-spacing:.12em;margin-bottom:10px}
+.blend img{height:110px;width:100%;object-fit:cover}
+.blend p{font-size:17px;color:#cbbd93;line-height:1.5;margin-top:10px}
+footer.site{text-align:center;padding:22px 0 6px}
+footer.site .logo img{height:52px;margin:0 auto 8px;width:auto}
+footer.site .links{font-size:16.5px;letter-spacing:.14em}
+footer.site .links b{color:#b98a1e}
+.page-head{text-align:center;padding:36px 0 8px}
+.page-head h1{font-size:clamp(32px,4.2vw,52px);letter-spacing:.04em}
+.page-head .sub{color:#b98a1e;font-size:19px;letter-spacing:.12em;margin-top:8px}
+.panel{border:2px solid #b98a1e;outline:1px solid #b98a1e;outline-offset:-9px;margin:26px 30px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;background:#151310}
+.panel h2{font-size:clamp(30px,3.6vw,46px);line-height:1.12;text-align:center}
+.panel .ctr{text-align:center}
+.panel .spec2{font-size:21px;letter-spacing:.08em;margin-top:14px}
+.panel .spec3{font-size:19px;margin-top:6px;color:#cbbd93}
+.price-big{color:#b98a1e;font-size:27px;letter-spacing:.1em;font-weight:700;margin-top:22px}
+.prod{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;padding:26px 30px;align-items:center}
+.prod h1{font-size:clamp(36px,4.4vw,58px);line-height:1.08}
+.prod h1 .g{color:#b98a1e}
+.prod .tag{letter-spacing:.34em;font-size:16.5px;margin-top:10px}
+.prod ul{list-style:none;margin:20px 0}
+.prod ul li{font-size:19.5px;padding:6px 0}
+.prod ul li::before{content:"•";color:#b98a1e;margin-right:10px;font-weight:700}
+.prod p{font-size:19px;line-height:1.55;color:#cbbd93}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:24px 30px 34px}
+.bcard{border:1.5px solid #b98a1e;background:#151310}
+.bcard img{height:170px;width:100%;object-fit:cover}
+.bcard .bt{padding:18px}
+.bcard h3{font-size:21px;margin-bottom:8px;line-height:1.3}
+.bcard p{font-size:16.5px;color:#cbbd93;line-height:1.55}
+.bcard a{color:#b98a1e;font-weight:700;display:inline-block;margin-top:9px}
+.faq-list{max-width:880px;margin:0 auto;padding:18px 30px 36px}
+details{border:1.5px solid #b98a1e;background:#151310;margin-bottom:12px;padding:0 20px}
+summary{cursor:pointer;font-weight:700;font-size:19px;padding:15px 0;list-style:none}
+details p{padding:0 0 17px;line-height:1.6;color:#cbbd93;font-size:17.5px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:22px 30px 34px;align-items:start}
+.cform label{display:block;font-weight:700;margin-bottom:14px;font-size:17px}
+.cform input,.cform textarea{width:100%;margin-top:6px;padding:12px;border:1.5px solid #b98a1e;background:#151310;color:#f3ead2;font:inherit}
+.ph-box{border:1.5px dashed #b98a1e;padding:22px;background:#151310}
+.ph-box p{padding:6px 0;font-size:17.5px}
+.ph-note{color:#b98a1e;font-size:15px}
+.noframe{max-width:1360px;margin:14px auto;padding:10px 26px 26px;position:relative;background:#0d0c0a}
+.script{font-family:'Great Vibes',cursive;font-size:clamp(30px,3.6vw,44px);color:#f3ead2;margin-top:2px}
+.qa-block{text-align:center;max-width:860px;margin:0 auto;padding:8px 30px 4px}
+.qa-block h3{font-size:26px;margin-bottom:6px}
+.qa-block p{font-size:19px;line-height:1.55;color:#cbbd93}
+.flourish{display:flex;align-items:center;gap:12px;max-width:340px;margin:20px auto;color:#b98a1e}
+.flourish::before,.flourish::after{content:"";flex:1;border-top:1.5px solid #b98a1e}
+.pager{text-align:center;font-size:18px;letter-spacing:.14em;padding:6px 0 30px;color:#cbbd93}
+.pager b{color:#b98a1e}
+.form-frame{border:2px solid #b98a1e;outline:1px solid #b98a1e;outline-offset:-9px;padding:38px 40px;position:relative;background:#151310}
+.form-frame .corner{width:52px;height:52px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:30px}
+.split h2{font-size:34px;margin-bottom:12px}
+.split p{font-size:19px;line-height:1.6;color:#cbbd93;margin-bottom:12px}
+@media(max-width:900px){
+ .hero,.panel,.prod,.contact-grid,.split{grid-template-columns:1fr}
+ .blend3,.blog-grid{grid-template-columns:1fr 1fr}
+ nav.mainnav{display:none;flex-direction:column;gap:2px;align-items:center}
+ nav.mainnav.open{display:flex}
+ nav.mainnav .dot{display:none}
+ .burger{display:block}
+ .frame{padding:8px 12px 18px}
+}
+@media(max-width:560px){.blend3,.blog-grid{grid-template-columns:1fr}}
+</style></head><body>
+<div class="noframe">
+<header class="site"><a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
+<div class="topline"></div>
+<nav class="mainnav"><a href="index.html">HOME</a><span class="dot">&bull;</span><a href="shop.html" class=active>SHOP</a><span class="dot">&bull;</span><a href="product.html">PRODUCT</a><span class="dot">&bull;</span><a href="about.html">ABOUT</a><span class="dot">&bull;</span><a href="blog.html">BLOG</a><span class="dot">&bull;</span><a href="faq.html">FAQ</a><span class="dot">&bull;</span><a href="contact.html">CONTACT</a></nav>
+<button class="burger" aria-label="Menu">&#9776;</button>
+<div class="topline" style="margin-top:8px"></div></header>
+
+<div class="panel"><div><img src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey box and sachet" style="width:100%"></div>
+<div class="ctr"><h2>BLACK HORSE<br>VITAL HONEY</h2>
+<div class="spec2">BOX OF 24 SACHETS</div>
+<div class="spec3">10 GRAMS x 24 SACHETS (240g TOTAL)</div>
+<div class="price-big">PRICE ON REQUEST</div>
+<a class="btn-line" href="contact.html">INQUIRE NOW</a>
+<p style="margin-top:18px;font-size:17.5px">One product, one box: 24 sachets of 10 grams each, 100% natural, with Royal Jelly, Panax Ginseng &amp; Rainforest Herbs. For single sachets, please enquire.</p>
+<a class="btn-gold" href="product.html">VIEW THE PRODUCT</a></div></div>
+<footer class="site"><div class="topline" style="margin:6px 0 16px"></div>
+<a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
+<div class="links">PRIVACY POLICY <b>&bull;</b> TERMS OF SERVICE <b>&bull;</b> INQUIRIES</div>
+<div style="margin-top:8px;font-size:15.5px">&copy; BLACK HORSE VITAL HONEY. ALL RIGHTS RESERVED.</div></footer>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+ var b=document.querySelector('.burger'),n=document.querySelector('.mainnav');
+ if(b&&n){b.addEventListener('click',function(){n.classList.toggle('open');});}
+ var f=document.querySelector('form.cform');
+ if(f){f.addEventListener('submit',function(e){e.preventDefault();var n=document.createElement('p');n.className='form-note';n.style.cssText='margin-top:14px;font-weight:600';n.textContent='Thank you. Your message has been noted on this page. This demo form is not connected to an inbox yet.';f.appendChild(n);f.reset();});}
+ var q=document.querySelector('.qty');
+ if(q){var inp=q.querySelector('input'),btns=q.querySelectorAll('button');if(inp&&btns.length==2){btns[0].addEventListener('click',function(){var v=parseInt(inp.value||'1',10);if(v>1)inp.value=v-1;});btns[1].addEventListener('click',function(){var v=parseInt(inp.value||'1',10);inp.value=v+1;});}}
+ var filt=document.querySelector('.filters');
+ if(filt){var cards=[].slice.call(document.querySelectorAll('.pcard'));var boxes=[].slice.call(filt.querySelectorAll('input[type=checkbox]'));
+  function apply(){var pack=[];boxes.forEach(function(x){if(x.checked&&x.getAttribute('data-f')==='pack')pack.push(x.value);});
+   cards.forEach(function(c){var show=true;if(pack.length&&pack.indexOf(c.getAttribute('data-pack'))===-1)show=false;c.style.display=show?'':'none';});}
+  boxes.forEach(function(x){x.addEventListener('change',apply);});}
+ var sel=document.getElementById('sortsel');
+ if(sel){sel.addEventListener('change',function(){var grid=sel.closest('.shop-grid,.wrap').querySelector('.pgrid4,.pgrid');if(!grid)return;var cs=[].slice.call(grid.children);if(sel.value==='az')cs.sort(function(a,b){return a.querySelector('h3').textContent.localeCompare(b.querySelector('h3').textContent);});if(sel.value==='za')cs.sort(function(a,b){return b.querySelector('h3').textContent.localeCompare(a.querySelector('h3').textContent);});cs.forEach(function(c){grid.appendChild(c);});});}
+});
+</script></body></html>
