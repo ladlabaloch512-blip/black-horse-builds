@@ -284,6 +284,11 @@ button.btn-gold,button.btn-line,button.btn-black,button.btn-goldb,button.btn-hex
 .cart-link::after{content:"CART";font-size:13px;font-weight:700;letter-spacing:.1em;color:#e9c766}
 .cart-link svg{stroke:#e9c766}
 @media(max-width:900px){.hbar>.cart-link{margin-left:auto}.hbar .hicons{margin-left:auto;display:flex!important}}
+
+/*vcart*/
+a.vcart{text-decoration:none}
+.qtyrow .vcart{flex:1;text-align:center;white-space:nowrap}
+@media(max-width:700px){.qtyrow{gap:8px}.qtyrow .qty{flex:1 1 100%}.qtyrow .btn-gold{padding-left:8px;padding-right:8px;font-size:13.5px;white-space:nowrap}.qtyrow .vcart{padding-left:8px;padding-right:8px;font-size:13.5px}}
 </style>
 
 <style data-gal>
@@ -329,7 +334,7 @@ button.btn-gold,button.btn-line,button.btn-black,button.btn-goldb,button.btn-hex
 <p style="margin-top:8px;font-size:17px">Box of 24 Sachets (10g each)</p>
 <div class="price-req" style="color:#b98a1e">Price on Request</div>
 <div class="qtyrow"><div class="qty"><button type="button" aria-label="Minus">-</button><input value="1" aria-label="Quantity"><button type="button" aria-label="Plus">+</button></div>
-<button type="button" class="btn-gold" data-add="box24" style="flex:1;text-align:center">ADD TO CART</button></div>
+<button type="button" class="btn-gold" data-add="box24" style="flex:1;text-align:center">ADD TO CART</button> <a class="btn-outline vcart" href="cart.html">VIEW CART</a></div>
 
 </div></div>
 </div></div>
