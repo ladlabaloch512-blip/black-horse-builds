@@ -240,22 +240,67 @@ body.nav-open{overflow:hidden}
 }
 </style>
 
+<style data-cart>
+.cart-link{position:relative;display:inline-flex;align-items:center;text-decoration:none}
+.cart-link svg{width:23px;height:23px;fill:none;stroke:#b98a1e;stroke-width:1.8}
+.cart-count{position:absolute;top:-8px;right:-10px;background:#b98a1e;color:#111;border-radius:50%;min-width:19px;height:19px;font-size:12px;font-weight:700;display:none;align-items:center;justify-content:center;padding:0 4px}
+.cart-link.has .cart-count{display:flex}
+.cart-d{position:absolute;top:14px;right:16px;z-index:5}
+.cart-nav-link{display:none}
+.cart-nav-link .cart-count{position:static;background:none;color:inherit;min-width:0;height:auto;font-size:inherit;padding:0}
+.cart-nav-link.has .cart-count{display:inline}
+@media(max-width:900px){.cart-nav-link{display:block}}
+header.site{position:relative}
+button.btn-gold,button.btn-line,button.btn-black,button.btn-goldb,button.btn-hex,button.btn-outline{font:inherit;cursor:pointer}
+.slot-photo{border:1.5px dashed #b98a1e;display:flex;align-items:center;justify-content:center;min-height:230px;color:#b98a1e;letter-spacing:.14em;font-size:14px;line-height:1.7;text-align:center;padding:20px}
+.qv-overlay{position:fixed;inset:0;background:rgba(0,0,0,.64);display:none;align-items:center;justify-content:center;z-index:400;padding:16px}
+.qv-overlay.open{display:flex}
+.qv-panel{background:#fffdf6;color:#191713;max-width:520px;width:100%;max-height:88dvh;overflow:auto;padding:26px;position:relative;border:1.5px solid #b98a1e;border-radius:10px}
+.qv-panel img{width:100%;display:block}
+.qv-panel .slot-photo{min-height:190px}
+.qv-close{position:absolute;top:6px;right:12px;background:none;border:0;font-size:27px;line-height:1;color:#b98a1e;cursor:pointer;z-index:2}
+.qv-panel h3{margin:16px 0 6px}
+.qv-panel p{line-height:1.55}
+.qv-price{color:#b98a1e;font-weight:700;letter-spacing:.06em;margin:10px 0 14px}
+.qv-row{display:flex;gap:12px;align-items:stretch;flex-wrap:wrap}
+.qv-add{background:linear-gradient(180deg,#e9c766,#b98a1e);color:#111;border:0;padding:12px 22px;font-weight:700;letter-spacing:.08em;cursor:pointer}
+.cart-row{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid #e0d2a4}
+.cart-row img{width:84px;height:84px;object-fit:cover;flex:none}
+.cart-row .slot-photo{min-height:84px;width:84px;flex:none;padding:6px;font-size:9.5px}
+.cart-row .ci{flex:1;min-width:120px}
+.cart-row .ci b{display:block;margin-bottom:3px}
+.cart-row .ci span{font-size:14.5px;opacity:.85}
+.cqty{display:inline-flex;align-items:center;gap:2px;flex:none}
+.cqty button{width:30px;height:32px;background:none;border:1.5px solid #b98a1e;color:inherit;font-size:17px;cursor:pointer;line-height:1}
+.cqty input{width:42px;height:32px;text-align:center;background:transparent;border:0;color:inherit;font:inherit}
+.cart-remove{background:none;border:0;color:#b98a1e;cursor:pointer;font-size:21px;line-height:1;flex:none;padding:4px}
+.cart-box{border:1.5px solid #b98a1e;padding:22px;margin-top:26px;border-radius:10px}
+.crow{display:flex;justify-content:space-between;gap:14px;padding:5px 0;font-size:17px}
+.cart-empty{text-align:center;padding:34px 0 10px}
+.co-form{display:grid;gap:14px;max-width:560px;margin-top:20px}
+.co-form label{font-size:15px;letter-spacing:.04em}
+.co-form input,.co-form textarea{width:100%;margin-top:5px;padding:12px 14px;background:transparent;border:1.5px solid #e0d2a4;color:inherit;font:inherit;border-radius:10px}
+.co-form textarea{min-height:84px}
+.co-note{font-size:14px;opacity:.8;line-height:1.55;max-width:560px}
+.co-item{display:flex;justify-content:space-between;gap:14px;padding:7px 0;border-bottom:1px solid #e0d2a4;font-size:16.5px}
+@media(max-width:560px){.cart-row{flex-wrap:wrap}.qv-panel{padding:20px}}
+</style>
+
 </head><body class="white-bg">
 <div class="topbar">100% Natural &bull; With Royal Jelly, Panax Ginseng &amp; Rainforest Herbs</div>
 <header class="site"><div class="hbar">
 <a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
 <nav class="mainnav"><a href="index.html">Home</a>
-<a href="shop.html">Shop</a>
 <a href="product.html" class="active">Product</a>
 <a href="about.html">About</a>
 <a href="blog.html">Blog</a>
 <a href="faq.html">FAQ</a>
 <a href="contact.html">Contact</a></nav>
-<div class="hicons"><span><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg></span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-5.5 8-5.5s6.5 1.5 8 5.5"/></svg></span><span><svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 12.2A1.8 1.8 0 0 0 9.2 18h8.9a1.8 1.8 0 0 0 1.8-1.4L21.5 8H6"/><circle cx="10" cy="21" r="1.4"/><circle cx="18" cy="21" r="1.4"/></svg></span></div>
+<div class="hicons"><span><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg></span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-5.5 8-5.5s6.5 1.5 8 5.5"/></svg></span><a class="cart-link" href="cart.html" aria-label="Cart"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 12.2A1.8 1.8 0 0 0 9.2 18h8.9a1.8 1.8 0 0 0 1.8-1.4L21.5 8H6"/><circle cx="10" cy="21" r="1.4"/><circle cx="18" cy="21" r="1.4"/></svg><span class="cart-count" data-cart-count></span></a></div>
 <button class="burger" aria-label="Menu">&#9776;</button>
 </div></header>
 
-<div class="wrap"><div class="crumb">Home / Shop / Natural Honey / <b>Black Horse Vital Honey</b></div>
+<div class="wrap"><div class="crumb">Home / Product / Natural Honey / <b>Black Horse Vital Honey</b></div>
 <div class="prod"><div><img class="main-img" src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey box">
 <div class="thumbs"><img src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey box of 24 sachets"><img src="../assets/sachet-web.jpg" alt="Black Horse Vital Honey single sachets"><img src="../assets/comb-web.jpg" alt="Natural honeycomb"></div></div>
 <div><span class="badge">THE SIGNATURE BLEND</span>
@@ -271,13 +316,24 @@ body.nav-open{overflow:hidden}
 <p style="margin-top:8px;font-size:17px">Box of 24 Sachets (10g each)</p>
 <div class="price-req" style="color:#b98a1e">Price on Request</div>
 <div class="qtyrow"><div class="qty"><button type="button" aria-label="Minus">-</button><input value="1" aria-label="Quantity"><button type="button" aria-label="Plus">+</button></div>
-<a class="btn-gold" href="contact.html" style="flex:1;text-align:center">ADD TO CART</a></div>
-<a class="btn-black" href="contact.html" style="display:block;margin-top:14px">BUY NOW</a>
+<button type="button" class="btn-gold" data-add="box24" style="flex:1;text-align:center">ADD TO CART</button></div>
+<button type="button" class="btn-black" data-qv="box24" style="display:block;margin-top:14px;width:100%">QUICK VIEW</button>
+</div></div>
+<div class="prod" style="margin-top:56px"><div><div class="slot-photo" style="min-height:340px">PRODUCT PHOTO<br>TO COME</div></div>
+<div><span class="badge">SECOND PRODUCT</span>
+<h2 style="font-size:clamp(26px,3vw,36px);margin-top:10px">[Second product - name to be confirmed]</h2>
+<div class="size">[Pack size to be confirmed]</div>
+<h3 style="margin-top:20px;letter-spacing:.06em">ON THE BOX</h3>
+<p style="margin-top:8px;font-size:17px">[Product facts to be confirmed]</p>
+<div class="price-req" style="color:#b98a1e">Price on Request</div>
+<div class="qtyrow"><div class="qty"><button type="button" aria-label="Minus">-</button><input value="1" aria-label="Quantity"><button type="button" aria-label="Plus">+</button></div>
+<button type="button" class="btn-gold" data-add="slot2" style="flex:1;text-align:center">ADD TO CART</button></div>
+<button type="button" class="btn-black" data-qv="slot2" style="display:block;margin-top:14px;width:100%">QUICK VIEW</button>
 </div></div></div>
 <footer class="site"><div class="badge-strip"><span>100% NATURAL</span><span>24 SACHETS</span><span>10 GRAMS EACH</span></div>
 <div class="fgrid"><div><a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
 <p>The natural honey blend, with Royal Jelly, Panax Ginseng and Rainforest Herbs. 100% natural.</p><div class="socials"><span aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.4V4.9c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.6v7h2.9z"/></svg></span><span aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l6.1 8.2L4.4 20h2.3l4.4-5.5 3.4 5.5H20l-6.4-8.6L19.5 4h-2.3l-4 5L9.7 4H4z"/></svg></span><span aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.9"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r=".9" fill="#111" stroke="none"/></svg></span><span aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M21 8.2c-.2-1.4-1-2.2-2.4-2.4C16.6 5.5 12 5.5 12 5.5s-4.6 0-6.6.3C4 6 3.2 6.8 3 8.2 2.7 10.2 2.7 13.8 3 15.8c.2 1.4 1 2.2 2.4 2.4 2 .3 6.6.3 6.6.3s4.6 0 6.6-.3c1.4-.2 2.2-1 2.4-2.4.3-2 .3-5.6 0-7.6z"/><path d="M10 9.7v4.6L14.3 12z" fill="#e9c766"/></svg></span></div></div>
-<div><h4>SHOP</h4><a href="shop.html">Shop</a><a href="product.html">Product</a><a href="about.html">About</a><a href="blog.html">Blog</a></div>
+<div><h4>QUICK LINKS</h4><a href="index.html">Home</a><a href="product.html">Product</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
 <div><h4>INFORMATION</h4><a href="about.html">About</a><a href="contact.html">Contact Us</a><a href="faq.html">FAQ</a><a href="blog.html">Blog</a></div>
 <div><h4>SUPPORT</h4><a href="faq.html">FAQ</a><a href="contact.html">Contact Us</a></div></div><div class="copy">&copy; BLACK HORSE VITAL HONEY. ALL RIGHTS RESERVED.</div></footer>
 
@@ -388,6 +444,67 @@ if(dets.length){
     });
   });
 }
+});
+</script>
+
+<script data-cart>
+document.addEventListener('DOMContentLoaded',function(){
+var PROD={'box24':{name:'Black Horse Vital Honey',desc:'Box of 24 Sachets (10g each)',facts:'100% natural, with Royal Jelly, Panax Ginseng & Rainforest Herbs.',img:'../assets/boxes-web.jpg'},
+'slot2':{name:'[Second product - name to be confirmed]',desc:'[Product facts to be confirmed]',facts:'',img:''}};
+var cart={};try{var raw=localStorage.getItem('bh-cart');if(raw)cart=JSON.parse(raw)||{};}catch(e){cart={};}
+if(!Object.keys(cart).length){try{var m=document.cookie.match(/(?:^|; )bh-cart=([^;]*)/);if(m)cart=JSON.parse(decodeURIComponent(m[1]))||{};}catch(e){cart={};}}
+function save(){try{localStorage.setItem('bh-cart',JSON.stringify(cart));}catch(e){try{document.cookie='bh-cart='+encodeURIComponent(JSON.stringify(cart))+';path=/;max-age=86400;SameSite=Lax';}catch(e2){}}}
+function count(){var c=0;for(var k in cart)if(PROD[k])c+=cart[k];return c;}
+function paint(){var c=count();[].slice.call(document.querySelectorAll('[data-cart-count]')).forEach(function(b){b.textContent=c;var l=b.closest('.cart-link,.cart-nav-link');if(l)l.classList.toggle('has',c>0);});}
+var qv=null,qvImg=null,qvSlot=null,qvName=null,qvDesc=null,qvFacts=null,qvInput=null,qvAdd=null;
+function buildQV(){
+  qv=document.createElement('div');qv.className='qv-overlay';
+  qv.innerHTML='<div class="qv-panel"><button type="button" class="qv-close" aria-label="Close quick view">&#10005;</button><img alt="Black Horse Vital Honey box of 24 sachets"><div class="slot-photo" style="display:none">PRODUCT PHOTO<br>TO COME</div><h3></h3><p class="qv-desc"></p><p class="qv-facts"></p><div class="qv-price">Price on request</div><div class="qv-row"><div class="qty"><button type="button" class="qv-minus" aria-label="Minus">-</button><input value="1" aria-label="Quantity"><button type="button" class="qv-plus" aria-label="Plus">+</button></div><button type="button" class="btn-gold qv-add">ADD TO CART</button></div></div>';
+  document.body.appendChild(qv);
+  qvImg=qv.querySelector('img');qvSlot=qv.querySelector('.slot-photo');qvName=qv.querySelector('h3');qvDesc=qv.querySelector('.qv-desc');qvFacts=qv.querySelector('.qv-facts');qvInput=qv.querySelector('.qty input');qvAdd=qv.querySelector('.qv-add');
+  qv.addEventListener('click',function(e){if(e.target===qv)closeQV();});
+  qv.querySelector('.qv-close').addEventListener('click',closeQV);
+  qv.querySelector('.qv-minus').addEventListener('click',function(){var v=parseInt(qvInput.value,10)||1;qvInput.value=Math.max(1,v-1);});
+  qv.querySelector('.qv-plus').addEventListener('click',function(){var v=parseInt(qvInput.value,10)||1;qvInput.value=v+1;});
+  qvAdd.addEventListener('click',function(){var id=qvAdd.getAttribute('data-add');var v=parseInt(qvInput.value,10)||1;add(id,v,qvAdd);closeQV();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeQV();});
+}
+function openQV(id){var p=PROD[id];if(!p)return;if(!qv)buildQV();
+  if(p.img){qvImg.src=p.img;qvImg.style.display='';qvSlot.style.display='none';}else{qvImg.style.display='none';qvSlot.style.display='flex';}
+  qvName.textContent=p.name;qvDesc.textContent=p.desc;qvFacts.textContent=p.facts;qvInput.value='1';qvAdd.setAttribute('data-add',id);qv.classList.add('open');}
+function closeQV(){if(qv)qv.classList.remove('open');}
+function qtyNear(el){var s=el.closest('.qtyrow,.prod,.dp-grid,.hcard,.rcard,.pcard,.panel,.showcase,.dark-panel,.split,.boxline,.closeband');var i=s?s.querySelector('.qty input'):null;var v=i?parseInt(i.value,10):1;return(isNaN(v)||v<1)?1:v;}
+function add(id,q,btn){if(!PROD[id])return;cart[id]=(cart[id]||0)+q;save();paint();renderCart();
+  if(btn){var t=btn.textContent;btn.textContent='ADDED';setTimeout(function(){btn.textContent=t;},1100);}}
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+function renderCart(){
+  var box=document.getElementById('cart-items');var cl=document.getElementById('cart-count-line');
+  if(cl)cl.textContent=count();
+  var co=document.getElementById('co-items');
+  if(co){var ch='';for(var k in cart){if(!PROD[k])continue;ch+='<div class="co-item"><span>'+esc(PROD[k].name)+' &times; '+cart[k]+'</span><span>Price on request</span></div>';}
+    co.innerHTML=ch||'<div class="co-item"><span>Your cart is empty.</span><span></span></div>';}
+  if(!box)return;
+  var empty=document.getElementById('cart-empty');var sum=document.getElementById('cart-box');
+  var keys=Object.keys(cart).filter(function(k){return PROD[k]&&cart[k]>0;});
+  if(!keys.length){box.innerHTML='';if(empty)empty.style.display='';if(sum)sum.style.display='none';return;}
+  if(empty)empty.style.display='none';if(sum)sum.style.display='';
+  box.innerHTML=keys.map(function(k){var p=PROD[k];
+    var pic=p.img?'<img src="'+p.img+'" alt="'+esc(p.name)+'">':'<div class="slot-photo">PRODUCT PHOTO<br>TO COME</div>';
+    return '<div class="cart-row">'+pic+'<div class="ci"><b>'+esc(p.name)+'</b><span>'+esc(p.desc)+' &middot; Price on request</span></div><div class="cqty"><button type="button" data-dec="'+k+'" aria-label="Minus">-</button><input value="'+cart[k]+'" aria-label="Quantity" readonly><button type="button" data-inc="'+k+'" aria-label="Plus">+</button></div><button type="button" class="cart-remove" data-remove="'+k+'" aria-label="Remove">&#10005;</button></div>';}).join('');
+}
+document.addEventListener('click',function(e){
+  var t=e.target.closest?e.target:null;if(!t)return;
+  var addB=t.closest('[data-add]');if(addB&&!addB.classList.contains('qv-add')){add(addB.getAttribute('data-add'),qtyNear(addB),addB);return;}
+  var qvB=t.closest('[data-qv]');if(qvB){openQV(qvB.getAttribute('data-qv'));return;}
+  var inc=t.closest('[data-inc]');if(inc){cart[inc.getAttribute('data-inc')]++;save();paint();renderCart();return;}
+  var dec=t.closest('[data-dec]');if(dec){var k=dec.getAttribute('data-dec');cart[k]--;if(cart[k]<=0)delete cart[k];save();paint();renderCart();return;}
+  var rem=t.closest('[data-remove]');if(rem){delete cart[rem.getAttribute('data-remove')];save();paint();renderCart();return;}
+});
+var cof=document.getElementById('co-form');
+if(cof)cof.addEventListener('submit',function(e){e.preventDefault();cart={};save();paint();window.location.href='thank-you.html';});
+var mn=document.querySelector('.mainnav');
+if(mn&&!mn.querySelector('.cart-nav-link')){var cl=document.createElement('a');cl.href='cart.html';cl.className='cart-nav-link';cl.innerHTML='CART <span class="cart-count" data-cart-count></span>';mn.appendChild(cl);}
+paint();renderCart();
 });
 </script>
 
