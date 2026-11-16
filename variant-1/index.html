@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Variant 1 - Bold Gold Store - Home - Black Horse Vital Honey</title>
+<title>Black Horse Vital Honey - Home - Black Horse Vital Honey</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -127,7 +127,7 @@ details p{padding:0 0 18px;line-height:1.65;color:#444}
 }
 @media(max-width:560px){.cards3,.blog-grid,.ing-cards,.pgrid{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr}}
 </style></head><body>
-<div class="topbar">EXPERIENCE THE POWER &bull; 100% NATURAL INGREDIENTS &bull; WORLDWIDE SHIPPING</div>
+<div class="topbar">100% Natural &bull; With Royal Jelly, Panax Ginseng &amp; Rainforest Herbs</div>
 <header class="site"><div class="hbar">
 <a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
 <nav class="mainnav"><a href="index.html" class="active">Home</a>
@@ -142,9 +142,9 @@ details p{padding:0 0 18px;line-height:1.65;color:#444}
 </div></header>
 
 <section class="hero"><div class="hero-txt">
-<div class="eyebrow">NATURAL VITALITY &amp; STAMINA</div>
+<div class="eyebrow">100% NATURAL INGREDIENTS</div>
 <h1 class="display">BLACK HORSE<br><span class="gold">VITAL HONEY</span></h1>
-<p>The ultimate natural energy booster, crafted with premium Royal Jelly, Panax Ginseng, and Rainforest Herbs. 100% natural, designed for peak performance.</p>
+<p>A premium natural honey blend, crafted with Royal Jelly, Panax Ginseng, and Rainforest Herbs. 100% natural, in sachets of 10 grams each.</p>
 <div class="spec-line">10 GRAMS x 24 SACHETS</div>
 <a class="btn-gold" href="contact.html">REQUEST PRICE</a> <a class="btn-outline" href="about.html">EXPLORE OUR STORY</a>
 </div><div class="hero-img"><img src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey box with honeycomb and ginseng"></div></section>
@@ -154,16 +154,16 @@ details p{padding:0 0 18px;line-height:1.65;color:#444}
 <section class="dark-sec"><div class="dark-grid">
 <div><img src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey boxes and sachets"></div>
 <div><div class="kicker">OUR SIGNATURE BLEND</div>
-<h2>THE ORIGINAL BLACK HORSE VITAL HONEY</h2>
-<p>The ultimate natural energy booster, crafted with premium Royal Jelly, Panax Ginseng and Rainforest Herbs. 100% natural, designed for peak performance.</p>
+<h2>BLACK HORSE VITAL HONEY</h2>
+<p>A premium natural honey blend, crafted with Royal Jelly, Panax Ginseng and Rainforest Herbs. 100% natural, in sachets of 10 grams each.</p>
 <p style="margin-top:12px">Premium Sachet Box (24 x 10g)</p>
 <div class="price-req">Price on Request</div>
 <a class="btn-gold" href="contact.html">INQUIRE FOR PRICING</a></div></div></section>
-<section class="articles"><div class="wrap"><h2>LATEST ARTICLES</h2><div class="cards3"><div class="acard"><img src="../assets/comb-web.jpg" alt=""><p>The Benefits of Royal Jelly</p></div><div class="acard"><img src="../assets/boxes-web.jpg" alt=""><p>Stamina and Panax Ginseng</p></div><div class="acard"><img src="../assets/boxes-web.jpg" alt=""><p>Why Choose 100% Natural?</p></div></div>
+<section class="articles"><div class="wrap"><h2>LATEST ARTICLES</h2><div class="cards3"><div class="acard"><img src="../assets/comb-web.jpg" alt="About Royal Jelly"><p>About Royal Jelly</p></div><div class="acard"><img src="../assets/boxes-web.jpg" alt="Inside the Blend: Panax Ginseng"><p>Inside the Blend: Panax Ginseng</p></div><div class="acard"><img src="../assets/boxes-web.jpg" alt="What 100% Natural Means"><p>What 100% Natural Means</p></div></div>
 <p style="text-align:center;margin-top:24px"><a class="btn-outline" href="blog.html">VIEW ALL ARTICLES</a></p></div></section>
 <footer class="site"><div class="fgrid">
 <div><a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
-<p>The natural energy blend, crafted with premium Royal Jelly, Panax Ginseng and Rainforest Herbs. 100% natural.</p></div>
+<p>The natural honey blend, crafted with premium Royal Jelly, Panax Ginseng and Rainforest Herbs. 100% natural.</p></div>
 <div><h4>SHOP</h4><a href="shop.html">Shop</a><a href="product.html">Product</a><a href="about.html">About</a><a href="blog.html">Blog</a></div>
 <div><h4>INFORMATION</h4><a href="about.html">About</a><a href="contact.html">Contact Us</a><a href="faq.html">FAQ</a><a href="blog.html">Information</a></div>
 <div><h4>SUPPORT</h4><a href="faq.html">FAQ</a><a href="contact.html">Contact Us</a></div>
@@ -173,5 +173,16 @@ details p{padding:0 0 18px;line-height:1.65;color:#444}
 document.addEventListener('DOMContentLoaded',function(){
  var b=document.querySelector('.burger'),n=document.querySelector('.mainnav');
  if(b&&n){b.addEventListener('click',function(){n.classList.toggle('open');});}
+ var f=document.querySelector('form.cform');
+ if(f){f.addEventListener('submit',function(e){e.preventDefault();var n=document.createElement('p');n.className='form-note';n.style.cssText='margin-top:14px;font-weight:600';n.textContent='Thank you. Your message has been noted on this page. This demo form is not connected to an inbox yet.';f.appendChild(n);f.reset();});}
+ var q=document.querySelector('.qty');
+ if(q){var inp=q.querySelector('input'),btns=q.querySelectorAll('button');if(inp&&btns.length==2){btns[0].addEventListener('click',function(){var v=parseInt(inp.value||'1',10);if(v>1)inp.value=v-1;});btns[1].addEventListener('click',function(){var v=parseInt(inp.value||'1',10);inp.value=v+1;});}}
+ var filt=document.querySelector('.filters');
+ if(filt){var cards=[].slice.call(document.querySelectorAll('.pcard'));var boxes=[].slice.call(filt.querySelectorAll('input[type=checkbox]'));
+  function apply(){var pack=[];boxes.forEach(function(x){if(x.checked&&x.getAttribute('data-f')==='pack')pack.push(x.value);});
+   cards.forEach(function(c){var show=true;if(pack.length&&pack.indexOf(c.getAttribute('data-pack'))===-1)show=false;c.style.display=show?'':'none';});}
+  boxes.forEach(function(x){x.addEventListener('change',apply);});}
+ var sel=document.getElementById('sortsel');
+ if(sel){sel.addEventListener('change',function(){var grid=sel.closest('.shop-grid,.wrap').querySelector('.pgrid4,.pgrid');if(!grid)return;var cs=[].slice.call(grid.children);if(sel.value==='az')cs.sort(function(a,b){return a.querySelector('h3').textContent.localeCompare(b.querySelector('h3').textContent);});if(sel.value==='za')cs.sort(function(a,b){return b.querySelector('h3').textContent.localeCompare(a.querySelector('h3').textContent);});cs.forEach(function(c){grid.appendChild(c);});});}
 });
 </script></body></html>
