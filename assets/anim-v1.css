@@ -165,3 +165,43 @@ summary{transition:color .2s ease}
 .irow:nth-child(2){animation-delay:.1s}
 .irow:nth-child(3){animation-delay:.2s}
 .irow:nth-child(4){animation-delay:.3s}
+
+/* ============ R-SNOW-4 expanded set (Snow's more-animation order, 2026-11-16) ============
+   Safety: hidden states are JS-added only; force-reveal failsafe in anim-v1.js plus the
+   html.bh-all backstop below; no reduced-motion gating anywhere. */
+/* Hero entrance: fade joins the existing bhSettle rise (classes added by JS only) */
+@keyframes bhFade1{from{opacity:0}to{opacity:1}}
+.bh-hx{animation:bhSettle .6s ease-out,bhFade1 .6s ease-out}
+.bh-hi{animation:bhFade1 .65s ease-out}
+/* Scroll reveal: .bh-rv exists only where JS put it; classes are removed after the move */
+.bh-rv{opacity:0;transform:translateY(16px)}
+.bh-rv.bh-in{opacity:1;transform:translateY(0);transition:opacity .55s ease,transform .55s ease}
+html.bh-all .bh-rv{opacity:1!important;transform:none!important}
+/* Badge glow pulse (Product page badge) */
+.badge{animation:bhGlow1 3.2s ease-in-out infinite}
+@keyframes bhGlow1{0%,100%{box-shadow:0 0 0 rgba(201,154,36,0)}50%{box-shadow:0 0 18px rgba(201,154,36,.5)}}
+/* Touch-audit fixes: shine sweeps on tap and once in view (desktop hover form kept above) */
+.btn-gold:active::before,.btn-black:active::before,.send-bar:active::before{left:115%}
+.btn-gold.bh-shine::before,.btn-black.bh-shine::before,.send-bar.bh-shine::before{left:115%}
+.bh-zoom{animation:bhZoom1 .8s ease-out}
+@keyframes bhZoom1{from{transform:scale(1.05)}to{transform:scale(1)}}
+/* Product gallery: slide easing refined to ease-out; active thumb gains a soft gold ring */
+[data-gal] .gal-track{transition:transform .45s ease-out}
+.gal-thumbs button{transition:box-shadow .3s ease}
+.gal-thumbs button.on{box-shadow:0 0 0 3px rgba(201,154,36,.28)}
+/* Add to cart: flying image clone, button confirm ring, cart count pop */
+.bh-flyer{position:fixed;z-index:600;pointer-events:none;border-radius:6px;object-fit:cover;margin:0}
+[data-add].bh-added{animation:bhAdded1 .55s ease}
+@keyframes bhAdded1{0%{box-shadow:0 0 0 rgba(201,154,36,0)}40%{box-shadow:0 0 0 6px rgba(201,154,36,.35)}100%{box-shadow:0 0 0 rgba(201,154,36,0)}}
+[data-cart-count].bh-pop{animation:bhPopCt1 .45s ease-out}
+@keyframes bhPopCt1{0%{transform:scale(1)}40%{transform:scale(1.45)}100%{transform:scale(1)}}
+/* Place order: progress shimmer, then the placed settle */
+#co-form button.bh-processing{position:relative;overflow:hidden;pointer-events:none}
+#co-form button.bh-processing::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.35) 50%,rgba(255,255,255,0) 70%);animation:bhProg1 .7s linear infinite}
+@keyframes bhProg1{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+#co-form button.bh-placed{animation:bhPopCt1 .4s ease-out}
+/* Thank-you seal: gold circle and check drawn in (SVG injected by anim-v1.js) */
+.bh-seal{display:block;margin:0 auto 14px;width:76px;height:76px}
+.bh-seal circle{fill:none;stroke:#c79a24;stroke-width:2.5;stroke-dasharray:1;stroke-dashoffset:1;animation:bhDraw1 .7s ease-out forwards}
+.bh-seal path{fill:none;stroke:#c79a24;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:bhDraw1 .45s ease-out .55s forwards}
+@keyframes bhDraw1{to{stroke-dashoffset:0}}
