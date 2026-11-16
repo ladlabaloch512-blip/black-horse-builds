@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Variant 4 - Honeycomb Geometric - About</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;background:#0c0d10;color:#f2ead6}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+header.site{background:#0a0a0a;border-bottom:2px solid #c79a24}
+.hbar{display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1360px;margin:0 auto;padding:12px 24px}
+.hbar .brand{display:flex;align-items:center;gap:14px}
+.hbar .brand img{height:56px;width:auto}
+.hbar .brand span{color:#e9c766;font-size:21px;letter-spacing:.14em;font-weight:600}
+nav.mainnav{display:flex;gap:32px;font-size:19px;letter-spacing:.06em}
+nav.mainnav a{color:#fff;padding:6px 2px}
+nav.mainnav a.active{color:#e9c766;border-bottom:2px solid #e9c766}
+.burger{display:none;background:none;border:0;color:#e9c766;font-size:28px;cursor:pointer}
+.hexbg{background-color:#101116;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="56" height="100" viewBox="0 0 56 100"><g fill="none" stroke="%23c79a24" stroke-opacity="0.20"><path d="M28 2l24 14v28L28 58 4 44V16z"/><path d="M28 58l24 14v28M28 58L4 72v28"/></g></svg>')}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:0;overflow:hidden}
+.hero-txt{padding:64px 40px 60px 6vw;clip-path:polygon(0 0,100% 0,88% 100%,0 100%);background:#14151b}
+.hero-txt h1{font-size:clamp(42px,5.4vw,74px);line-height:1.02;color:#e9c766;font-weight:700;letter-spacing:.01em}
+.hero-txt h1 .w{color:#fff}
+.badgehex{display:inline-block;background:linear-gradient(180deg,#f0d47a,#c79a24);color:#111;font-weight:700;text-align:center;padding:14px 16px;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);font-size:16px;line-height:1.15;margin-left:14px;vertical-align:top}
+.hero-txt .sub{font-size:21px;margin:20px 0 6px;color:#fff;letter-spacing:.04em}
+.hero-txt .sub2{font-size:19px;color:#d8cfb2}
+.btn-gold{display:inline-block;background:linear-gradient(180deg,#f0d47a,#c79a24);color:#111;font-weight:700;letter-spacing:.08em;padding:13px 26px;border-radius:5px;font-size:17px;border:0;cursor:pointer;margin-top:24px}
+.btn-line{display:inline-block;border:1.5px solid #c79a24;color:#e9c766;font-weight:600;letter-spacing:.08em;padding:12px 24px;border-radius:5px;font-size:17px;margin-top:24px;margin-left:12px}
+.hero-img{position:relative}
+.hero-img img{width:100%;height:100%;object-fit:cover;min-height:340px}
+.hero-img::before{content:"";position:absolute;inset:22px;border:2px solid rgba(199,154,36,.75);clip-path:polygon(50% 0,100% 12%,100% 88%,50% 100%,0 88%,0 12%);pointer-events:none;z-index:2}
+.shields{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:44px 0 10px}
+.shield{border:2px solid #c79a24;background:#14151b;text-align:center;padding:26px 18px 30px;clip-path:polygon(0 0,100% 0,100% 82%,50% 100%,0 82%)}
+.shield img{height:120px;width:100%;object-fit:cover;margin:14px 0 6px}
+.shield h3{font-size:21px;letter-spacing:.1em;line-height:1.25}
+.shield p{font-family:'Jost',sans-serif;font-size:14.5px;color:#cbbd93}
+.boxline{text-align:center;font-size:20px;padding:22px 0 40px;letter-spacing:.04em}
+.boxline .pr{color:#e9c766;font-weight:700;font-size:22px;display:block;margin-top:6px}
+.sec-dark{background:#0a0a0a}
+.blogrow{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:0 0 52px}
+.bcard{border:1.5px solid #c79a24;background:#14151b}
+.bcard img{height:150px;width:100%;object-fit:cover;clip-path:polygon(0 0,100% 0,100% 100%,0 82%)}
+.bcard .bt{padding:16px 18px 20px}
+.bcard h3{font-family:'Jost',sans-serif;font-size:16.5px;line-height:1.4}
+.bcard a{color:#e9c766;font-family:'Jost',sans-serif;font-size:14.5px;display:inline-block;margin-top:8px}
+footer.site{background:#060606;border-top:2px solid #c79a24}
+.fgrid{display:flex;justify-content:space-between;gap:30px;align-items:center;max-width:1240px;margin:0 auto;padding:30px 24px;flex-wrap:wrap}
+.fgrid .logo img{height:56px;width:auto}
+.fgrid h4{color:#e9c766;letter-spacing:.1em;font-size:16px;margin-bottom:8px}
+.fgrid a{display:block;font-family:'Jost',sans-serif;font-size:14.5px;color:#d8cfb2;padding:3px 0}
+.fgrid .small{font-family:'Jost',sans-serif;font-size:13px;color:#9a8f6e;max-width:300px;line-height:1.55}
+.page-head{text-align:center;padding:48px 0 10px}
+.page-head h1{font-size:clamp(34px,4.6vw,58px);color:#e9c766;letter-spacing:.05em}
+.page-head .sub{font-size:20px;letter-spacing:.14em;color:#fff;margin-top:8px}
+.shop-grid{display:grid;grid-template-columns:200px 1fr;gap:26px;padding:30px 0 56px;align-items:start}
+.cats h4{color:#e9c766;letter-spacing:.12em;font-size:18px;margin:18px 0 10px}
+.cats p{font-family:'Jost',sans-serif;font-size:15px;padding:6px 0;color:#e8dfc4}
+.cats p::before{content:"";display:inline-block;width:13px;height:13px;background:#c79a24;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);margin-right:9px;vertical-align:-1px}
+.pgrid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pcard{border:2px solid #c79a24;background:#101116;padding:16px;text-align:center;position:relative}
+.pcard .heximg{clip-path:polygon(50% 0,100% 14%,100% 86%,50% 100%,0 86%,0 14%);margin-bottom:16px}
+.pcard .heximg img{height:210px;width:100%;object-fit:cover}
+.pcard .tag{position:absolute;top:22px;right:22px;background:linear-gradient(180deg,#f0d47a,#c79a24);color:#111;font-weight:700;font-size:13.5px;padding:10px 9px;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);line-height:1.15}
+.pcard h3{color:#e9c766;font-size:20px;letter-spacing:.05em}
+.pcard p{font-family:'Jost',sans-serif;color:#d8cfb2;font-size:14.5px;margin-top:5px}
+.pcard .row{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #3a3520;margin-top:16px;padding-top:14px}
+.pcard .pr{font-size:16.5px;letter-spacing:.05em;text-align:left;line-height:1.3}
+.btn-hex{display:inline-block;background:linear-gradient(180deg,#f0d47a,#c79a24);color:#111;font-weight:700;padding:11px 18px;clip-path:polygon(12% 0,88% 0,100% 50%,88% 100%,12% 100%,0 50%);font-size:15.5px;letter-spacing:.04em}
+.prod{display:grid;grid-template-columns:1fr 1fr;gap:44px;padding:36px 0 60px;align-items:center}
+.prod .frame{border:2px solid #c79a24;padding:14px;background:#101116}
+.prod h1{font-size:clamp(34px,4.4vw,58px);color:#e9c766;line-height:1.05}
+.prod h1 .w{color:#fff}
+.prod .size{font-size:22px;letter-spacing:.1em;margin-top:10px}
+.checks{list-style:none;margin:16px 0}
+.checks li{font-family:'Jost',sans-serif;font-size:16.5px;padding:6px 0}
+.checks li::before{content:"";display:inline-block;width:12px;height:12px;background:#c79a24;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);margin-right:10px}
+.price-big{color:#e9c766;font-size:24px;letter-spacing:.06em;font-weight:700}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding:44px 0}
+.split h2{font-size:34px;color:#e9c766;letter-spacing:.04em;margin-bottom:12px}
+.split p{font-family:'Jost',sans-serif;line-height:1.7;color:#d8cfb2;margin-bottom:12px;font-size:16px}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:24px 0 56px}
+.faq-list{max-width:860px;margin:0 auto;padding:22px 0 60px}
+.faq-hero{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;padding:52px 0 60px;align-items:center}
+.faq-eyebrow{color:#e9c766;font-size:23px;letter-spacing:.14em;font-weight:600}
+.faq-giant{font-family:Georgia,serif;font-size:clamp(80px,9vw,140px);color:#fff;line-height:1;font-weight:700;margin:6px 0 26px}
+.qa-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.qa-card{border:1.5px solid #c79a24;background:#0c0d10;padding:22px 20px 20px 34px;position:relative}
+.qa-badge{position:absolute;left:-16px;top:18px;background:#14151b;border:1.5px solid #c79a24;color:#e9c766;font-size:13px;font-weight:700;padding:9px 6px;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.qa-card h3{font-size:20.5px;letter-spacing:.03em;line-height:1.25;border-bottom:1px solid #3a3520;padding-bottom:10px}
+.qa-card p{font-family:'Jost',sans-serif;font-size:15px;line-height:1.6;color:#d8cfb2;margin-top:10px}
+.faq-photo img{width:100%;border:2px solid #c79a24;box-shadow:0 0 55px rgba(199,154,36,.55),0 0 130px rgba(199,154,36,.28)}
+.faq-more{font-family:'Jost',sans-serif;color:#d8cfb2;margin-top:22px;font-size:15.5px}
+.faq-more a{color:#e9c766;text-decoration:underline}
+@media(max-width:900px){.faq-hero{grid-template-columns:1fr}.qa-grid{grid-template-columns:1fr}}
+details{border:1.5px solid #c79a24;background:#14151b;margin-bottom:12px;padding:0 20px}
+summary{cursor:pointer;font-weight:600;font-size:18px;padding:16px 0;list-style:none;letter-spacing:.04em}
+details p{font-family:'Jost',sans-serif;padding:0 0 18px;line-height:1.65;color:#d8cfb2}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;padding:22px 0 60px;align-items:start}
+.cform label{display:block;font-weight:600;margin-bottom:14px;font-size:16px;letter-spacing:.04em}
+.cform input,.cform textarea{width:100%;margin-top:6px;padding:12px;border:1.5px solid #c79a24;background:#14151b;color:#fff;font:inherit}
+.ph-box{border:1.5px dashed #c79a24;padding:22px;background:#14151b}
+.ph-box p{padding:6px 0;font-family:'Jost',sans-serif;font-size:15.5px}
+.ph-note{color:#e9c766;font-size:13.5px}
+@media(max-width:900px){
+ .hero,.prod,.split,.contact-grid{grid-template-columns:1fr}
+ .hero-txt{clip-path:none}
+ .shields,.blogrow,.blog-grid,.pgrid3{grid-template-columns:1fr 1fr}
+ .shop-grid{grid-template-columns:1fr}
+ nav.mainnav{display:none;position:absolute;top:100%;left:0;right:0;background:#0a0a0a;flex-direction:column;padding:16px 24px;gap:4px;z-index:50}
+ nav.mainnav.open{display:flex}
+ header.site{position:relative}
+ .burger{display:block}
+ .hbar .brand span{display:none}
+}
+@media(max-width:560px){.shields,.blogrow,.blog-grid,.pgrid3{grid-template-columns:1fr}}
+</style></head><body>
+<header class="site"><div class="hbar">
+<a class="brand" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"><span>VITAL HONEY</span></a>
+<nav class="mainnav"><a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="product.html">Product</a>
+<a href="about.html" class="active">About</a>
+<a href="blog.html">Blog</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a></nav>
+<button class="burger" aria-label="Menu">&#9776;</button>
+</div></header>
+
+<div class="wrap"><div class="page-head"><h1>ABOUT BLACK HORSE</h1><div class="sub">100% NATURAL - ROYAL JELLY - PANAX GINSENG - RAINFOREST HERBS</div></div>
+<div class="split"><div><h2>THE BLEND</h2><p>Black Horse Vital Honey is a 100% natural honey blend with Royal Jelly, Panax Ginseng and Rainforest Herbs. One box holds 24 sachets of 10 grams each.</p><p>The design of the box says it plainly: natural honey, Royal Jelly, Panax Ginseng and Rainforest Herbs. That is the whole blend, packed in single sachets.</p><a class="btn-gold" href="product.html">SEE THE PRODUCT</a></div>
+<div class="frame" style="border:2px solid #c79a24;padding:12px"><img src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey boxes" style="width:100%"></div></div>
+<div class="shields" style="padding-bottom:50px">
+<div class="shield"><h3>ROYAL JELLY</h3><p style="margin-top:10px">High-grade natural source.</p></div>
+<div class="shield"><h3>PANAX GINSENG</h3><p style="margin-top:10px">A time-tested root in the blend.</p></div>
+<div class="shield"><h3>RAINFOREST HERBS</h3><p style="margin-top:10px">Traditional rich botanicals.</p></div>
+</div></div>
+<footer class="site"><div class="fgrid">
+<a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
+<div><h4>Quick Links</h4><a href="index.html">Home</a><a href="product.html">Product</a><a href="contact.html">Contact</a></div>
+<div class="small">&copy; Black Horse Vital Honey. All rights reserved.<br>Our products are 100% natural and made from premium rainforest herbs.</div>
+</div></footer>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+ var b=document.querySelector('.burger'),n=document.querySelector('.mainnav');
+ if(b&&n){b.addEventListener('click',function(){n.classList.toggle('open');});}
+});
+</script></body></html>
