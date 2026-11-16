@@ -139,9 +139,6 @@ details p{padding:0 0 17px;line-height:1.6;color:#4c4636;font-size:17.5px}
 @media(max-width:560px){.blend3,.blog-grid{grid-template-columns:1fr}}
 </style><link rel="stylesheet" href="../assets/anim-v5.css"><style data-rsnow2>
 .acc-a{overflow:hidden;transition:height .34s ease}
-.qa-block h3{cursor:pointer}
-.qa-block h3::after{content:" +";color:#b98a1e;font-weight:400}
-.qa-block.acc-open h3::after{content:" \2212"}
 .nav-close{display:none}
 @media(max-width:900px){
 .mainnav{position:fixed!important;top:0!important;left:0!important;right:auto!important;height:100dvh;width:min(320px,84vw);background:#fdfaf1;border-right:1px solid #b98a1e;flex-direction:column!important;align-items:flex-start!important;justify-content:flex-start!important;padding:26px!important;gap:15px!important;transform:translateX(-106%);transition:transform .26s ease-in;z-index:300;display:flex!important;overflow-y:auto;flex-wrap:nowrap!important}
@@ -158,8 +155,6 @@ body.nav-open{overflow:hidden}
 .panel .price-big{font-size:22px;white-space:nowrap}
 .panel .spec3{font-size:16.5px}
 }
-.qa-block h3::after{display:inline-block;transition:transform .34s ease}
-.qa-block.acc-open h3::after{transform:rotate(180deg)}
 </style>
 
 </head><body>
@@ -260,7 +255,6 @@ function setupAcc(itemSel,headSel){
 }
 setupAcc('.fq-item','h3');
 setupAcc('.qa-card','h3');
-setupAcc('.qa-block','h3');
 /* D4 for V1 native details: animate height, keep details semantics */
 var dets=[].slice.call(document.querySelectorAll('details.faq-item'));
 if(dets.length){
