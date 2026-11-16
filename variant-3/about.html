@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Variant 3 - Light Cream Minimal Black - About</title>
+<title>Black Horse Vital Honey - About</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,800;1,500&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -150,5 +150,16 @@ details p{padding:0 0 18px;line-height:1.65;color:#cbbd93}
 document.addEventListener('DOMContentLoaded',function(){
  var b=document.querySelector('.burger'),n=document.querySelector('.mainnav');
  if(b&&n){b.addEventListener('click',function(){n.classList.toggle('open');});}
+ var f=document.querySelector('form.cform');
+ if(f){f.addEventListener('submit',function(e){e.preventDefault();var n=document.createElement('p');n.className='form-note';n.style.cssText='margin-top:14px;font-weight:600';n.textContent='Thank you. Your message has been noted on this page. This demo form is not connected to an inbox yet.';f.appendChild(n);f.reset();});}
+ var q=document.querySelector('.qty');
+ if(q){var inp=q.querySelector('input'),btns=q.querySelectorAll('button');if(inp&&btns.length==2){btns[0].addEventListener('click',function(){var v=parseInt(inp.value||'1',10);if(v>1)inp.value=v-1;});btns[1].addEventListener('click',function(){var v=parseInt(inp.value||'1',10);inp.value=v+1;});}}
+ var filt=document.querySelector('.filters');
+ if(filt){var cards=[].slice.call(document.querySelectorAll('.pcard'));var boxes=[].slice.call(filt.querySelectorAll('input[type=checkbox]'));
+  function apply(){var pack=[];boxes.forEach(function(x){if(x.checked&&x.getAttribute('data-f')==='pack')pack.push(x.value);});
+   cards.forEach(function(c){var show=true;if(pack.length&&pack.indexOf(c.getAttribute('data-pack'))===-1)show=false;c.style.display=show?'':'none';});}
+  boxes.forEach(function(x){x.addEventListener('change',apply);});}
+ var sel=document.getElementById('sortsel');
+ if(sel){sel.addEventListener('change',function(){var grid=sel.closest('.shop-grid,.wrap').querySelector('.pgrid4,.pgrid');if(!grid)return;var cs=[].slice.call(grid.children);if(sel.value==='az')cs.sort(function(a,b){return a.querySelector('h3').textContent.localeCompare(b.querySelector('h3').textContent);});if(sel.value==='za')cs.sort(function(a,b){return b.querySelector('h3').textContent.localeCompare(a.querySelector('h3').textContent);});cs.forEach(function(c){grid.appendChild(c);});});}
 });
 </script></body></html>
