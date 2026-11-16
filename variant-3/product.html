@@ -104,6 +104,18 @@ details p{padding:0 0 18px;line-height:1.65;color:#cbbd93}
 .ph-box{border:1.5px dashed #c79a24;padding:22px;background:#141414}
 .ph-box p{padding:6px 0;font-size:16px}
 .ph-note{color:#c79a24;font-size:13.5px}
+.stats3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center;padding:30px 0 34px;border-top:1.5px solid #8a6d1d;border-bottom:1.5px solid #8a6d1d;margin:36px 0 6px}
+.stats3 .n{font-family:'Playfair Display',serif;font-size:42px;color:#c79a24}
+.stats3 .l{letter-spacing:.14em;font-size:14px;color:#cbbd93;margin-top:5px}
+.showcase{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center;padding:46px 0 10px}
+.showcase h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,38px);font-weight:600;margin-bottom:14px}
+.showcase p{line-height:1.7;color:#cbbd93;margin-bottom:14px;font-size:17px}
+.closeband{text-align:center;background:#141414;padding:52px 24px 56px;margin:46px 0 60px}
+.closeband h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3.6vw,42px);font-weight:600}
+.article-col{max-width:800px;margin:0 auto;padding:6px 0 10px}
+.article-col p{font-size:18px;line-height:1.75;color:#cbbd93;margin-bottom:18px}
+.article-col h2{font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:#f3ead2;margin:26px 0 12px}
+@media(max-width:900px){.showcase{grid-template-columns:1fr}.stats3{grid-template-columns:1fr}}
 @media(max-width:1000px){.pgrid4{grid-template-columns:1fr 1fr}}
 @media(max-width:900px){
  .hero,.home-cols,.prod,.split,.contact-grid{grid-template-columns:1fr}
@@ -116,18 +128,40 @@ details p{padding:0 0 18px;line-height:1.65;color:#cbbd93}
  .hero-txt{padding:40px 24px}
 }
 @media(max-width:900px){.splithead{flex-wrap:wrap;justify-content:center !important;gap:8px}.splithead .icons{display:none}.sortrow{flex-wrap:wrap;justify-content:flex-start}}
+body.cream-page{background:#f6f0e2}
+body.cream-page header.site{background:#f6f0e2}
+body.cream-page footer.site{background:#f6f0e2}
+.foot-line{display:flex;justify-content:space-between;align-items:center;gap:16px;max-width:1100px;margin:0 auto;flex-wrap:wrap;font-size:14.5px;color:#cbbd93}
+.foot-line .grp{display:flex;gap:22px;flex-wrap:wrap}
+.foot-centre{text-align:center}
+.foot-centre .logo img{height:44px}
+.priv-line{letter-spacing:.14em;font-size:13.5px;color:#cbbd93;margin-top:8px}
+.bsocials{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;flex-wrap:wrap;gap:10px}
+.foot-bottom .bsocials{margin-top:0}
+.bsocials span{width:34px;height:34px;border-radius:50%;background:linear-gradient(180deg,#e9c766,#c79a24);display:flex;align-items:center;justify-content:center}
+.bsocials svg{width:17px;height:17px;fill:#111}
+.bcat{color:#c79a24;font-size:13px;letter-spacing:.14em;margin-bottom:7px;text-transform:uppercase}
+.framed-img{border:1.5px solid #8a6d1d;padding:12px;background:#171512}
+.essence{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:6px 0 60px;text-align:left}
+.essence .eic{width:54px;height:54px}
+.essence svg{width:54px;height:54px;stroke:#c79a24;fill:none;stroke-width:1.4}
+.essence h3{letter-spacing:.1em;font-size:18px;margin:12px 0 7px}
+.essence p{color:#cbbd93;line-height:1.6;font-size:16px}
+.eyebrow2{color:#c79a24;letter-spacing:.24em;font-size:14.5px;font-weight:600}
+.touch{font-family:'Playfair Display',serif;font-size:clamp(32px,3.6vw,44px);font-weight:600;margin:10px 0 26px}
+.supp{letter-spacing:.12em;font-size:17px;margin:24px 0 8px}
+.contact-grid p.cp{color:#cbbd93;line-height:1.7;font-size:16.5px;max-width:440px}
+.uform input.ul{border:0;border-bottom:1.5px solid #8a6d1d;border-radius:0;background:transparent;padding:10px 2px}
+.send-full{width:100%;border-radius:4px;padding:15px}
+@media(max-width:900px){.essence{grid-template-columns:1fr}}
 @media(max-width:560px){.blog-grid,.pgrid2,.range2,.ben-grid{grid-template-columns:1fr}.pgrid4{grid-template-columns:1fr !important}.fnav{justify-content:center}}
 </style></head><body>
-<header class="site">
-<div class="icons"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2L5 8zM9 8V6a3 3 0 0 1 6 0v2"/></svg></div>
-<a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
-<nav class="mainnav"><a href="index.html">HOME</a>
-<a href="shop.html">SHOP</a>
-<a href="product.html" class="active">PRODUCT</a>
-<a href="about.html">ABOUT</a>
-<a href="blog.html">BLOG</a>
-<a href="faq.html">FAQ</a>
-<a href="contact.html">CONTACT</a></nav>
+<header class="site splithead" style="display:flex;align-items:center;justify-content:space-between;text-align:left;padding-top:14px">
+<nav class="mainnav" style="padding:0"><a href="index.html">HOME</a><a href="shop.html">SHOP</a><a href="product.html" class=active>PRODUCT</a></nav>
+<a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo" style="margin:0"></a>
+<nav class="mainnav" style="padding:0"><a href="about.html">ABOUT</a><a href="blog.html">BLOG</a><a href="faq.html">FAQ</a><a href="contact.html">CONTACT</a></nav>
+<div class="icons" style="position:static"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2L5 8zM9 8V6a3 3 0 0 1 6 0v2"/></svg></div>
 <button class="burger" aria-label="Menu">&#9776;</button></header>
 
 <div class="wrap"><div class="prod">
@@ -140,11 +174,7 @@ details p{padding:0 0 18px;line-height:1.65;color:#cbbd93}
 <ul class="ben2"><li>100% Natural</li><li>Rainforest Herbs</li><li>Royal Jelly</li><li>Box of 24 sachets (10g each)</li><li>Panax Ginseng</li></ul>
 <div class="price-row"><span class="price-big">PRICE ON REQUEST</span><a class="btn-goldb" href="contact.html">ADD TO CART</a></div>
 </div></div></div>
-<footer class="site"><div class="fnav">
-<div class="grp"><a href="index.html">HOME</a><a href="shop.html">SHOP</a><a href="product.html">PRODUCT</a><a href="about.html">ABOUT</a></div>
-<a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
-<div class="grp"><a href="blog.html">BLOG</a><a href="faq.html">FAQ</a><a href="contact.html">CONTACT</a></div></div>
-<div class="copy">&copy; BLACK HORSE. ALL RIGHTS RESERVED.</div></footer>
+<footer class="site"><div class="foot-centre"><a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a><div class="copy">&copy; BLACK HORSE. ALL RIGHTS RESERVED.</div></div></footer>
 
 <script>
 document.addEventListener('DOMContentLoaded',function(){
@@ -155,10 +185,18 @@ document.addEventListener('DOMContentLoaded',function(){
  var q=document.querySelector('.qty');
  if(q){var inp=q.querySelector('input'),btns=q.querySelectorAll('button');if(inp&&btns.length==2){btns[0].addEventListener('click',function(){var v=parseInt(inp.value||'1',10);if(v>1)inp.value=v-1;});btns[1].addEventListener('click',function(){var v=parseInt(inp.value||'1',10);inp.value=v+1;});}}
  var filt=document.querySelector('.filters');
- if(filt){var cards=[].slice.call(document.querySelectorAll('.pcard'));var boxes=[].slice.call(filt.querySelectorAll('input[type=checkbox]'));
-  function apply(){var pack=[];boxes.forEach(function(x){if(x.checked&&x.getAttribute('data-f')==='pack')pack.push(x.value);});
-   cards.forEach(function(c){var show=true;if(pack.length&&pack.indexOf(c.getAttribute('data-pack'))===-1)show=false;c.style.display=show?'':'none';});}
+ if(filt){var cards=[].slice.call(document.querySelectorAll('.pcard,.hcard'));var boxes=[].slice.call(filt.querySelectorAll('input[type=checkbox]'));
+  function apply(){var groups={};boxes.forEach(function(x){var f=x.getAttribute('data-f');if(x.checked&&f){(groups[f]=groups[f]||[]).push(x.value);}});
+   cards.forEach(function(c){var show=true;Object.keys(groups).forEach(function(f){var vals=(c.getAttribute('data-'+f)||'').split(' ');if(!groups[f].some(function(v){return vals.indexOf(v)>-1;}))show=false;});c.style.display=show?'':'none';});}
   boxes.forEach(function(x){x.addEventListener('change',apply);});}
+ document.querySelectorAll('form.demo-form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var n=f.querySelector('.sub-note');if(n)n.style.display='block';f.reset();});});
+ var pills=[].slice.call(document.querySelectorAll('.pill'));
+ if(pills.length){var bcards=[].slice.call(document.querySelectorAll('[data-bcat]'));pills.forEach(function(p){p.addEventListener('click',function(){pills.forEach(function(x){x.classList.remove('on');});p.classList.add('on');var v=p.getAttribute('data-pill');bcards.forEach(function(c){c.style.display=(v==='all'||c.getAttribute('data-bcat')===v)?'':'none';});});});}
+ var fs=document.getElementById('faq-search'),fitems=[].slice.call(document.querySelectorAll('.faq-item'));
+ function faqApply(){var q=fs?fs.value.toLowerCase():'';var on=document.querySelector('.cat-rail a.on');var cv=on?on.getAttribute('data-fcat'):'all';fitems.forEach(function(it){var ok=(cv==='all'||it.getAttribute('data-fcat')===cv)&&(!q||it.textContent.toLowerCase().indexOf(q)>-1);it.style.display=ok?'':'none';});}
+ if(fs)fs.addEventListener('input',faqApply);
+ var gb=document.getElementById('faq-go');if(gb)gb.addEventListener('click',faqApply);
+ [].slice.call(document.querySelectorAll('.cat-rail a')).forEach(function(a){a.addEventListener('click',function(){[].slice.call(document.querySelectorAll('.cat-rail a')).forEach(function(x){x.classList.remove('on');});a.classList.add('on');faqApply();});});
  var sel=document.getElementById('sortsel');
  if(sel){sel.addEventListener('change',function(){var grid=sel.closest('.shop-grid,.wrap').querySelector('.pgrid4,.pgrid');if(!grid)return;var cs=[].slice.call(grid.children);if(sel.value==='az')cs.sort(function(a,b){return a.querySelector('h3').textContent.localeCompare(b.querySelector('h3').textContent);});if(sel.value==='za')cs.sort(function(a,b){return b.querySelector('h3').textContent.localeCompare(a.querySelector('h3').textContent);});cs.forEach(function(c){grid.appendChild(c);});});}
 });

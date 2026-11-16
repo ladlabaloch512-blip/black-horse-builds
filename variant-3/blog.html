@@ -104,6 +104,18 @@ details p{padding:0 0 18px;line-height:1.65;color:#cbbd93}
 .ph-box{border:1.5px dashed #c79a24;padding:22px;background:#141414}
 .ph-box p{padding:6px 0;font-size:16px}
 .ph-note{color:#c79a24;font-size:13.5px}
+.stats3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center;padding:30px 0 34px;border-top:1.5px solid #8a6d1d;border-bottom:1.5px solid #8a6d1d;margin:36px 0 6px}
+.stats3 .n{font-family:'Playfair Display',serif;font-size:42px;color:#c79a24}
+.stats3 .l{letter-spacing:.14em;font-size:14px;color:#cbbd93;margin-top:5px}
+.showcase{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center;padding:46px 0 10px}
+.showcase h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,38px);font-weight:600;margin-bottom:14px}
+.showcase p{line-height:1.7;color:#cbbd93;margin-bottom:14px;font-size:17px}
+.closeband{text-align:center;background:#141414;padding:52px 24px 56px;margin:46px 0 60px}
+.closeband h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3.6vw,42px);font-weight:600}
+.article-col{max-width:800px;margin:0 auto;padding:6px 0 10px}
+.article-col p{font-size:18px;line-height:1.75;color:#cbbd93;margin-bottom:18px}
+.article-col h2{font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:#f3ead2;margin:26px 0 12px}
+@media(max-width:900px){.showcase{grid-template-columns:1fr}.stats3{grid-template-columns:1fr}}
 @media(max-width:1000px){.pgrid4{grid-template-columns:1fr 1fr}}
 @media(max-width:900px){
  .hero,.home-cols,.prod,.split,.contact-grid{grid-template-columns:1fr}
@@ -116,6 +128,33 @@ details p{padding:0 0 18px;line-height:1.65;color:#cbbd93}
  .hero-txt{padding:40px 24px}
 }
 @media(max-width:900px){.splithead{flex-wrap:wrap;justify-content:center !important;gap:8px}.splithead .icons{display:none}.sortrow{flex-wrap:wrap;justify-content:flex-start}}
+body.cream-page{background:#f6f0e2}
+body.cream-page header.site{background:#f6f0e2}
+body.cream-page footer.site{background:#f6f0e2}
+.foot-line{display:flex;justify-content:space-between;align-items:center;gap:16px;max-width:1100px;margin:0 auto;flex-wrap:wrap;font-size:14.5px;color:#cbbd93}
+.foot-line .grp{display:flex;gap:22px;flex-wrap:wrap}
+.foot-centre{text-align:center}
+.foot-centre .logo img{height:44px}
+.priv-line{letter-spacing:.14em;font-size:13.5px;color:#cbbd93;margin-top:8px}
+.bsocials{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;flex-wrap:wrap;gap:10px}
+.foot-bottom .bsocials{margin-top:0}
+.bsocials span{width:34px;height:34px;border-radius:50%;background:linear-gradient(180deg,#e9c766,#c79a24);display:flex;align-items:center;justify-content:center}
+.bsocials svg{width:17px;height:17px;fill:#111}
+.bcat{color:#c79a24;font-size:13px;letter-spacing:.14em;margin-bottom:7px;text-transform:uppercase}
+.framed-img{border:1.5px solid #8a6d1d;padding:12px;background:#171512}
+.essence{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:6px 0 60px;text-align:left}
+.essence .eic{width:54px;height:54px}
+.essence svg{width:54px;height:54px;stroke:#c79a24;fill:none;stroke-width:1.4}
+.essence h3{letter-spacing:.1em;font-size:18px;margin:12px 0 7px}
+.essence p{color:#cbbd93;line-height:1.6;font-size:16px}
+.eyebrow2{color:#c79a24;letter-spacing:.24em;font-size:14.5px;font-weight:600}
+.touch{font-family:'Playfair Display',serif;font-size:clamp(32px,3.6vw,44px);font-weight:600;margin:10px 0 26px}
+.supp{letter-spacing:.12em;font-size:17px;margin:24px 0 8px}
+.contact-grid p.cp{color:#cbbd93;line-height:1.7;font-size:16.5px;max-width:440px}
+.uform input.ul{border:0;border-bottom:1.5px solid #8a6d1d;border-radius:0;background:transparent;padding:10px 2px}
+.send-full{width:100%;border-radius:4px;padding:15px}
+@media(max-width:900px){.essence{grid-template-columns:1fr}}
 @media(max-width:560px){.blog-grid,.pgrid2,.range2,.ben-grid{grid-template-columns:1fr}.pgrid4{grid-template-columns:1fr !important}.fnav{justify-content:center}}
 </style></head><body>
 <header class="site">
@@ -129,12 +168,12 @@ details p{padding:0 0 18px;line-height:1.65;color:#cbbd93}
 <a href="faq.html">FAQ</a>
 <a href="contact.html">CONTACT</a></nav>
 <button class="burger" aria-label="Menu">&#9776;</button></header>
-<div class="wrap"><div class="page-head"><h1>THE VITALITY JOURNAL</h1><div class="crumb2"><b>Home</b> / Blog</div></div><p class="plead" style="text-align:center;color:#c79a24;font-size:19px;margin-top:2px">Stories of Natural Wellness and Rainforest Herbs.</p><div class="catrow"><b>ALL</b> &nbsp;/&nbsp; THE BLEND &nbsp;/&nbsp; HERBS &amp; GINSENG &nbsp;/&nbsp; WELLNESS &nbsp;/&nbsp; LIFESTYLE</div><div class="blog-grid"><div class="bcard"><img src="../assets/comb-web.jpg" alt="About Royal Jelly"><div class="bt"><h3>About Royal Jelly</h3><p>Royal Jelly is one of the key ingredients named on the box. This article explains what it is and its place in the Black Horse blend.</p><a href="blog.html">Read more &gt;</a></div></div><div class="bcard"><img src="../assets/boxes-web.jpg" alt="Inside the Blend: Panax Ginseng"><div class="bt"><h3>Inside the Blend: Panax Ginseng</h3><p>Panax Ginseng has a long history in traditional blends. A simple look at its place in Black Horse Vital Honey.</p><a href="blog.html">Read more &gt;</a></div></div><div class="bcard"><img src="../assets/sachet-web.jpg" alt="What 100% Natural Means"><div class="bt"><h3>What 100% Natural Means</h3><p>Black Horse Vital Honey is 100% natural. Here is what that means for the blend in every sachet.</p><a href="blog.html">Read more &gt;</a></div></div></div></div>
+<div class="wrap"><div class="page-head"><h1>THE VITALITY JOURNAL</h1><div class="crumb2"><b>Home</b> / Blog</div></div><p class="plead" style="text-align:center;color:#c79a24;font-size:19px;margin-top:2px">Royal Jelly, Panax Ginseng and Rainforest Herbs, explained simply.</p><div class="catrow"><b>ALL</b> &nbsp;/&nbsp; THE BLEND &nbsp;/&nbsp; HERBS &amp; GINSENG &nbsp;/&nbsp; WELLNESS &nbsp;/&nbsp; LIFESTYLE</div><div class="blog-grid"><div class="bcard"><a href="article.html"><img src="../assets/comb-web.jpg" alt="About Royal Jelly"></a><div class="bt"><div class="bcat">ROYAL JELLY</div><h3><a href="article.html">About Royal Jelly</a></h3><p>Royal Jelly is one of the key ingredients named on the box. This article explains what it is and its place in the Black Horse blend.</p><a href="article.html">Read more &gt;</a></div></div><div class="bcard"><a href="article.html"><img src="../assets/boxes-web.jpg" alt="Inside the Blend: Panax Ginseng"></a><div class="bt"><div class="bcat">PANAX GINSENG</div><h3><a href="article.html">Inside the Blend: Panax Ginseng</a></h3><p>Panax Ginseng is one of the ingredients named on the box. A simple look at its place in Black Horse Vital Honey.</p><a href="article.html">Read more &gt;</a></div></div><div class="bcard"><a href="article.html"><img src="../assets/sachet-web.jpg" alt="What 100% Natural Means"></a><div class="bt"><div class="bcat">100% NATURAL</div><h3><a href="article.html">What 100% Natural Means</a></h3><p>Black Horse Vital Honey is 100% natural. Here is what that means for the blend in every sachet.</p><a href="article.html">Read more &gt;</a></div></div></div></div>
 <footer class="site"><div class="fnav">
 <div class="grp"><a href="index.html">HOME</a><a href="shop.html">SHOP</a><a href="product.html">PRODUCT</a><a href="about.html">ABOUT</a></div>
 <a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
 <div class="grp"><a href="blog.html">BLOG</a><a href="faq.html">FAQ</a><a href="contact.html">CONTACT</a></div></div>
-<div class="copy">&copy; BLACK HORSE. ALL RIGHTS RESERVED.</div></footer>
+<div class="foot-bottom"><span class="copy">&copy; BLACK HORSE. ALL RIGHTS RESERVED.</span><div class="bsocials"><span aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.4V4.9c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.6v7h2.9z"/></svg></span><span aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.9"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r=".9" fill="#111" stroke="none"/></svg></span><span aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M15 4v10.8a3.6 3.6 0 1 1-3.6-3.6c.35 0 .7.05 1 .14V8.2A6.6 6.6 0 1 0 18.6 14.8V8.6A7.4 7.4 0 0 0 21.5 10V6.6A5.9 5.9 0 0 1 18.4 4H15z"/></svg></span></div></div></footer>
 
 <script>
 document.addEventListener('DOMContentLoaded',function(){
@@ -145,10 +184,18 @@ document.addEventListener('DOMContentLoaded',function(){
  var q=document.querySelector('.qty');
  if(q){var inp=q.querySelector('input'),btns=q.querySelectorAll('button');if(inp&&btns.length==2){btns[0].addEventListener('click',function(){var v=parseInt(inp.value||'1',10);if(v>1)inp.value=v-1;});btns[1].addEventListener('click',function(){var v=parseInt(inp.value||'1',10);inp.value=v+1;});}}
  var filt=document.querySelector('.filters');
- if(filt){var cards=[].slice.call(document.querySelectorAll('.pcard'));var boxes=[].slice.call(filt.querySelectorAll('input[type=checkbox]'));
-  function apply(){var pack=[];boxes.forEach(function(x){if(x.checked&&x.getAttribute('data-f')==='pack')pack.push(x.value);});
-   cards.forEach(function(c){var show=true;if(pack.length&&pack.indexOf(c.getAttribute('data-pack'))===-1)show=false;c.style.display=show?'':'none';});}
+ if(filt){var cards=[].slice.call(document.querySelectorAll('.pcard,.hcard'));var boxes=[].slice.call(filt.querySelectorAll('input[type=checkbox]'));
+  function apply(){var groups={};boxes.forEach(function(x){var f=x.getAttribute('data-f');if(x.checked&&f){(groups[f]=groups[f]||[]).push(x.value);}});
+   cards.forEach(function(c){var show=true;Object.keys(groups).forEach(function(f){var vals=(c.getAttribute('data-'+f)||'').split(' ');if(!groups[f].some(function(v){return vals.indexOf(v)>-1;}))show=false;});c.style.display=show?'':'none';});}
   boxes.forEach(function(x){x.addEventListener('change',apply);});}
+ document.querySelectorAll('form.demo-form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var n=f.querySelector('.sub-note');if(n)n.style.display='block';f.reset();});});
+ var pills=[].slice.call(document.querySelectorAll('.pill'));
+ if(pills.length){var bcards=[].slice.call(document.querySelectorAll('[data-bcat]'));pills.forEach(function(p){p.addEventListener('click',function(){pills.forEach(function(x){x.classList.remove('on');});p.classList.add('on');var v=p.getAttribute('data-pill');bcards.forEach(function(c){c.style.display=(v==='all'||c.getAttribute('data-bcat')===v)?'':'none';});});});}
+ var fs=document.getElementById('faq-search'),fitems=[].slice.call(document.querySelectorAll('.faq-item'));
+ function faqApply(){var q=fs?fs.value.toLowerCase():'';var on=document.querySelector('.cat-rail a.on');var cv=on?on.getAttribute('data-fcat'):'all';fitems.forEach(function(it){var ok=(cv==='all'||it.getAttribute('data-fcat')===cv)&&(!q||it.textContent.toLowerCase().indexOf(q)>-1);it.style.display=ok?'':'none';});}
+ if(fs)fs.addEventListener('input',faqApply);
+ var gb=document.getElementById('faq-go');if(gb)gb.addEventListener('click',faqApply);
+ [].slice.call(document.querySelectorAll('.cat-rail a')).forEach(function(a){a.addEventListener('click',function(){[].slice.call(document.querySelectorAll('.cat-rail a')).forEach(function(x){x.classList.remove('on');});a.classList.add('on');faqApply();});});
  var sel=document.getElementById('sortsel');
  if(sel){sel.addEventListener('change',function(){var grid=sel.closest('.shop-grid,.wrap').querySelector('.pgrid4,.pgrid');if(!grid)return;var cs=[].slice.call(grid.children);if(sel.value==='az')cs.sort(function(a,b){return a.querySelector('h3').textContent.localeCompare(b.querySelector('h3').textContent);});if(sel.value==='za')cs.sort(function(a,b){return b.querySelector('h3').textContent.localeCompare(a.querySelector('h3').textContent);});cs.forEach(function(c){grid.appendChild(c);});});}
 });
