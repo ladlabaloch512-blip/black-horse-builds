@@ -167,7 +167,8 @@ body.page-flex footer.site{margin-top:auto}
 @media(max-width:900px){
 .mainnav{position:fixed!important;top:0!important;left:0!important;right:auto!important;height:100dvh;width:min(320px,84vw);background:#101010;border-right:1px solid #c79a24;flex-direction:column!important;align-items:flex-start!important;justify-content:flex-start!important;padding:26px!important;gap:15px!important;transform:translateX(-106%);transition:transform .24s ease-in;z-index:300;display:flex!important;overflow-y:auto;flex-wrap:nowrap!important}
 .mainnav.open{transform:translateX(0);transition:transform .28s ease-out}
-.mainnav a{font-size:18px}
+.mainnav a{font-size:18px;color:#f2ead2!important;opacity:1!important}
+.mainnav a.active{color:#c79a24!important}
 .nav-close{display:block;align-self:flex-end;background:none;border:0;font-size:25px;line-height:1;color:#e9c766;cursor:pointer;padding:2px 4px}
 .nav-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);opacity:0;pointer-events:none;transition:opacity .3s ease;z-index:290}
 body.nav-open .nav-overlay{opacity:1;pointer-events:auto}
@@ -200,17 +201,6 @@ body.nav-open{overflow:hidden}
 header.site{position:relative}
 button.btn-gold,button.btn-line,button.btn-black,button.btn-goldb,button.btn-hex,button.btn-outline{font:inherit;cursor:pointer}
 .slot-photo{border:1.5px dashed #c79a24;display:flex;align-items:center;justify-content:center;min-height:230px;color:#c79a24;letter-spacing:.14em;font-size:14px;line-height:1.7;text-align:center;padding:20px}
-.qv-overlay{position:fixed;inset:0;background:rgba(0,0,0,.64);display:none;align-items:center;justify-content:center;z-index:400;padding:16px}
-.qv-overlay.open{display:flex}
-.qv-panel{background:#161511;color:#f2ead2;max-width:520px;width:100%;max-height:88dvh;overflow:auto;padding:26px;position:relative;border:1.5px solid #c79a24;border-radius:0}
-.qv-panel img{width:100%;display:block}
-.qv-panel .slot-photo{min-height:190px}
-.qv-close{position:absolute;top:6px;right:12px;background:none;border:0;font-size:27px;line-height:1;color:#c79a24;cursor:pointer;z-index:2}
-.qv-panel h3{margin:16px 0 6px}
-.qv-panel p{line-height:1.55}
-.qv-price{color:#c79a24;font-weight:700;letter-spacing:.06em;margin:10px 0 14px}
-.qv-row{display:flex;gap:12px;align-items:stretch;flex-wrap:wrap}
-.qv-add{background:linear-gradient(180deg,#e9c766,#c79a24);color:#111;border:0;padding:12px 22px;font-weight:700;letter-spacing:.08em;cursor:pointer}
 .cart-row{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid #4a4230}
 .cart-row img{width:84px;height:84px;object-fit:cover;flex:none}
 .cart-row .slot-photo{min-height:84px;width:84px;flex:none;padding:6px;font-size:9.5px}
@@ -233,7 +223,7 @@ button.btn-gold,button.btn-line,button.btn-black,button.btn-goldb,button.btn-hex
 .qty{display:inline-flex;align-items:center;gap:2px}
 .qty button{width:32px;height:34px;background:none;border:1.5px solid #c79a24;color:inherit;font-size:17px;cursor:pointer;line-height:1}
 .qty input{width:44px;height:34px;text-align:center;background:transparent;border:0;color:inherit;font:inherit}
-@media(max-width:560px){.cart-row{flex-wrap:wrap}.qv-panel{padding:20px}}
+@media(max-width:560px){.cart-row{flex-wrap:wrap}}
 </style>
 
 </head><body>
@@ -299,7 +289,7 @@ if(nav&&burger){
   burger.addEventListener('click',function(){setTimeout(sync,0);});
   cb.addEventListener('click',shut);
   ov.addEventListener('click',shut);
-  nav.addEventListener('click',function(e){var a=e.target.closest?e.target.closest('a'):null;if(a)shut();});
+  nav.addEventListener('click',function(e){var a=e.target.closest?e.target.closest('a'):null;if(!a)return;var href=a.getAttribute('href');var wasOpen=nav.classList.contains('open');shut();if(href&&href.indexOf('http')!==0&&/\.html($|[?#])/.test(href)&&(wasOpen||window.innerWidth<=900)){e.preventDefault();window.location.href=href;}});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')shut();});
   if(navs.length>1){
     var second=navs[1],moved=null,mq=window.matchMedia('(max-width:900px)');
@@ -381,23 +371,6 @@ if(!Object.keys(cart).length){try{var m=document.cookie.match(/(?:^|; )bh-cart=(
 function save(){try{localStorage.setItem('bh-cart',JSON.stringify(cart));}catch(e){try{document.cookie='bh-cart='+encodeURIComponent(JSON.stringify(cart))+';path=/;max-age=86400;SameSite=Lax';}catch(e2){}}}
 function count(){var c=0;for(var k in cart)if(PROD[k])c+=cart[k];return c;}
 function paint(){var c=count();[].slice.call(document.querySelectorAll('[data-cart-count]')).forEach(function(b){b.textContent=c;var l=b.closest('.cart-link,.cart-nav-link');if(l)l.classList.toggle('has',c>0);});}
-var qv=null,qvImg=null,qvSlot=null,qvName=null,qvDesc=null,qvFacts=null,qvInput=null,qvAdd=null;
-function buildQV(){
-  qv=document.createElement('div');qv.className='qv-overlay';
-  qv.innerHTML='<div class="qv-panel"><button type="button" class="qv-close" aria-label="Close quick view">&#10005;</button><img alt="Black Horse Vital Honey box of 24 sachets"><div class="slot-photo" style="display:none">PRODUCT PHOTO<br>TO COME</div><h3></h3><p class="qv-desc"></p><p class="qv-facts"></p><div class="qv-price">Price on request</div><div class="qv-row"><div class="qty"><button type="button" class="qv-minus" aria-label="Minus">-</button><input value="1" aria-label="Quantity"><button type="button" class="qv-plus" aria-label="Plus">+</button></div><button type="button" class="btn-gold qv-add">ADD TO CART</button></div></div>';
-  document.body.appendChild(qv);
-  qvImg=qv.querySelector('img');qvSlot=qv.querySelector('.slot-photo');qvName=qv.querySelector('h3');qvDesc=qv.querySelector('.qv-desc');qvFacts=qv.querySelector('.qv-facts');qvInput=qv.querySelector('.qty input');qvAdd=qv.querySelector('.qv-add');
-  qv.addEventListener('click',function(e){if(e.target===qv)closeQV();});
-  qv.querySelector('.qv-close').addEventListener('click',closeQV);
-  qv.querySelector('.qv-minus').addEventListener('click',function(){var v=parseInt(qvInput.value,10)||1;qvInput.value=Math.max(1,v-1);});
-  qv.querySelector('.qv-plus').addEventListener('click',function(){var v=parseInt(qvInput.value,10)||1;qvInput.value=v+1;});
-  qvAdd.addEventListener('click',function(){var id=qvAdd.getAttribute('data-add');var v=parseInt(qvInput.value,10)||1;add(id,v,qvAdd);closeQV();});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeQV();});
-}
-function openQV(id){var p=PROD[id];if(!p)return;if(!qv)buildQV();
-  if(p.img){qvImg.src=p.img;qvImg.style.display='';qvSlot.style.display='none';}else{qvImg.style.display='none';qvSlot.style.display='flex';}
-  qvName.textContent=p.name;qvDesc.textContent=p.desc;qvFacts.textContent=p.facts;qvInput.value='1';qvAdd.setAttribute('data-add',id);qv.classList.add('open');}
-function closeQV(){if(qv)qv.classList.remove('open');}
 function qtyNear(el){var s=el.closest('.qtyrow,.prod,.dp-grid,.hcard,.rcard,.pcard,.panel,.showcase,.dark-panel,.split,.boxline,.closeband');var i=s?s.querySelector('.qty input'):null;var v=i?parseInt(i.value,10):1;return(isNaN(v)||v<1)?1:v;}
 function add(id,q,btn){if(!PROD[id])return;cart[id]=(cart[id]||0)+q;save();paint();renderCart();
   if(btn){var t=btn.textContent;btn.textContent='ADDED';setTimeout(function(){btn.textContent=t;},1100);}}
@@ -419,8 +392,7 @@ function renderCart(){
 }
 document.addEventListener('click',function(e){
   var t=e.target.closest?e.target:null;if(!t)return;
-  var addB=t.closest('[data-add]');if(addB&&!addB.classList.contains('qv-add')){add(addB.getAttribute('data-add'),qtyNear(addB),addB);return;}
-  var qvB=t.closest('[data-qv]');if(qvB){openQV(qvB.getAttribute('data-qv'));return;}
+  var addB=t.closest('[data-add]');if(addB){add(addB.getAttribute('data-add'),qtyNear(addB),addB);return;}
   var inc=t.closest('[data-inc]');if(inc){cart[inc.getAttribute('data-inc')]++;save();paint();renderCart();return;}
   var dec=t.closest('[data-dec]');if(dec){var k=dec.getAttribute('data-dec');cart[k]--;if(cart[k]<=0)delete cart[k];save();paint();renderCart();return;}
   var rem=t.closest('[data-remove]');if(rem){delete cart[rem.getAttribute('data-remove')];save();paint();renderCart();return;}
