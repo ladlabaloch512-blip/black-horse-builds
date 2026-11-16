@@ -3,6 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="From the Blog: notes on the blend and its ingredients, Royal Jelly, Panax Ginseng and Rainforest Herbs.">
 <title>Black Horse Vital Honey - Blog</title>
+<link rel="icon" type="image/png" href="../assets/favicon-a.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Jost:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -210,6 +211,9 @@ body.nav-open{overflow:hidden}
 }
 .qa-card h3::after{transition:transform .3s cubic-bezier(0.65,0,0.35,1)}
 .qa-card.acc-open h3::after{transform:rotate(180deg)}
+
+/*zfix*/
+@media(max-width:900px){.mainnav{z-index:300!important}}
 </style>
 
 <style data-rsnow3>
@@ -254,11 +258,17 @@ button.btn-gold,button.btn-line,button.btn-black,button.btn-goldb,button.btn-hex
 .qty button{width:32px;height:34px;background:none;border:1.5px solid #c79a24;color:inherit;font-size:17px;cursor:pointer;line-height:1}
 .qty input{width:44px;height:34px;text-align:center;background:transparent;border:0;color:inherit;font:inherit}
 @media(max-width:560px){.cart-row{flex-wrap:wrap}}
+
+/*hcart*/
+.cart-link{gap:8px;padding:9px 14px;border:1.5px solid #e9c766;border-radius:3px}
+.cart-link::after{content:"CART";font-size:13px;font-weight:700;letter-spacing:.1em;color:#e9c766}
+.cart-link svg{stroke:#e9c766}
+@media(max-width:900px){.hbar .hright{margin-left:auto}.hbar>.cart-link{margin-left:auto}}
 </style>
 
 </head><body class="hexbg">
 <header class="site"><div class="hbar">
-<a class="brand" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"><span>VITAL HONEY</span></a>
+<a class="brand" href="index.html"><img src="../assets/logo-a-keyed.webp" alt="Black Horse logo"><span>VITAL HONEY</span></a>
 <nav class="mainnav"><a href="index.html">Home</a>
 <a href="product.html">Product</a>
 <a href="about.html">About</a>
@@ -270,7 +280,7 @@ button.btn-gold,button.btn-line,button.btn-black,button.btn-goldb,button.btn-hex
 </div></header>
 <div class="wrap" style="position:relative"><span class="cornerhex" style="top:6px;left:2px"></span><span class="cornerhex" style="top:6px;right:2px"></span><div class="page-head"><div class="orn-title"><span class="oline"></span><span class="ohx"></span><h1>FROM THE BLOG</h1><span class="ohx"></span><span class="oline"></span></div><div class="sub">NOTES ON THE BLEND AND ITS INGREDIENTS</div></div><div class="blog-grid"><div class="bcard"><a href="article.html"><img src="../assets/comb-web.jpg" alt="About Royal Jelly"></a><div class="bt"><div class="meta-c">ROYAL JELLY</div><h3><a href="article.html">About Royal Jelly</a></h3><p>Royal Jelly is one of the key ingredients named on the box. This article explains what it is and its place in the Black Horse blend.</p><a href="article.html">Read more &gt;</a></div></div><div class="bcard"><a href="article.html"><img src="../assets/boxes-web.jpg" alt="Inside the Blend: Panax Ginseng"></a><div class="bt"><div class="meta-c">PANAX GINSENG</div><h3><a href="article.html">Inside the Blend: Panax Ginseng</a></h3><p>Panax Ginseng is one of the ingredients named on the box. A simple look at its place in Black Horse Vital Honey.</p><a href="article.html">Read more &gt;</a></div></div><div class="bcard"><a href="article.html"><img src="../assets/sachet-web.jpg" alt="What 100% Natural Means"></a><div class="bt"><div class="meta-c">100% NATURAL</div><h3><a href="article.html">What 100% Natural Means</a></h3><p>Black Horse Vital Honey is 100% natural. Here is what that means for the blend in every sachet.</p><a href="article.html">Read more &gt;</a></div></div></div></div>
 <footer class="site"><div class="fgrid">
-<a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
+<a class="logo" href="index.html"><img src="../assets/logo-a-keyed.webp" alt="Black Horse logo"></a>
 <div><h4>Quick Links</h4><a href="index.html">Home</a><a href="product.html">Product</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
 <div><h4>Newsletter</h4><form class="demo-form sub-form-c"><input type="email" required placeholder="Your email address" aria-label="Email address"><button type="submit">SUBSCRIBE</button><p class="sub-note sub-note-c">Thank you. This demo form is not connected to an inbox yet, so nothing was sent.</p></form><div class="csocials"><span aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.4V4.9c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.6v7h2.9z"/></svg></span><span aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l6.1 8.2L4.4 20h2.3l4.4-5.5 3.4 5.5H20l-6.4-8.6L19.5 4h-2.3l-4 5L9.7 4H4z"/></svg></span><span aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.9"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r=".9" fill="#111" stroke="none"/></svg></span><span aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M21 8.2c-.2-1.4-1-2.2-2.4-2.4C16.6 5.5 12 5.5 12 5.5s-4.6 0-6.6.3C4 6 3.2 6.8 3 8.2 2.7 10.2 2.7 13.8 3 15.8c.2 1.4 1 2.2 2.4 2.4 2 .3 6.6.3 6.6.3s4.6 0 6.6-.3c1.4-.2 2.2-1 2.4-2.4.3-2 .3-5.6 0-7.6z"/><path d="M10 9.7v4.6L14.3 12z" fill="#f0d47a"/></svg></span></div></div>
 <div class="small">&copy; Black Horse Vital Honey. All rights reserved.<br>The natural honey blend, made with Royal Jelly, Panax Ginseng and Rainforest Herbs. 100% natural.</div>
