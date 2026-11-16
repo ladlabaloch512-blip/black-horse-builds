@@ -286,6 +286,20 @@ button.btn-gold,button.btn-line,button.btn-black,button.btn-goldb,button.btn-hex
 @media(max-width:560px){.cart-row{flex-wrap:wrap}.qv-panel{padding:20px}}
 </style>
 
+<style data-gal>
+.gal-stage{position:relative;overflow:hidden;aspect-ratio:1/1;touch-action:pan-y;border:1px solid #e0d2a4}
+.gal-track{display:flex;height:100%;transition:transform .45s ease}
+.gal-track img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;display:block}
+.gal-arrow{position:absolute;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;border:1px solid #b98a1e;background:rgba(10,8,4,.5);color:#b98a1e;font-size:22px;line-height:1;cursor:pointer;z-index:3;padding:0}
+.gal-arrow.prev{left:10px}.gal-arrow.next{right:10px}
+.gal-thumbs{display:flex;gap:8px;margin-top:10px}
+.gal-thumbs button{flex:1;padding:0;background:none;border:1px solid #e0d2a4;cursor:pointer;overflow:hidden}
+.gal-thumbs button.on{outline:2px solid #b98a1e;outline-offset:-2px}
+.gal-thumbs img{width:100%;height:56px;object-fit:cover;display:block}
+.hexframe .gal-stage{border:none}
+.hexframe .gal-track img{clip-path:none;min-height:0}
+</style>
+
 </head><body class="white-bg">
 <div class="topbar">100% Natural &bull; With Royal Jelly, Panax Ginseng &amp; Rainforest Herbs</div>
 <header class="site"><div class="hbar">
@@ -300,9 +314,8 @@ button.btn-gold,button.btn-line,button.btn-black,button.btn-goldb,button.btn-hex
 <button class="burger" aria-label="Menu">&#9776;</button>
 </div></header>
 
-<div class="wrap"><div class="crumb">Home / Product / Natural Honey / <b>Black Horse Vital Honey</b></div>
-<div class="prod"><div><img class="main-img" src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey box">
-<div class="thumbs"><img src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey box of 24 sachets"><img src="../assets/sachet-web.jpg" alt="Black Horse Vital Honey single sachets"><img src="../assets/comb-web.jpg" alt="Natural honeycomb"></div></div>
+<div class="wrap"><div class="crumb">Home / Product / <b>Black Horse Vital Honey</b></div>
+<div class="prod"><div><div class="gal" data-gal><div class="gal-stage"><div class="gal-track"><img src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey boxes and sachets"><img src="../assets/gal-poster.jpg" alt="Black Horse Vital Honey box, poster photograph"><img src="../assets/gal-box.jpg" alt="Black Horse Vital Honey box, close up"><img src="../assets/sachet-web.jpg" alt="Black Horse Vital Honey sachets, close up"></div><button type="button" class="gal-arrow prev" aria-label="Previous photo">&#8249;</button><button type="button" class="gal-arrow next" aria-label="Next photo">&#8250;</button></div><div class="gal-thumbs"><button type="button" class="on" aria-label="Photo 1"><img src="../assets/boxes-web.jpg" alt=""></button><button type="button" class="" aria-label="Photo 2"><img src="../assets/gal-poster.jpg" alt=""></button><button type="button" class="" aria-label="Photo 3"><img src="../assets/gal-box.jpg" alt=""></button><button type="button" class="" aria-label="Photo 4"><img src="../assets/sachet-web.jpg" alt=""></button></div></div></div>
 <div><span class="badge">THE SIGNATURE BLEND</span>
 <h1>BLACK HORSE <span class="gold">VITAL HONEY</span></h1>
 <div class="size">10 GRAMS x 24 SACHETS</div>
@@ -319,17 +332,7 @@ button.btn-gold,button.btn-line,button.btn-black,button.btn-goldb,button.btn-hex
 <button type="button" class="btn-gold" data-add="box24" style="flex:1;text-align:center">ADD TO CART</button></div>
 <button type="button" class="btn-black" data-qv="box24" style="display:block;margin-top:14px;width:100%">QUICK VIEW</button>
 </div></div>
-<div class="prod" style="margin-top:56px"><div><div class="slot-photo" style="min-height:340px">PRODUCT PHOTO<br>TO COME</div></div>
-<div><span class="badge">SECOND PRODUCT</span>
-<h2 style="font-size:clamp(26px,3vw,36px);margin-top:10px">[Second product - name to be confirmed]</h2>
-<div class="size">[Pack size to be confirmed]</div>
-<h3 style="margin-top:20px;letter-spacing:.06em">ON THE BOX</h3>
-<p style="margin-top:8px;font-size:17px">[Product facts to be confirmed]</p>
-<div class="price-req" style="color:#b98a1e">Price on Request</div>
-<div class="qtyrow"><div class="qty"><button type="button" aria-label="Minus">-</button><input value="1" aria-label="Quantity"><button type="button" aria-label="Plus">+</button></div>
-<button type="button" class="btn-gold" data-add="slot2" style="flex:1;text-align:center">ADD TO CART</button></div>
-<button type="button" class="btn-black" data-qv="slot2" style="display:block;margin-top:14px;width:100%">QUICK VIEW</button>
-</div></div></div>
+</div></div>
 <footer class="site"><div class="badge-strip"><span>100% NATURAL</span><span>24 SACHETS</span><span>10 GRAMS EACH</span></div>
 <div class="fgrid"><div><a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
 <p>The natural honey blend, with Royal Jelly, Panax Ginseng and Rainforest Herbs. 100% natural.</p><div class="socials"><span aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.4V4.9c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.6v7h2.9z"/></svg></span><span aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l6.1 8.2L4.4 20h2.3l4.4-5.5 3.4 5.5H20l-6.4-8.6L19.5 4h-2.3l-4 5L9.7 4H4z"/></svg></span><span aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.9"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r=".9" fill="#111" stroke="none"/></svg></span><span aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M21 8.2c-.2-1.4-1-2.2-2.4-2.4C16.6 5.5 12 5.5 12 5.5s-4.6 0-6.6.3C4 6 3.2 6.8 3 8.2 2.7 10.2 2.7 13.8 3 15.8c.2 1.4 1 2.2 2.4 2.4 2 .3 6.6.3 6.6.3s4.6 0 6.6-.3c1.4-.2 2.2-1 2.4-2.4.3-2 .3-5.6 0-7.6z"/><path d="M10 9.7v4.6L14.3 12z" fill="#e9c766"/></svg></span></div></div>
@@ -450,7 +453,7 @@ if(dets.length){
 <script data-cart>
 document.addEventListener('DOMContentLoaded',function(){
 var PROD={'box24':{name:'Black Horse Vital Honey',desc:'Box of 24 Sachets (10g each)',facts:'100% natural, with Royal Jelly, Panax Ginseng & Rainforest Herbs.',img:'../assets/boxes-web.jpg'},
-'slot2':{name:'[Second product - name to be confirmed]',desc:'[Product facts to be confirmed]',facts:'',img:''}};
+};
 var cart={};try{var raw=localStorage.getItem('bh-cart');if(raw)cart=JSON.parse(raw)||{};}catch(e){cart={};}
 if(!Object.keys(cart).length){try{var m=document.cookie.match(/(?:^|; )bh-cart=([^;]*)/);if(m)cart=JSON.parse(decodeURIComponent(m[1]))||{};}catch(e){cart={};}}
 function save(){try{localStorage.setItem('bh-cart',JSON.stringify(cart));}catch(e){try{document.cookie='bh-cart='+encodeURIComponent(JSON.stringify(cart))+';path=/;max-age=86400;SameSite=Lax';}catch(e2){}}}
@@ -505,6 +508,25 @@ if(cof)cof.addEventListener('submit',function(e){e.preventDefault();cart={};save
 var mn=document.querySelector('.mainnav');
 if(mn&&!mn.querySelector('.cart-nav-link')){var cl=document.createElement('a');cl.href='cart.html';cl.className='cart-nav-link';cl.innerHTML='CART <span class="cart-count" data-cart-count></span>';mn.appendChild(cl);}
 paint();renderCart();
+});
+</script>
+
+<script data-gal>
+document.addEventListener('DOMContentLoaded',function(){
+ document.querySelectorAll('[data-gal]').forEach(function(g){
+  var track=g.querySelector('.gal-track');if(!track)return;
+  var slides=track.children,thumbs=g.querySelectorAll('.gal-thumbs button'),idx=0;
+  function go(i){idx=((i%slides.length)+slides.length)%slides.length;track.style.transform='translateX('+(-idx*100)+'%)';for(var t=0;t<thumbs.length;t++)thumbs[t].classList.toggle('on',t===idx);}
+  for(var t=0;t<thumbs.length;t++)(function(t){thumbs[t].addEventListener('click',function(){go(t);});})(t);
+  var pv=g.querySelector('.gal-arrow.prev'),nx=g.querySelector('.gal-arrow.next');
+  if(pv)pv.addEventListener('click',function(){go(idx-1);});
+  if(nx)nx.addEventListener('click',function(){go(idx+1);});
+  var st=g.querySelector('.gal-stage'),sx=null;
+  st.addEventListener('dragstart',function(e){e.preventDefault();});
+  st.addEventListener('pointerdown',function(e){sx=e.clientX;});
+  st.addEventListener('pointerup',function(e){if(sx===null)return;var d=e.clientX-sx;if(d<=-40)go(idx+1);else if(d>=40)go(idx-1);sx=null;});
+  go(0);
+ });
 });
 </script>
 

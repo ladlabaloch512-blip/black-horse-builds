@@ -332,14 +332,6 @@ button.btn-gold,button.btn-line,button.btn-black,button.btn-goldb,button.btn-hex
 <a class="btn-gold" href="product.html">SEE THE PRODUCT PAGE</a>
 <div style="margin-top:12px"><button type="button" class="btn-black" data-add="box24">ADD TO CART</button> <button type="button" class="btn-outline" data-qv="box24">QUICK VIEW</button></div>
 </div></div>
-<div class="showcase" style="margin-top:46px">
-<div><div class="slot-photo" style="min-height:300px">PRODUCT PHOTO<br>TO COME</div></div>
-<div><div class="kicker" style="color:#111">SECOND PRODUCT</div>
-<h2>[Second product - name to be confirmed]</h2>
-<p>[Product facts to be confirmed]</p>
-<div class="price-req" style="color:#b98a1e">Price on Request</div>
-<div style="margin-top:12px"><button type="button" class="btn-gold" data-add="slot2">ADD TO CART</button> <button type="button" class="btn-outline" data-qv="slot2">QUICK VIEW</button></div>
-</div></div>
 <h2 class="sec-title">THE SIGNATURE BLEND</h2>
 <div class="ing-cards">
 <div class="ing"><img src="../assets/comb-web.jpg" alt="Royal jelly ingredient"><h3>ROYAL JELLY</h3><p>A natural ingredient named on the box.</p></div>
@@ -476,7 +468,7 @@ if(dets.length){
 <script data-cart>
 document.addEventListener('DOMContentLoaded',function(){
 var PROD={'box24':{name:'Black Horse Vital Honey',desc:'Box of 24 Sachets (10g each)',facts:'100% natural, with Royal Jelly, Panax Ginseng & Rainforest Herbs.',img:'../assets/boxes-web.jpg'},
-'slot2':{name:'[Second product - name to be confirmed]',desc:'[Product facts to be confirmed]',facts:'',img:''}};
+};
 var cart={};try{var raw=localStorage.getItem('bh-cart');if(raw)cart=JSON.parse(raw)||{};}catch(e){cart={};}
 if(!Object.keys(cart).length){try{var m=document.cookie.match(/(?:^|; )bh-cart=([^;]*)/);if(m)cart=JSON.parse(decodeURIComponent(m[1]))||{};}catch(e){cart={};}}
 function save(){try{localStorage.setItem('bh-cart',JSON.stringify(cart));}catch(e){try{document.cookie='bh-cart='+encodeURIComponent(JSON.stringify(cart))+';path=/;max-age=86400;SameSite=Lax';}catch(e2){}}}
