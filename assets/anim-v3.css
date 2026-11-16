@@ -1,0 +1,88 @@
+/* Black Horse V3 (Design 3 black) animation layer.
+   Twin of the approved V2 set with the V3-1 to V3-5 black tunings:
+   glow instead of border brighten (V3-1), brighter shimmer (V3-2),
+   hero edge light instead of shadow drift (V3-3), shine and fill
+   unchanged (V3-4), FAQ and form glow instead of warm (V3-5).
+   No layout change, nothing starts hidden, no reduced-motion gating. */
+
+/* S1 nav underline sweep */
+nav.mainnav a{position:relative}
+nav.mainnav a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1.5px;background:#c79a24;transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+@media (hover:hover) and (pointer:fine){
+ nav.mainnav a:hover::after{transform:scaleX(1)}
+}
+
+/* V3-2 headline gold italic shimmer, once, brighter pass on black */
+h1 .g i,.page-head h1 i{background-image:linear-gradient(100deg,#c79a24 36%,#ffe9a8 50%,#c79a24 64%);background-size:230% 100%;background-position:110% 0;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:bhShimmer3 1.5s ease 1.2s 1}
+@keyframes bhShimmer3{from{background-position:110% 0}to{background-position:-110% 0}}
+
+/* V3-3 hero photo edge light: gold rim settles in over 1s and stays */
+.hero-img img{animation:bhEdge3 1s ease forwards}
+@keyframes bhEdge3{from{box-shadow:0 0 0 1px rgba(199,154,36,0),0 0 24px rgba(199,154,36,0)}to{box-shadow:0 0 0 1px rgba(199,154,36,.5),0 0 28px rgba(199,154,36,.18)}}
+
+/* S2 shine on the gold pill (reads stronger on black, V3-4) + S3 press */
+.btn-goldb{position:relative;overflow:hidden}
+.btn-goldb::before{content:"";position:absolute;top:0;bottom:0;left:-70%;width:45%;background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,255,255,.5),rgba(255,255,255,0));transform:skewX(-18deg);transition:left .55s ease;pointer-events:none}
+.btn-goldb,.btn-line{transition:transform .14s ease}
+.btn-goldb:active,.btn-line:active{transform:scale(.98)}
+.send-full{transition:transform .14s ease}
+.send-full:active{transform:scale(.99)}
+@media (hover:hover) and (pointer:fine){
+ .btn-goldb:hover::before{left:115%}
+}
+
+/* V2-6 outline button fills with gold from the bottom up (same on black) */
+.btn-line{background-image:linear-gradient(#c79a24,#c79a24);background-repeat:no-repeat;background-position:0 100%;background-size:100% 0;transition:background-size .3s ease,color .3s ease,transform .14s ease}
+@media (hover:hover) and (pointer:fine){
+ .btn-line:hover{background-size:100% 100%;color:#111}
+}
+
+/* V3-1 cards on black: soft outer gold glow instead of border brighten */
+.rcard,.bcard{transition:border-color .35s ease,background-color .35s ease,transform .35s ease,box-shadow .35s ease}
+.pcard{transition:outline-color .35s ease,background-color .35s ease,transform .35s ease,box-shadow .35s ease}
+@media (hover:hover) and (pointer:fine){
+ .rcard:hover,.bcard:hover{border-color:#c79a24;background-color:#1d1a14;transform:translateY(-2px);box-shadow:0 0 0 1px rgba(199,154,36,.45),0 8px 24px -8px rgba(199,154,36,.4)}
+ .pcard:hover{outline-color:#c79a24;background-color:#1a1712;transform:translateY(-2px);box-shadow:0 8px 24px -8px rgba(199,154,36,.4)}
+}
+
+/* V2-4 Benefits rule draw, same on black */
+.ben h3{background-image:linear-gradient(#c79a24,#c79a24);background-repeat:no-repeat;background-position:0 100%;background-size:0% 1.5px;animation:bhRule3 .7s ease forwards}
+.ben:nth-child(1) h3{animation-delay:.10s}
+.ben:nth-child(2) h3{animation-delay:.25s}
+.ben:nth-child(3) h3{animation-delay:.40s}
+.ben:nth-child(4) h3{animation-delay:.55s}
+@keyframes bhRule3{to{background-size:100% 1.5px}}
+
+/* V2-5 centred logo horse micro gallop, desktop hover only */
+@keyframes bhStep3{0%{transform:translateX(0)}40%{transform:translateX(3px)}100%{transform:translateX(0)}}
+@media (hover:hover) and (pointer:fine){
+ a.logo:hover img{animation:bhStep3 .4s ease}
+}
+
+/* V3-5 FAQ hairline items on black: divider glows, no warm background */
+.fq-item{transition:border-color .4s ease,box-shadow .4s ease}
+.fq-item .mark{transition:transform .3s ease,color .3s ease}
+@media (hover:hover) and (pointer:fine){
+ .fq-item:hover{border-top-color:#c79a24;box-shadow:0 -8px 16px -10px rgba(199,154,36,.55)}
+ .fq-item:hover .mark{color:#c79a24}
+}
+
+/* V3-5 form focus glow on black */
+.cform input,.cform textarea,.cform select{transition:border-color .3s ease,box-shadow .3s ease}
+.cform input:focus,.cform textarea:focus,.cform select:focus{border-color:#c79a24;box-shadow:0 1px 0 #c79a24,0 4px 18px -2px rgba(199,154,36,.4);outline:none}
+
+/* V2-8 shop sort control: soft focus treatment (native select) */
+.sel select{transition:border-color .25s ease,box-shadow .25s ease}
+.sel select:focus{border-color:#c79a24;box-shadow:0 4px 14px -4px rgba(199,154,36,.55);outline:none}
+
+/* S8 icon micro feedback */
+.icons svg{transition:transform .25s ease}
+.burger{transition:transform .25s ease}
+.bsocials a{transition:transform .25s ease}
+.essence svg{transition:transform .25s ease}
+@media (hover:hover) and (pointer:fine){
+ .icons svg:hover{transform:scale(1.1)}
+ .burger:hover{transform:scale(1.1)}
+ .bsocials a:hover{transform:translateY(-2px)}
+ .essence svg:hover{transform:scale(1.06)}
+}
