@@ -240,6 +240,9 @@ body.nav-open{overflow:hidden}
 .pills{display:none}
 .pill-select{display:block;width:100%;max-width:430px;margin:0 auto 24px;padding:11px 16px;font:inherit;font-size:15px;font-weight:600;letter-spacing:.04em;color:#111;background:#fff;border:1.5px solid #b98a1e;border-radius:999px}
 }
+
+/*zfix*/
+@media(max-width:900px){.mainnav{z-index:300!important}}
 </style>
 
 <style data-cart>
@@ -275,6 +278,12 @@ button.btn-gold,button.btn-line,button.btn-black,button.btn-goldb,button.btn-hex
 .co-note{font-size:14px;opacity:.8;line-height:1.55;max-width:560px}
 .co-item{display:flex;justify-content:space-between;gap:14px;padding:7px 0;border-bottom:1px solid #e0d2a4;font-size:16.5px}
 @media(max-width:560px){.cart-row{flex-wrap:wrap}}
+
+/*hcart*/
+.cart-link{gap:8px;padding:9px 14px;border:1.5px solid #e9c766;border-radius:3px}
+.cart-link::after{content:"CART";font-size:13px;font-weight:700;letter-spacing:.1em;color:#e9c766}
+.cart-link svg{stroke:#e9c766}
+@media(max-width:900px){.hbar>.cart-link{margin-left:auto}.hbar .hicons{margin-left:auto;display:flex!important}}
 </style>
 
 </head><body>
