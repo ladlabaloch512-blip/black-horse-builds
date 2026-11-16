@@ -1,0 +1,93 @@
+/* Black Horse V6 (Design 8 Classic Boutique, black) animation layer.
+   Twin of the approved V5 set with the V6 tunings: V6-1 frame shine
+   brighter plus a faint outer frame glow settling in over 1s, V6-2
+   engraved panels brighten with a soft glow (no warm background),
+   V6-4 buttons and dots identical to V5, V6-5 FAQ divider diamond
+   rotation only (no accordion in this build).
+   V6-3 DROPPED: the hero photo is one flat image, no separate haze
+   layer exists in the build. V5-8 bees were NOT approved.
+   Slowest timings, same as V5. No layout change, nothing starts
+   hidden, no reduced-motion gating. */
+
+/* S1 nav underline sweep, slow */
+nav.mainnav a{position:relative}
+nav.mainnav a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1.5px;background:#c79a24;transform:scaleX(0);transform-origin:left;transition:transform .45s ease}
+@media (hover:hover) and (pointer:fine){
+ nav.mainnav a:hover::after{transform:scaleX(1)}
+}
+
+/* V6-1 frame glow settle: faint outer gold glow arrives over 1s and
+   stays. The frame is fully drawn and visible throughout. */
+.frame{animation:bhFrameGlow6 1s ease forwards}
+@keyframes bhFrameGlow6{from{box-shadow:0 0 0 rgba(199,154,36,0)}to{box-shadow:0 0 26px rgba(199,154,36,.16)}}
+
+/* V6-1 corner flourish shine pass, clockwise, once, brighter on black */
+.corner{animation:bhCorner6 .6s ease 1}
+.c-tl{animation-delay:.1s}
+.c-tr{animation-delay:.7s}
+.c-br{animation-delay:1.3s}
+.c-bl{animation-delay:1.9s}
+@keyframes bhCorner6{0%{filter:brightness(1)}40%{filter:brightness(2.1)}100%{filter:brightness(1)}}
+
+/* V5-2 divider bloom: dividers grow from the centre on load, 800ms */
+.divider,.flourish{animation:bhBloom6 .8s ease}
+@keyframes bhBloom6{from{transform:scaleX(.8)}to{transform:scaleX(1)}}
+
+/* V5-6 gold buttons: S2 shine, slower (700ms) + S3 press (V6-4) */
+.btn-gold{position:relative;overflow:hidden}
+.btn-gold::before{content:"";position:absolute;top:0;bottom:0;left:-70%;width:45%;background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,255,255,.5),rgba(255,255,255,0));transform:skewX(-18deg);transition:left .7s ease;pointer-events:none}
+.btn-gold,.btn-line{transition:transform .16s ease}
+.btn-gold:active,.btn-line:active{transform:scale(.98)}
+@media (hover:hover) and (pointer:fine){
+ .btn-gold:hover::before{left:115%}
+}
+
+/* V5-6 outline button fill (V6-4: strongest contrast moment, correct) */
+.btn-line{background-image:linear-gradient(#c79a24,#c79a24);background-repeat:no-repeat;background-position:0 100%;background-size:100% 0;transition:background-size .4s ease,color .4s ease,transform .16s ease}
+@media (hover:hover) and (pointer:fine){
+ .btn-line:hover{background-size:100% 100%;color:#111}
+}
+
+/* V6-2 engraved blend panels on black: lines brighten, soft glow
+   behind the panel, border brightens. No lift, no warm background. */
+.blend{transition:border-color .45s ease,box-shadow .45s ease}
+.blend img{transition:filter .45s ease}
+@media (hover:hover) and (pointer:fine){
+ .blend:hover{border-color:#c79a24;box-shadow:0 0 20px rgba(199,154,36,.22)}
+ .blend:hover img{filter:brightness(1.22) saturate(1.15)}
+}
+
+/* Boutique card treatment on black: border brightens with a faint glow */
+.bcard,.panel{transition:border-color .45s ease,box-shadow .45s ease}
+@media (hover:hover) and (pointer:fine){
+ .bcard:hover,.panel:hover{border-color:#c79a24;box-shadow:0 0 16px rgba(199,154,36,.18)}
+}
+
+/* V5-5 dotted menu: dots beside a hovered link brighten (V6-4) */
+.mainnav .dot{transition:color .35s ease,filter .35s ease}
+@media (hover:hover) and (pointer:fine){
+ .mainnav a:hover + .dot{color:#c79a24;filter:brightness(1.7)}
+}
+
+/* V6-5 FAQ divider diamond rotation on question hover, 500ms.
+   No accordion exists in this build, so no accordion motion. */
+.flourish span{display:inline-block;transition:transform .5s ease}
+@media (hover:hover) and (pointer:fine){
+ .qa-block:hover + .flourish span{transform:rotate(45deg)}
+}
+
+/* V5-9 About circular badges: artwork turns 8 degrees and back */
+@media (hover:hover) and (pointer:fine){
+ .circ:hover .c{animation:bhTurn6 .6s ease}
+}
+@keyframes bhTurn6{0%{transform:rotate(0)}35%{transform:rotate(8deg)}100%{transform:rotate(0)}}
+
+/* S7 form focus glow on black */
+.cform input,.cform textarea,.cform select{transition:border-color .4s ease,box-shadow .4s ease}
+.cform input:focus,.cform textarea:focus,.cform select:focus{border-color:#c79a24;box-shadow:0 0 0 3px rgba(199,154,36,.25);outline:none}
+
+/* S8 icon micro feedback */
+.burger{transition:transform .3s ease}
+@media (hover:hover) and (pointer:fine){
+ .burger:hover{transform:scale(1.08)}
+}
