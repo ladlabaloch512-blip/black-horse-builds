@@ -125,7 +125,7 @@ details p{font-family:'Jost',sans-serif;padding:0 0 18px;line-height:1.65;color:
  .burger{display:block}
  .hbar .brand span{display:none}
 }
-@media(max-width:560px){.shields,.blogrow,.blog-grid,.pgrid3{grid-template-columns:1fr}.hx{width:76px;height:86px;font-size:11.5px}}
+@media(max-width:560px){.shields,.blogrow,.blog-grid,.pgrid3{grid-template-columns:1fr}.hx{width:76px;height:86px;font-size:11.5px}.hx.sm{font-size:11px;line-height:1.2;padding:4px}}
 .hicons-c{display:flex;gap:18px;align-items:center}
 .hicons-c svg{width:24px;height:24px;stroke:#e9c766;fill:none;stroke-width:1.7}
 .hright{display:flex;gap:16px;align-items:center}
@@ -133,6 +133,8 @@ nav.mainnav a.hexact{background:linear-gradient(180deg,#f0d47a,#c79a24);color:#1
 .fstrip{display:flex;justify-content:space-between;align-items:center;gap:16px;max-width:1240px;margin:0 auto;padding:16px 24px;flex-wrap:wrap}
 .fstrip .logo img{height:40px;width:auto}
 .fstrip span{font-family:'Jost',sans-serif;font-size:13.5px;color:#9a8f6e}
+.fstrip .flinks{display:flex;gap:18px;flex-wrap:wrap}
+.fstrip .flinks a{color:#e8dfc4;font-size:13.5px}
 .fline{text-align:center;font-family:'Jost',sans-serif;font-size:13.5px;color:#9a8f6e;padding:18px 24px}
 .sub-form-c{display:flex;gap:8px;flex-wrap:wrap}
 .sub-form-c input{padding:10px;border:1.5px solid #c79a24;background:#0c0d10;color:#f2ead6;font:inherit;min-width:170px}
@@ -180,7 +182,7 @@ nav.mainnav a.hexact{background:linear-gradient(180deg,#f0d47a,#c79a24);color:#1
 .irow-c b{display:block;font-size:16.5px;letter-spacing:.05em}
 .irow-c span{font-family:'Jost',sans-serif;color:#d8cfb2;font-size:15px}
 .contact-wrap{position:relative}
-.side-hex{position:absolute;top:0;bottom:0;width:110px;opacity:.55}
+.side-hex{position:absolute;top:0;bottom:0;width:110px;opacity:1;background-color:#0d0c08;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="56" height="100" viewBox="0 0 56 100"><g fill="none" stroke="%23c79a24" stroke-opacity="0.9" stroke-width="2.2"><path d="M28 2l24 14v28L28 58 4 44V16z"/><path d="M28 58l24 14v28M28 58L4 72v28"/></g></svg>')}
 .side-hex.l{left:-8px}.side-hex.r{right:-8px}
 @media(max-width:900px){.tile-row,.tile-arts,.cpanels{grid-template-columns:1fr}.side-hex{display:none}.hexmini{width:110px;height:110px;right:0}}
 </style></head><body>
@@ -208,7 +210,7 @@ nav.mainnav a.hexact{background:linear-gradient(180deg,#f0d47a,#c79a24);color:#1
 <label>Your Message<textarea name="message" rows="5" required></textarea></label>
 <button type="submit" class="btn-gold">SEND ENQUIRY</button>
 </form></div></div></div></div>
-<footer class="site"><div class="fline">&copy; Black Horse Vital Honey. All rights reserved.</div></footer>
+<footer class="site"><div class="fline" style="text-align:left;max-width:1240px;margin:0 auto">&copy; Black Horse Vital Honey. All rights reserved.</div></footer>
 
 <script>
 document.addEventListener('DOMContentLoaded',function(){

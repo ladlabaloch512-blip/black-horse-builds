@@ -125,7 +125,7 @@ details p{font-family:'Jost',sans-serif;padding:0 0 18px;line-height:1.65;color:
  .burger{display:block}
  .hbar .brand span{display:none}
 }
-@media(max-width:560px){.shields,.blogrow,.blog-grid,.pgrid3{grid-template-columns:1fr}.hx{width:76px;height:86px;font-size:11.5px}}
+@media(max-width:560px){.shields,.blogrow,.blog-grid,.pgrid3{grid-template-columns:1fr}.hx{width:76px;height:86px;font-size:11.5px}.hx.sm{font-size:11px;line-height:1.2;padding:4px}}
 .hicons-c{display:flex;gap:18px;align-items:center}
 .hicons-c svg{width:24px;height:24px;stroke:#e9c766;fill:none;stroke-width:1.7}
 .hright{display:flex;gap:16px;align-items:center}
@@ -133,6 +133,8 @@ nav.mainnav a.hexact{background:linear-gradient(180deg,#f0d47a,#c79a24);color:#1
 .fstrip{display:flex;justify-content:space-between;align-items:center;gap:16px;max-width:1240px;margin:0 auto;padding:16px 24px;flex-wrap:wrap}
 .fstrip .logo img{height:40px;width:auto}
 .fstrip span{font-family:'Jost',sans-serif;font-size:13.5px;color:#9a8f6e}
+.fstrip .flinks{display:flex;gap:18px;flex-wrap:wrap}
+.fstrip .flinks a{color:#e8dfc4;font-size:13.5px}
 .fline{text-align:center;font-family:'Jost',sans-serif;font-size:13.5px;color:#9a8f6e;padding:18px 24px}
 .sub-form-c{display:flex;gap:8px;flex-wrap:wrap}
 .sub-form-c input{padding:10px;border:1.5px solid #c79a24;background:#0c0d10;color:#f2ead6;font:inherit;min-width:170px}
@@ -180,7 +182,7 @@ nav.mainnav a.hexact{background:linear-gradient(180deg,#f0d47a,#c79a24);color:#1
 .irow-c b{display:block;font-size:16.5px;letter-spacing:.05em}
 .irow-c span{font-family:'Jost',sans-serif;color:#d8cfb2;font-size:15px}
 .contact-wrap{position:relative}
-.side-hex{position:absolute;top:0;bottom:0;width:110px;opacity:.55}
+.side-hex{position:absolute;top:0;bottom:0;width:110px;opacity:1;background-color:#0d0c08;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="56" height="100" viewBox="0 0 56 100"><g fill="none" stroke="%23c79a24" stroke-opacity="0.9" stroke-width="2.2"><path d="M28 2l24 14v28L28 58 4 44V16z"/><path d="M28 58l24 14v28M28 58L4 72v28"/></g></svg>')}
 .side-hex.l{left:-8px}.side-hex.r{right:-8px}
 @media(max-width:900px){.tile-row,.tile-arts,.cpanels{grid-template-columns:1fr}.side-hex{display:none}.hexmini{width:110px;height:110px;right:0}}
 </style></head><body>
@@ -198,11 +200,11 @@ nav.mainnav a.hexact{background:linear-gradient(180deg,#f0d47a,#c79a24);color:#1
 </div></header>
 
 <div class="wrap"><div class="about-head" style="padding:44px 0 6px"><div class="script-c">Our Story</div><h1><span class="g">THE BLACK HORSE BLEND</span></h1></div>
-<div class="split"><div><div class="hexphotos"><img src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey photo detail"><img src="../assets/comb-web.jpg" alt="Black Horse Vital Honey photo detail"><img src="../assets/sachet-web.jpg" alt="Black Horse Vital Honey photo detail"><img src="../assets/comb-web.jpg" alt="Black Horse Vital Honey photo detail"><img src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey photo detail"><img src="../assets/sachet-web.jpg" alt="Black Horse Vital Honey photo detail"></div><div class="seal">100%<br>NATURAL</div></div>
-<div><h2>THE BLEND</h2><p>Black Horse Vital Honey is a 100% natural honey blend with Royal Jelly, Panax Ginseng and Rainforest Herbs. One box holds 24 sachets of 10 grams each.</p><p>The design of the box says it plainly: natural honey, Royal Jelly, Panax Ginseng and Rainforest Herbs. That is the whole blend, packed in single sachets.</p>
+<div class="split"><div><h2>THE BLEND</h2><p>Black Horse Vital Honey is a 100% natural honey blend with Royal Jelly, Panax Ginseng and Rainforest Herbs. One box holds 24 sachets of 10 grams each.</p><p>The design of the box says it plainly: natural honey, Royal Jelly, Panax Ginseng and Rainforest Herbs. That is the whole blend, packed in single sachets.</p>
 <div class="obadges"><span class="obadge">100% NATURAL</span><span class="obadge">ROYAL JELLY</span><span class="obadge">PANAX GINSENG</span></div>
-<p style="margin-top:22px"><a class="btn-gold" href="product.html">SEE THE PRODUCT</a></p></div></div></div>
-<footer class="site"><div class="fline">&copy; Black Horse Vital Honey. All rights reserved.</div></footer>
+<p style="margin-top:22px"><a class="btn-gold" href="product.html">SEE THE PRODUCT</a></p><div class="seal" style="margin:26px auto 0 0">100%<br>NATURAL</div></div>
+<div><div class="hexphotos"><img src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey photo detail"><img src="../assets/comb-web.jpg" alt="Black Horse Vital Honey photo detail"><img src="../assets/sachet-web.jpg" alt="Black Horse Vital Honey photo detail"><img src="../assets/comb-web.jpg" alt="Black Horse Vital Honey photo detail"><img src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey photo detail"><img src="../assets/sachet-web.jpg" alt="Black Horse Vital Honey photo detail"></div></div></div></div>
+<footer class="site"><div class="fstrip"><span class="flinks"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="product.html">Product</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></span><span>&copy; Black Horse Vital Honey. All rights reserved.</span><div class="csocials"><span aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.4V4.9c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.6v7h2.9z"/></svg></span><span aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l6.1 8.2L4.4 20h2.3l4.4-5.5 3.4 5.5H20l-6.4-8.6L19.5 4h-2.3l-4 5L9.7 4H4z"/></svg></span><span aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.9"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r=".9" fill="#111" stroke="none"/></svg></span><span aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M21 8.2c-.2-1.4-1-2.2-2.4-2.4C16.6 5.5 12 5.5 12 5.5s-4.6 0-6.6.3C4 6 3.2 6.8 3 8.2 2.7 10.2 2.7 13.8 3 15.8c.2 1.4 1 2.2 2.4 2.4 2 .3 6.6.3 6.6.3s4.6 0 6.6-.3c1.4-.2 2.2-1 2.4-2.4.3-2 .3-5.6 0-7.6z"/><path d="M10 9.7v4.6L14.3 12z" fill="#f0d47a"/></svg></span></div></div></footer>
 
 <script>
 document.addEventListener('DOMContentLoaded',function(){
