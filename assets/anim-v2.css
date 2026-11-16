@@ -90,3 +90,51 @@ h1 .g i,.page-head h1 i{background-image:linear-gradient(100deg,#c79a24 38%,#f6e
  .bsocials a:hover{transform:translateY(-2px)}
  .essence svg:hover{transform:scale(1.06)}
 }
+
+/* ============ R-SNOW-4 expanded set (Snow's more-animation order, 2026-11-16) ============
+   Safety: hidden states are JS-added only; force-reveal failsafe in anim-v2.js plus the
+   html.bh-all backstop below; no reduced-motion gating anywhere. Quietest timings. */
+/* Hero entrance: gentle rise + fade (classes added by JS only; V2-1 shimmer still runs on the inner span) */
+.bh-hx{animation:bhHeroH2 .55s ease}
+@keyframes bhHeroH2{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.bh-hi{animation:bhFade2 .6s ease}
+@keyframes bhFade2{from{opacity:0}to{opacity:1}}
+/* Ken Burns, near-still out of respect for V2-2: a 1.5% drift over 16s, shadow breathe kept */
+.hero-img img{animation:bhKB2 16s ease-in-out infinite alternate,bhShadow2 6s ease-in-out infinite alternate}
+@keyframes bhKB2{from{transform:scale(1)}to{transform:scale(1.015)}}
+/* Scroll reveal: .bh-rv exists only where JS put it; classes are removed after the move */
+.bh-rv{opacity:0;transform:translateY(12px)}
+.bh-rv.bh-in{opacity:1;transform:translateY(0);transition:opacity .5s ease,transform .5s ease}
+html.bh-all .bh-rv{opacity:1!important;transform:none!important}
+/* Touch-audit fixes: tap and in-view equivalents (desktop hover forms kept above) */
+.btn-goldb:active::before{left:115%}
+.btn-goldb.bh-shine::before{left:115%}
+.btn-line:active{background-size:100% 100%;color:#111}
+.fq-item:active{border-top-color:#c79a24}
+.fq-item:active .mark{color:#c79a24}
+.icons svg:active{transform:scale(1.1)}
+.bsocials a:active{transform:translateY(-2px)}
+.essence svg:active{transform:scale(1.06)}
+a.logo.bh-gallop img{animation:bhStep2 .4s ease}
+.bh-zoom{animation:bhZoom2 .7s ease}
+@keyframes bhZoom2{from{transform:scale(1.04)}to{transform:scale(1)}}
+/* Product gallery: slide at the quiet 400ms; active thumb gains a soft gold ring */
+[data-gal] .gal-track{transition:transform .4s ease}
+.gal-thumbs button{transition:box-shadow .3s ease}
+.gal-thumbs button.on{box-shadow:0 0 0 3px rgba(199,154,36,.22)}
+/* Add to cart: flying image clone, button confirm ring, cart count pop */
+.bh-flyer{position:fixed;z-index:600;pointer-events:none;border-radius:6px;object-fit:cover;margin:0}
+[data-add].bh-added{animation:bhAdded2 .55s ease}
+@keyframes bhAdded2{0%{box-shadow:0 0 0 rgba(199,154,36,0)}40%{box-shadow:0 0 0 6px rgba(199,154,36,.3)}100%{box-shadow:0 0 0 rgba(199,154,36,0)}}
+[data-cart-count].bh-pop{animation:bhPopCt2 .45s ease}
+@keyframes bhPopCt2{0%{transform:scale(1)}40%{transform:scale(1.4)}100%{transform:scale(1)}}
+/* Place order: progress shimmer, then the placed settle */
+#co-form button.bh-processing{position:relative;overflow:hidden;pointer-events:none}
+#co-form button.bh-processing::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.35) 50%,rgba(255,255,255,0) 70%);animation:bhProg2 .7s linear infinite}
+@keyframes bhProg2{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+#co-form button.bh-placed{animation:bhPopCt2 .4s ease}
+/* Thank-you seal: gold circle and check drawn in (SVG injected by anim-v2.js) */
+.bh-seal{display:block;margin:0 auto 14px;width:76px;height:76px}
+.bh-seal circle{fill:none;stroke:#c79a24;stroke-width:2.5;stroke-dasharray:1;stroke-dashoffset:1;animation:bhDraw2 .7s ease forwards}
+.bh-seal path{fill:none;stroke:#c79a24;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:bhDraw2 .45s ease .55s forwards}
+@keyframes bhDraw2{to{stroke-dashoffset:0}}
