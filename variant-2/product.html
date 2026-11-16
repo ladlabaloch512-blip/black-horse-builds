@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Variant 2 - Light Cream Minimal - Product</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,800;1,500&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{font-family:'Jost',Arial,sans-serif;color:#161616;background:#ffffff}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+header.site{background:#ffffff;text-align:center;padding:22px 24px 0;position:relative}
+header.site .logo img{height:74px;width:auto;margin:0 auto}
+.icons{position:absolute;right:34px;top:30px;display:flex;gap:20px}
+.icons svg{width:24px;height:24px;stroke:#161616;fill:none;stroke-width:1.6}
+nav.mainnav{display:flex;justify-content:center;gap:38px;padding:18px 0 20px;font-size:16.5px;letter-spacing:.05em;flex-wrap:wrap}
+nav.mainnav a{text-transform:uppercase}
+nav.mainnav a.active{color:#c79a24;border-bottom:2px solid #c79a24;padding-bottom:3px;position:relative}
+nav.mainnav a.active::after{content:"";position:absolute;left:50%;bottom:-11px;transform:translateX(-50%);width:7px;height:7px;border-radius:50%;background:#c79a24}
+.faq-narrow{max-width:800px;margin:0 auto;padding:10px 0 60px}
+.fq-item{border-top:1.5px solid #cbb26a;padding:20px 4px 22px}
+.fq-item:last-child{border-bottom:1.5px solid #cbb26a}
+.fq-item h3{font-size:21px;font-weight:600;display:flex;justify-content:space-between;gap:16px}
+.fq-item h3 .mark{color:#c79a24;font-weight:400}
+.fq-item p{color:#55534a;line-height:1.65;margin-top:9px;font-size:16.5px;max-width:680px}
+.faq-title{font-family:'Playfair Display',serif;font-size:clamp(30px,4.4vw,54px);text-align:center;padding:44px 0 26px;font-weight:600}
+.faq-title .g{color:#c79a24}
+.catrow{text-align:center;color:#55534a;letter-spacing:.06em;font-size:15.5px;padding:6px 0 4px}
+.catrow b{color:#c79a24;font-weight:500}
+.burger{display:none;background:none;border:0;color:#c79a24;font-size:28px;cursor:pointer;margin:0 auto}
+.hero{background:#faf6ec;display:grid;grid-template-columns:1fr 1.05fr;align-items:stretch}
+.hero-txt{padding:64px 40px 60px 7vw}
+.hero-txt h1{font-family:'Playfair Display',serif;font-size:clamp(40px,5.2vw,72px);line-height:1.06;font-weight:600}
+.hero-txt h1 .g{color:#c79a24}
+.hero-txt h1 .b{color:#161616}
+.hero-txt p{font-size:20px;line-height:1.5;margin:20px 0 8px;max-width:470px}
+.spec{letter-spacing:.06em;font-size:16px;margin:14px 0 26px}
+.btn-line{display:inline-block;border:1.5px solid #c79a24;color:#c79a24;letter-spacing:.14em;padding:13px 30px;font-size:15px;background:transparent;cursor:pointer;font-weight:600}
+.btn-goldb{display:inline-block;background:linear-gradient(180deg,#e9c766,#c79a24);color:#111;letter-spacing:.08em;padding:13px 30px;font-size:15px;border:0;border-radius:26px;font-weight:700;cursor:pointer}
+.hero-img img{width:100%;height:100%;object-fit:cover;min-height:320px}
+.home-cols{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;padding:52px 0 58px}
+h2.sec{font-size:25px;letter-spacing:.1em;font-weight:600;margin-bottom:22px}
+.range2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.rcard{border:1.5px solid #cbb26a;padding:16px;text-align:center;background:#ffffff}
+.rcard img{height:150px;width:100%;object-fit:cover;margin-bottom:12px}
+.rcard h3{font-size:16.5px;line-height:1.4;font-weight:600}
+.rcard .pr{color:#c79a24;margin-top:6px;font-size:16px}
+.ben-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px 30px}
+.ben h3{color:#c79a24;font-weight:500;letter-spacing:.05em;font-size:21px}
+.ben p{color:#55534a;margin-top:5px;font-size:16px}
+footer.site{background:#faf6ec;padding:34px 24px 22px;text-align:center}
+footer.site .logo img{height:62px;margin:0 auto 8px;width:auto}
+.fnav{display:flex;justify-content:space-between;max-width:1100px;margin:0 auto 10px;font-size:15px;letter-spacing:.06em;flex-wrap:wrap;gap:10px}
+.fnav .grp{display:flex;gap:26px}
+.copy{font-size:13.5px;color:#55534a}
+.page-head{text-align:center;padding:44px 0 6px}
+.page-head h1{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(30px,4vw,46px);letter-spacing:.03em}
+.crumb2{text-align:center;color:#55534a;margin-top:10px}
+.crumb2 b{color:#c79a24;font-weight:500}
+.shop-wrap{background:#faf6ec;padding-bottom:56px;margin-top:26px}
+.shop-grid{display:grid;grid-template-columns:230px 1fr;gap:30px;padding-top:36px;align-items:start}
+.filters h3{letter-spacing:.08em;font-size:19px;border-bottom:1px solid #cbb26a;padding-bottom:12px}
+.filters h5{letter-spacing:.07em;font-size:16.5px;margin:20px 0 8px}
+.filters label{display:block;padding:5px 0;font-size:16px;color:#55534a}
+.sortrow{display:flex;justify-content:flex-end;gap:16px;align-items:center;margin-bottom:18px;font-size:15.5px;color:#55534a}
+.sortrow .sel{border:1px solid #cbb26a;padding:9px 14px;background:#ffffff;color:#161616}
+.pgrid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pgrid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.pcard{border:2px solid #161616;outline:1px solid #cbb26a;outline-offset:-7px;background:#faf6ec;padding:22px 16px 20px;text-align:center}
+.pcard img{height:170px;width:100%;object-fit:cover;margin-bottom:16px}
+.pcard h3{font-size:17.5px;letter-spacing:.03em;line-height:1.35}
+.pcard p{color:#55534a;font-size:14.5px;margin-top:6px}
+.pcard .pr{color:#c79a24;font-size:17.5px;margin:12px 0 14px}
+.prod{display:grid;grid-template-columns:1.05fr 1fr;gap:50px;padding:36px 0 60px;align-items:center}
+.prod .crumb2{text-align:left;margin:0 0 14px}
+.prod h1{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);line-height:1.1;font-weight:600}
+.prod h1 .big{font-weight:800;font-family:'Jost',sans-serif;letter-spacing:.01em}
+.prod .size{font-size:22px;letter-spacing:.05em;margin-top:12px}
+.prod .desc{font-size:18px;line-height:1.6;color:#55534a;margin:18px 0}
+.prod h3{letter-spacing:.1em;font-size:18px;margin-bottom:8px}
+.ben2{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;list-style:none}
+.ben2 li{font-size:16.5px;padding:5px 0}
+.ben2 li::before{content:"";display:inline-block;width:19px;height:19px;border-radius:50%;background:#c79a24 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.4"><path d="M4 12.5l5 5L20 6.5"/></svg>') center/11px no-repeat;vertical-align:-3px;margin-right:9px}
+.price-row{display:flex;align-items:center;gap:26px;margin-top:28px;flex-wrap:wrap}
+.price-big{font-family:'Playfair Display',serif;color:#c79a24;font-size:26px;letter-spacing:.05em}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center;padding:48px 0}
+.split h2{font-family:'Playfair Display',serif;font-size:34px;font-weight:600;margin-bottom:14px}
+.split p{line-height:1.7;color:#55534a;margin-bottom:12px;font-size:16.5px}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:26px 0 60px}
+.bcard{border:1.5px solid #cbb26a;background:#ffffff}
+.bcard img{height:180px;width:100%;object-fit:cover}
+.bcard .bt{padding:18px}
+.bcard h3{font-size:18.5px;margin-bottom:8px;line-height:1.35}
+.bcard p{color:#55534a;font-size:15px;line-height:1.6}
+.bcard a{color:#c79a24;font-weight:600;display:inline-block;margin-top:10px}
+.faq-list{max-width:860px;margin:0 auto;padding:22px 0 60px}
+details{border:1.5px solid #cbb26a;margin-bottom:12px;background:#ffffff;padding:0 20px}
+summary{cursor:pointer;font-weight:600;font-size:17px;padding:16px 0;list-style:none}
+details p{padding:0 0 18px;line-height:1.65;color:#55534a}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;padding:22px 0 60px;align-items:start}
+.cform label{display:block;font-weight:600;margin-bottom:14px;font-size:15px}
+.cform input,.cform textarea{width:100%;margin-top:6px;padding:12px;border:1.5px solid #cbb26a;font:inherit;background:#ffffff;color:#161616}
+.ph-box{border:1.5px dashed #c79a24;padding:22px;background:#faf6ec}
+.ph-box p{padding:6px 0;font-size:16px}
+.ph-note{color:#c79a24;font-size:13.5px}
+@media(max-width:1000px){.pgrid4{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){
+ .hero,.home-cols,.prod,.split,.contact-grid{grid-template-columns:1fr}
+ .shop-grid{grid-template-columns:1fr}
+ .blog-grid{grid-template-columns:1fr 1fr}
+ nav.mainnav{display:none;flex-direction:column;gap:8px}
+ nav.mainnav.open{display:flex}
+ .burger{display:block}
+ .icons{display:none}
+ .hero-txt{padding:40px 24px}
+}
+@media(max-width:900px){.splithead{flex-wrap:wrap;justify-content:center !important;gap:8px}.splithead .icons{display:none}.sortrow{flex-wrap:wrap;justify-content:flex-start}}
+@media(max-width:560px){.blog-grid,.pgrid2,.range2,.ben-grid{grid-template-columns:1fr}.pgrid4{grid-template-columns:1fr !important}.fnav{justify-content:center}}
+</style></head><body>
+<header class="site">
+<div class="icons"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2L5 8zM9 8V6a3 3 0 0 1 6 0v2"/></svg></div>
+<a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
+<nav class="mainnav"><a href="index.html">HOME</a>
+<a href="shop.html">SHOP</a>
+<a href="product.html" class="active">PRODUCT</a>
+<a href="about.html">ABOUT</a>
+<a href="blog.html">BLOG</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">CONTACT</a></nav>
+<button class="burger" aria-label="Menu">&#9776;</button></header>
+
+<div class="wrap"><div class="prod">
+<div><img src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey box and sachet" style="width:100%"></div>
+<div><div class="crumb2">HOME / PRODUCTS / VITAL HONEY</div>
+<h1>BLACK HORSE<br><span class="big">VITAL HONEY</span></h1>
+<div class="size">10 GRAMS x 24 SACHETS</div>
+<p class="desc">An exquisite natural honey blend made with rich, natural ingredients to support vitality and daily energy.</p>
+<h3>BENEFITS</h3>
+<ul class="ben2"><li>100% Natural</li><li>Rainforest Herbs</li><li>Royal Jelly</li><li>Box of 24 sachets (10g each)</li><li>Panax Ginseng</li></ul>
+<div class="price-row"><span class="price-big">PRICE ON REQUEST</span><a class="btn-goldb" href="contact.html">ADD TO CART</a></div>
+</div></div></div>
+<footer class="site"><div class="fnav">
+<div class="grp"><a href="index.html">HOME</a><a href="shop.html">SHOP</a><a href="product.html">PRODUCT</a><a href="about.html">ABOUT</a></div>
+<a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
+<div class="grp"><a href="blog.html">BLOG</a><a href="faq.html">FAQ</a><a href="contact.html">CONTACT</a></div></div>
+<div class="copy">&copy; BLACK HORSE. ALL RIGHTS RESERVED.</div></footer>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+ var b=document.querySelector('.burger'),n=document.querySelector('.mainnav');
+ if(b&&n){b.addEventListener('click',function(){n.classList.toggle('open');});}
+});
+</script></body></html>
