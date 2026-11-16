@@ -1,0 +1,90 @@
+/* Black Horse V5 (Design 8 Classic Boutique, cream) animation layer.
+   Approved set only: S1, S2, S3, S7, S8 as tuned by V5 items,
+   V5-1, V5-2, V5-4, V5-5, V5-6, V5-9, and V5-7 divider diamond
+   rotation ONLY (the build's FAQ has no accordion, all answers open).
+   V5-3 DROPPED: the hero photo is one flat image, no separate haze
+   layer exists in the build. V5-8 bees were NOT approved.
+   Slowest timings of all variants. No layout change, nothing starts
+   hidden, no reduced-motion gating. */
+
+/* S1 nav underline sweep, slow */
+nav.mainnav a{position:relative}
+nav.mainnav a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1.5px;background:#b98a1e;transform:scaleX(0);transform-origin:left;transition:transform .45s ease}
+@media (hover:hover) and (pointer:fine){
+ nav.mainnav a:hover::after{transform:scaleX(1)}
+}
+
+/* V5-1 frame corner flourish shine pass, clockwise, once.
+   The frame is fully drawn from first paint; only light travels. */
+.corner{animation:bhCorner5 .6s ease 1}
+.c-tl{animation-delay:.1s}
+.c-tr{animation-delay:.7s}
+.c-br{animation-delay:1.3s}
+.c-bl{animation-delay:1.9s}
+@keyframes bhCorner5{0%{filter:brightness(1)}40%{filter:brightness(1.75)}100%{filter:brightness(1)}}
+
+/* V5-2 divider bloom: ornamental dividers grow from the centre on
+   load, 800ms. Dividers only, never text. */
+.divider,.flourish{animation:bhBloom5 .8s ease}
+@keyframes bhBloom5{from{transform:scaleX(.8)}to{transform:scaleX(1)}}
+
+/* V5-6 gold buttons: S2 shine, slower here (700ms) + S3 press */
+.btn-gold{position:relative;overflow:hidden}
+.btn-gold::before{content:"";position:absolute;top:0;bottom:0;left:-70%;width:45%;background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,255,255,.5),rgba(255,255,255,0));transform:skewX(-18deg);transition:left .7s ease;pointer-events:none}
+.btn-gold,.btn-line{transition:transform .16s ease}
+.btn-gold:active,.btn-line:active{transform:scale(.98)}
+@media (hover:hover) and (pointer:fine){
+ .btn-gold:hover::before{left:115%}
+}
+
+/* V5-6 outline button: gold fill rises over 400ms, text turns black */
+.btn-line{background-image:linear-gradient(#c79a24,#c79a24);background-repeat:no-repeat;background-position:0 100%;background-size:100% 0;transition:background-size .4s ease,color .4s ease,transform .16s ease}
+@media (hover:hover) and (pointer:fine){
+ .btn-line:hover{background-size:100% 100%;color:#111}
+}
+
+/* V5-4 engraved blend panels: the artwork warms, the panel border
+   brightens. No lift, no zoom - the drawing is lit, not moved. */
+.blend{transition:border-color .45s ease}
+.blend img{transition:filter .45s ease}
+@media (hover:hover) and (pointer:fine){
+ .blend:hover{border-color:#b98a1e}
+ .blend:hover img{filter:brightness(1.14) saturate(1.12)}
+}
+
+/* Boutique card treatment: border brightens slowly, no lift */
+.bcard,.panel{transition:border-color .45s ease}
+@media (hover:hover) and (pointer:fine){
+ .bcard:hover,.panel:hover{border-color:#b98a1e}
+}
+
+/* V5-5 dotted menu: dots beside a hovered link brighten */
+.mainnav .dot{transition:color .35s ease,filter .35s ease}
+@media (hover:hover) and (pointer:fine){
+ .mainnav a:hover + .dot{color:#b98a1e;filter:brightness(1.6)}
+}
+
+/* V5-7 FAQ divider diamond: on question hover, the divider under it
+   rotates its diamond 45 degrees and returns (500ms). No accordion
+   exists in this build, so no accordion motion is applied. */
+.flourish span{display:inline-block;transition:transform .5s ease}
+@media (hover:hover) and (pointer:fine){
+ .qa-block:hover + .flourish span{transform:rotate(45deg)}
+}
+
+/* V5-9 About circular badges: artwork turns 8 degrees and back,
+   600ms, label stays still */
+@media (hover:hover) and (pointer:fine){
+ .circ:hover .c{animation:bhTurn5 .6s ease}
+}
+@keyframes bhTurn5{0%{transform:rotate(0)}35%{transform:rotate(8deg)}100%{transform:rotate(0)}}
+
+/* S7 form focus glow, soft and slow */
+.cform input,.cform textarea,.cform select{transition:border-color .4s ease,box-shadow .4s ease}
+.cform input:focus,.cform textarea:focus,.cform select:focus{border-color:#b98a1e;box-shadow:0 0 0 3px rgba(185,138,30,.18);outline:none}
+
+/* S8 icon micro feedback */
+.burger{transition:transform .3s ease}
+@media (hover:hover) and (pointer:fine){
+ .burger:hover{transform:scale(1.08)}
+}
