@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Write to Black Horse in the boutique cream design: a simple form with name, email and message. Contact details follow when the client provides them.">
+<meta name="description" content="Write to Black Horse: a simple form with name, email and message. Contact details follow when the client provides them.">
 <title>Black Horse Vital Honey - Contact</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
@@ -137,7 +137,7 @@ details p{padding:0 0 17px;line-height:1.6;color:#4c4636;font-size:17.5px}
  .frame{padding:8px 12px 18px}
 }
 @media(max-width:560px){.blend3,.blog-grid{grid-template-columns:1fr}}
-</style></head><body>
+</style><link rel="stylesheet" href="../assets/anim-v5.css"></head><body>
 <div class="noframe">
 <header class="site"><a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
 <div class="topline"></div>
@@ -184,4 +184,4 @@ document.addEventListener('DOMContentLoaded',function(){
  var sel=document.getElementById('sortsel');
  if(sel){sel.addEventListener('change',function(){var grid=sel.closest('.shop-grid,.wrap').querySelector('.pgrid4,.pgrid');if(!grid)return;var cs=[].slice.call(grid.children);if(sel.value==='az')cs.sort(function(a,b){return a.querySelector('h3').textContent.localeCompare(b.querySelector('h3').textContent);});if(sel.value==='za')cs.sort(function(a,b){return b.querySelector('h3').textContent.localeCompare(a.querySelector('h3').textContent);});cs.forEach(function(c){grid.appendChild(c);});});}
 });
-</script></body></html>
+</script><script src="../assets/anim-v5.js" defer></script></body></html>
