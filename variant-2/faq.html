@@ -3,6 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Questions answered plainly: the blend, the box of 24 sachets, the price on request, and how to get in touch.">
 <title>Black Horse Vital Honey - FAQ</title>
+<link rel="icon" type="image/png" href="../assets/favicon-a.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,800;1,500&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -180,6 +181,9 @@ body.nav-open{overflow:hidden}
 }
 .fq-item .mark{display:inline-block;transition:transform .28s ease}
 .fq-item.acc-open .mark{transform:rotate(180deg)}
+
+/*zfix*/
+@media(max-width:900px){.mainnav{z-index:300!important}}
 </style>
 
 <style data-rsnow3>
@@ -224,12 +228,19 @@ button.btn-gold,button.btn-line,button.btn-black,button.btn-goldb,button.btn-hex
 .qty button{width:32px;height:34px;background:none;border:1.5px solid #c79a24;color:inherit;font-size:17px;cursor:pointer;line-height:1}
 .qty input{width:44px;height:34px;text-align:center;background:transparent;border:0;color:inherit;font:inherit}
 @media(max-width:560px){.cart-row{flex-wrap:wrap}}
+
+/*hcart*/
+.cart-link{gap:8px;padding:9px 14px;border:1.5px solid #1c1a14;border-radius:3px}
+.cart-link::after{content:"CART";font-size:13px;font-weight:700;letter-spacing:.1em;color:#1c1a14}
+.cart-link svg{stroke:#1c1a14}
+.cart-count{background:#1c1a14;color:#fff8ea}
+@media(max-width:900px){.icons{display:flex!important;right:16px!important}.icons>svg{display:none!important}.splithead .icons{display:flex!important}.cart-link{padding:7px 10px}.cart-link svg{width:19px;height:19px}.cart-link::after{font-size:12px}}
 </style>
 
 </head><body class="cream-page">
 <header class="site">
 <div class="icons"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg><a class="cart-link" href="cart.html" aria-label="Cart"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2L5 8zM9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-count" data-cart-count></span></a></div>
-<a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
+<a class="logo" href="index.html"><img src="../assets/logo-a-light.webp" alt="Black Horse logo"></a>
 <nav class="mainnav"><a href="index.html">HOME</a>
 <a href="product.html">PRODUCT</a>
 <a href="about.html">ABOUT</a>
@@ -238,7 +249,7 @@ button.btn-gold,button.btn-line,button.btn-black,button.btn-goldb,button.btn-hex
 <a href="contact.html">CONTACT</a></nav>
 <button class="burger" aria-label="Menu">&#9776;</button></header>
 <div class="wrap"><h1 class="faq-title"><span class="g">FREQUENTLY</span> ASKED QUESTIONS</h1><div class="faq-narrow"><div class="fq-item"><h3>What is Black Horse Vital Honey?<span class="mark">&#8722;</span></h3><p>Black Horse Vital Honey is a 100% natural honey blend with Royal Jelly, Panax Ginseng and Rainforest Herbs. It comes in sachets of 10 grams each.</p></div><div class="fq-item"><h3>How many sachets are in one box?<span class="mark">+</span></h3><p>One box holds 24 sachets, and each sachet is 10 grams.</p></div><div class="fq-item"><h3>What are the main ingredients?<span class="mark">+</span></h3><p>The blend is made with Royal Jelly, Panax Ginseng and Rainforest Herbs, in a 100% natural honey base.</p></div><div class="fq-item"><h3>How much does it cost?<span class="mark">+</span></h3><p>The price is on request. Please send an enquiry through the Contact page and we will share the current price.</p></div><div class="fq-item"><h3>How do I place an order?<span class="mark">+</span></h3><p>Send your details through the Contact page, or use the ADD TO CART button on the Product page. We will confirm your order and the price with you first.</p></div><div class="fq-item"><h3>How do I contact you?<span class="mark">+</span></h3><p>Use the form on the Contact page. Phone, email and address details will be added here as soon as the client provides them.</p></div></div></div>
-<footer class="site"><div class="foot-centre"><a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a><div class="copy">&copy; BLACK HORSE. ALL RIGHTS RESERVED.</div></div></footer>
+<footer class="site"><div class="foot-centre"><a class="logo" href="index.html"><img src="../assets/logo-a-light.webp" alt="Black Horse logo"></a><div class="copy">&copy; BLACK HORSE. ALL RIGHTS RESERVED.</div></div></footer>
 
 <script>
 document.addEventListener('DOMContentLoaded',function(){
