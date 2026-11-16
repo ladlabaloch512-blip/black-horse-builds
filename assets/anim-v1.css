@@ -1,0 +1,167 @@
+/* Black Horse V1 (Design 1 Bold Gold Store) - approved animation layer.
+   Rules: content visible on load, transform/shine/glow only, no opacity-0 starts,
+   no reduced-motion gating, no layout change. Approved set: S1-S8, S10 (no drip
+   element in build, nothing to attach), V1-1,2,3,4,5,6,7,9,10. V1-8 dropped. */
+
+/* S1 nav underline sweep */
+nav.mainnav a{position:relative}
+nav.mainnav a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:#d9a92c;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+nav.mainnav a.active::after{transform:scaleX(1)}
+@media (hover:hover) and (pointer:fine){
+ nav.mainnav a:hover::after{transform:scaleX(1)}
+}
+
+/* S2 gold button shine sweep + S3 press settle */
+.btn-gold,.btn-black,.send-bar{position:relative;overflow:hidden}
+.btn-gold::before,.btn-black::before,.send-bar::before{content:"";position:absolute;top:0;bottom:0;left:-70%;width:45%;background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,255,255,.45),rgba(255,255,255,0));transform:skewX(-18deg);transition:left .5s ease;pointer-events:none}
+.btn-gold,.btn-black,.btn-outline{transition:transform .12s ease,box-shadow .3s ease}
+.send-bar{transition:transform .12s ease}
+.btn-gold:active,.btn-black:active,.btn-outline:active{transform:scale(.98)}
+.send-bar:active{transform:scale(.99)}
+@media (hover:hover) and (pointer:fine){
+ .btn-gold:hover::before,.btn-black:hover::before,.send-bar:hover::before{left:115%}
+}
+
+/* V1-6 Add to Cart / buy bar fill (inset fill under the label) */
+@media (hover:hover) and (pointer:fine){
+ .pcard .btn-gold:hover,.prod .btn-gold:hover,.prod .btn-black:hover{box-shadow:inset 0 -64px 0 rgba(0,0,0,.16)}
+}
+
+/* S4 card lift + S5 image zoom inside frame (hover capable only) */
+.pcard,.acard,.bcard,.ing{transition:transform .25s ease,box-shadow .25s ease}
+.acard img,.bcard img,.pcard img{transition:transform .4s ease}
+@media (hover:hover) and (pointer:fine){
+ .pcard:hover,.acard:hover,.bcard:hover,.ing:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(20,16,4,.14)}
+ .acard:hover img,.bcard:hover img{transform:scale(1.03)}
+ .pcard:hover img{transform:scale(1.02)}
+}
+
+/* V1-1 hero headline two line settle (visible throughout, transform only) */
+@keyframes bhSettle{from{transform:translateY(-8px)}to{transform:translateY(0)}}
+h1.display{animation:bhSettle .6s ease-out}
+h1.display .gold{display:inline-block;animation:bhSettle .6s ease-out .12s backwards}
+.page-head h1{animation:bhSettle .55s ease-out}
+
+/* V1-2 announcement bar marquee (JS wraps the bar's own text, claims unchanged) */
+.topbar.bh-marquee{overflow:hidden;text-align:left}
+.topbar .bh-track{display:inline-flex;white-space:nowrap;animation:bhMarquee 30s linear infinite;will-change:transform}
+.topbar .bh-track span{padding-right:56px}
+@keyframes bhMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (hover:hover) and (pointer:fine){
+ .topbar.bh-marquee:hover .bh-track{animation-play-state:paused}
+}
+
+/* V1-3 hero product photo slow push */
+.hero-img{overflow:hidden}
+.hero-img img{animation:bhPush 8s ease-in-out infinite alternate}
+@keyframes bhPush{from{transform:scale(1)}to{transform:scale(1.05)}}
+
+/* V1-4 blend strip icon pop in sequence */
+@keyframes bhPop{from{transform:scale(.9)}to{transform:scale(1)}}
+.strip-in span svg{animation:bhPop .45s ease-out backwards}
+.strip-in span:nth-child(2) svg{animation-delay:.1s}
+.strip-in span:nth-child(3) svg{animation-delay:.2s}
+.strip-in span:nth-child(4) svg{animation-delay:.3s}
+
+/* V1-5 dark signature band glow drift (behind the product photo) */
+.dark-sec .dark-grid img{animation:bhGlow 5s ease-in-out infinite alternate}
+@keyframes bhGlow{from{box-shadow:0 0 0 rgba(233,199,102,0)}to{box-shadow:0 0 42px rgba(233,199,102,.35)}}
+
+/* S5 product page: main image gentle zoom, thumbnails respond */
+.prod .main-img{transition:transform .5s ease}
+.thumbs img{transition:transform .3s ease,border-color .3s ease}
+@media (hover:hover) and (pointer:fine){
+ .prod .main-img:hover{transform:scale(1.015)}
+ .thumbs img:hover{transform:scale(1.03);border-color:#c79a24}
+}
+
+/* S6 FAQ smooth open (native details, answer content settles on open) */
+@keyframes bhOpen{from{transform:translateY(-6px)}to{transform:translateY(0)}}
+details[open] p,details[open] .faq-a{animation:bhOpen .3s ease-out}
+summary{transition:color .2s ease}
+@media (hover:hover) and (pointer:fine){
+ summary:hover{color:#b98a1e}
+}
+
+/* V1-7 shop filters: build filters are static groups (no accordion in build),
+   so this item lands as checkbox and label feedback only. Flagged in report. */
+.filters label{transition:color .2s ease}
+.filters input[type=checkbox]{accent-color:#c79a24}
+@media (hover:hover) and (pointer:fine){
+ .filters label:hover{color:#b98a1e}
+}
+
+/* S7 form focus glow */
+.cform input:focus,.cform textarea:focus{border-color:#c79a24;box-shadow:0 0 0 3px rgba(201,154,36,.18);outline:none}
+
+/* S8 header icon micro feedback (burger on mobile, search/account/cart icons on inner pages) */
+.burger{transition:transform .2s ease}
+.hbar a svg{transition:transform .2s ease}
+.hicons span{display:inline-block;transition:transform .2s ease}
+@media (hover:hover) and (pointer:fine){
+ .burger:hover{transform:scale(1.12)}
+ .hbar a:hover svg{transform:scale(1.12)}
+ .hicons span:hover{transform:scale(1.12)}
+}
+
+/* V1-9 blog and article links: arrow style slide on the read links */
+.bcard a{transition:transform .25s ease}
+@media (hover:hover) and (pointer:fine){
+ .bcard a:hover{transform:translateX(4px)}
+}
+
+/* New R-SNOW-1 homepage sections: same baseline language.
+   stats3 stays fully static (counters not approved outside V4 Product).
+   showcase cards reuse .pcard rules above. closeband buttons reuse shine. */
+.closeband .btn-gold,.closeband .btn-black{position:relative;overflow:hidden}
+
+/* Screenshot Match R1 rebuild blocks (final V1 structure) */
+/* Home split row: dark signature panel + side articles */
+.dark-panel img{animation:bhGlow 5s ease-in-out infinite alternate}
+.sart{transition:transform .25s ease,box-shadow .25s ease}
+.sart img{transition:transform .4s ease}
+@media (hover:hover) and (pointer:fine){
+ .sart:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(20,16,4,.14)}
+ .sart:hover img{transform:scale(1.03)}
+}
+/* Shop horizontal cards + filter rail boxes */
+.hcard{transition:transform .25s ease,box-shadow .25s ease}
+.hcard img{transition:transform .4s ease}
+.rail-box{transition:border-color .25s ease,box-shadow .25s ease}
+@media (hover:hover) and (pointer:fine){
+ .hcard:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(20,16,4,.14)}
+ .hcard:hover img{transform:scale(1.03)}
+ .hcard .btn-gold:hover{box-shadow:inset 0 -64px 0 rgba(0,0,0,.16)}
+ .rail-box:hover{border-color:#c79a24}
+}
+/* Blog filter pills: V1-9 fill wipe via inset fill */
+.pill{transition:box-shadow .25s ease,color .25s ease,transform .12s ease}
+.pill:active{transform:scale(.98)}
+@media (hover:hover) and (pointer:fine){
+ .pill:hover{box-shadow:inset 0 -40px 0 rgba(201,154,36,.28)}
+}
+/* Blog horizontal cards */
+.bcard-h{transition:transform .25s ease,box-shadow .25s ease}
+.bcard-h img{transition:transform .4s ease}
+.bcard-h a{transition:transform .25s ease}
+@media (hover:hover) and (pointer:fine){
+ .bcard-h:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(20,16,4,.14)}
+ .bcard-h:hover img{transform:scale(1.03)}
+ .bcard-h a:hover{transform:translateX(4px)}
+}
+/* FAQ layout: category rail feedback (accordion motion stays on details above) */
+.cat-rail a,.cat-rail button,.cat-rail li,.cat-rail [data-fcat]{transition:color .2s ease,transform .2s ease}
+@media (hover:hover) and (pointer:fine){
+ .cat-rail a:hover,.cat-rail button:hover,.cat-rail [data-fcat]:hover{color:#b98a1e;transform:translateX(3px)}
+}
+/* Product badge strip: one settle on load, badges fully visible throughout */
+.badge-strip{animation:bhSettle .55s ease-out}
+/* Blog Golden Club band: form focus glow + button press (shine via .btn rules if classed) */
+.goldclub input:focus{border-color:#c79a24;box-shadow:0 0 0 3px rgba(201,154,36,.18);outline:none}
+.goldclub button,.goldclub .btn-gold{transition:transform .12s ease}
+.goldclub button:active,.goldclub .btn-gold:active{transform:scale(.98)}
+/* Contact care column: V1-10 icon rows pop once, staggered, no loop */
+.irow{animation:bhPop .45s ease-out backwards}
+.irow:nth-child(2){animation-delay:.1s}
+.irow:nth-child(3){animation-delay:.2s}
+.irow:nth-child(4){animation-delay:.3s}
