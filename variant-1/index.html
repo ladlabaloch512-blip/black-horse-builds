@@ -212,7 +212,7 @@ body.white-bg{background:#fff}
 .wholesale p{color:#555;font-size:15px;line-height:1.6}
 .send-bar{width:100%;background:#0a0a0a;color:#e9c766;border:0;padding:16px;font:inherit;font-weight:700;letter-spacing:.1em;cursor:pointer;border-radius:4px;font-size:16px}
 @media(max-width:900px){.fgrid-about{grid-template-columns:1fr 1fr}.splitrow{grid-template-columns:1fr}.dp-grid{grid-template-columns:1fr}.faq-layout{grid-template-columns:1fr}.info-col{border-left:0;padding-left:0}.bcard-h{flex-direction:column}.bcard-h img{width:100%;height:180px;min-height:0}.hicons{display:none}}
-</style></head><body>
+</style><link rel="stylesheet" href="../assets/anim-v1.css"></head><body>
 <div class="topbar">100% Natural &bull; With Royal Jelly, Panax Ginseng &amp; Rainforest Herbs</div>
 <header class="site"><div class="hbar">
 <a class="logo" href="index.html"><img src="../assets/logo-web.webp" alt="Black Horse logo"></a>
@@ -305,4 +305,4 @@ document.addEventListener('DOMContentLoaded',function(){
  var sel=document.getElementById('sortsel');
  if(sel){sel.addEventListener('change',function(){var grid=sel.closest('.shop-grid,.wrap').querySelector('.pgrid4,.pgrid');if(!grid)return;var cs=[].slice.call(grid.children);if(sel.value==='az')cs.sort(function(a,b){return a.querySelector('h3').textContent.localeCompare(b.querySelector('h3').textContent);});if(sel.value==='za')cs.sort(function(a,b){return b.querySelector('h3').textContent.localeCompare(a.querySelector('h3').textContent);});cs.forEach(function(c){grid.appendChild(c);});});}
 });
-</script></body></html>
+</script><script src="../assets/anim-v1.js" defer></script></body></html>
