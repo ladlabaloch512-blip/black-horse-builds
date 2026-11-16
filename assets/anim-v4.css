@@ -115,3 +115,52 @@ nav.mainnav a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;hei
  .burger:hover{transform:scale(1.12)}
  .csocials a:hover{transform:translateY(-2px)}
 }
+
+/* ============ R-SNOW-4 expanded set (Snow's more-animation order, 2026-11-16) ============
+   Safety: hidden states are JS-added only; force-reveal failsafe in anim-v4.js plus the
+   html.bh-all backstop below; no reduced-motion gating anywhere. Geometric bezier language.
+   The S11 counters (.hx) are excluded from the reveal so their count is never disturbed. */
+/* Page-head entrance: rise + fade on the geometric bezier (hero keeps its bhInL4/bhInR4
+   slide-ins; the h1 inside the hero text gains the fade-rise on top) */
+.bh-hx{animation:bhHeroH4 .6s cubic-bezier(0.65,0,0.35,1)}
+@keyframes bhHeroH4{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+/* Ken Burns on the hero photo, slow */
+.hero-img img{animation:bhKB4 14s ease-in-out infinite alternate}
+@keyframes bhKB4{from{transform:scale(1)}to{transform:scale(1.04)}}
+/* Scroll reveal */
+.bh-rv{opacity:0;transform:translateY(14px)}
+.bh-rv.bh-in{opacity:1;transform:translateY(0);transition:opacity .55s cubic-bezier(0.65,0,0.35,1),transform .55s cubic-bezier(0.65,0,0.35,1)}
+html.bh-all .bh-rv{opacity:1!important;transform:none!important}
+/* Seal and badge glow pulse (drop-shadow so hex shapes keep their clipped form) */
+.seal,.badgehex{animation:bhGlow4 3.4s ease-in-out infinite}
+@keyframes bhGlow4{0%,100%{filter:drop-shadow(0 0 0 rgba(199,154,36,0))}50%{filter:drop-shadow(0 0 9px rgba(199,154,36,.55))}}
+/* FAQ badge lights up on the OPEN card; one in-view pulse for every badge */
+.qa-card .qa-badge{transition:filter .3s cubic-bezier(0.65,0,0.35,1),background-color .3s ease}
+.qa-card.acc-open .qa-badge{filter:drop-shadow(0 0 7px rgba(199,154,36,.8))}
+.qa-badge.bh-pulse{animation:bhPulse4 .8s cubic-bezier(0.65,0,0.35,1)}
+@keyframes bhPulse4{0%{filter:drop-shadow(0 0 0 rgba(199,154,36,0))}45%{filter:drop-shadow(0 0 9px rgba(199,154,36,.85))}100%{filter:drop-shadow(0 0 0 rgba(199,154,36,0))}}
+/* Touch equivalents for the hover micro-accents */
+.hicons-c svg:active{transform:scale(1.12)}
+.csocials a:active{transform:translateY(-2px)}
+.bh-zoom{animation:bhZoom4 .7s cubic-bezier(0.65,0,0.35,1)}
+@keyframes bhZoom4{from{transform:scale(1.04)}to{transform:scale(1)}}
+/* Product gallery: slide on the geometric bezier; active thumb gains a soft gold ring */
+[data-gal] .gal-track{transition:transform .45s cubic-bezier(0.65,0,0.35,1)}
+.gal-thumbs button{transition:box-shadow .3s ease}
+.gal-thumbs button.on{box-shadow:0 0 0 3px rgba(199,154,36,.3)}
+/* Add to cart: flying image clone, button confirm ring, cart count pop */
+.bh-flyer{position:fixed;z-index:600;pointer-events:none;border-radius:6px;object-fit:cover;margin:0}
+[data-add].bh-added{animation:bhAdded4 .55s cubic-bezier(0.65,0,0.35,1)}
+@keyframes bhAdded4{0%{box-shadow:0 0 0 rgba(199,154,36,0)}40%{box-shadow:0 0 0 6px rgba(199,154,36,.35)}100%{box-shadow:0 0 0 rgba(199,154,36,0)}}
+[data-cart-count].bh-pop{animation:bhPopCt4 .45s cubic-bezier(0.65,0,0.35,1)}
+@keyframes bhPopCt4{0%{transform:scale(1)}40%{transform:scale(1.45)}100%{transform:scale(1)}}
+/* Place order: progress shimmer, then the placed settle */
+#co-form button.bh-processing{position:relative;overflow:hidden;pointer-events:none}
+#co-form button.bh-processing::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.35) 50%,rgba(255,255,255,0) 70%);animation:bhProg4 .7s linear infinite}
+@keyframes bhProg4{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+#co-form button.bh-placed{animation:bhPopCt4 .4s cubic-bezier(0.65,0,0.35,1)}
+/* Thank-you seal: gold circle and check drawn in (SVG injected by anim-v4.js) */
+.bh-seal{display:block;margin:0 auto 14px;width:76px;height:76px}
+.bh-seal circle{fill:none;stroke:#c79a24;stroke-width:2.5;stroke-dasharray:1;stroke-dashoffset:1;animation:bhDraw4 .7s cubic-bezier(0.65,0,0.35,1) forwards}
+.bh-seal path{fill:none;stroke:#c79a24;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:bhDraw4 .45s cubic-bezier(0.65,0,0.35,1) .55s forwards}
+@keyframes bhDraw4{to{stroke-dashoffset:0}}
