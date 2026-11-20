@@ -20,8 +20,8 @@ if(nav){
 }
 /* ---------- cart ---------- */
 var PROD={
-  'black24':{name:'Black Horse Vital Honey - Black Pack',desc:'Box of 24 Sachets (10g each)',price:5,img:'../assets/boxes-web.jpg'},
-  'yellow24':{name:'Black Horse Vital Honey - Yellow Pack',desc:'Box of 24 Sachets (10g each)',price:5,img:'assets/yellow-pack.webp?v=20261120a'}
+  'black24':{name:'Black Horse Vital Honey - Black Pack',desc:'Box of 24 Sachets (10g each)',price:5,img:'assets/pack-black.jpg'},
+  'yellow24':{name:'Black Horse Vital Honey - Yellow Pack',desc:'Box of 24 Sachets (10g each)',price:5,img:'assets/pack-yellow.jpg'}
 };
 var KEY='bh-final-cart';
 var cart={};
@@ -90,8 +90,8 @@ function renderCart(){
   if(!ids.length){
     host.innerHTML='<div class="cart-empty"><p>Your cart is empty.</p></div>'+
     '<div class="range-grid">'+
-    '<div class="rcard"><div class="rimg"><img src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey - Black Pack"></div><div class="rbody"><div class="pack">The Black Pack</div><h3>Black Horse Vital Honey</h3><p class="desc">Box of 24 Sachets (10g each). 100% natural, with Royal Jelly, Panax Ginseng and Rainforest Herbs.</p><div class="rrow"><span class="price">$5</span><button type="button" class="btn-gold" data-add="black24">ADD TO CART</button></div></div></div>'+
-    '<div class="rcard"><div class="rimg"><img src="assets/yellow-pack.webp" alt="Black Horse Vital Honey - Yellow Pack"></div><div class="rbody"><div class="pack">The Yellow Pack</div><h3>Black Horse Vital Honey</h3><p class="desc">Box of 24 Sachets (10g each). 100% natural, with Royal Jelly, Panax Ginseng and Rainforest Herbs.</p><div class="rrow"><span class="price">$5</span><button type="button" class="btn-gold" data-add="yellow24">ADD TO CART</button></div></div></div>'+
+    '<div class="rcard"><div class="rimg"><img src="assets/pack-black.jpg" alt="Black Horse Vital Honey, Black Pack, box of 24 sachets"></div><div class="rbody"><div class="pack">The Black Pack</div><h3>Black Horse Vital Honey</h3><p class="desc">Box of 24 Sachets (10g each). 100% natural, with Royal Jelly, Panax Ginseng and Rainforest Herbs.</p><div class="rrow"><span class="price">$5</span><button type="button" class="btn-gold" data-add="black24">ADD TO CART</button></div></div></div>'+
+    '<div class="rcard"><div class="rimg"><img src="assets/pack-yellow.jpg" alt="Black Horse Vital Honey, Yellow Pack, box of 24 sachets"></div><div class="rbody"><div class="pack">The Yellow Pack</div><h3>Black Horse Vital Honey</h3><p class="desc">Box of 24 Sachets (10g each). 100% natural, with Royal Jelly, Panax Ginseng and Rainforest Herbs.</p><div class="rrow"><span class="price">$5</span><button type="button" class="btn-gold" data-add="yellow24">ADD TO CART</button></div></div></div>'+
     '</div>';
     if(sumEl)sumEl.style.display='none';return;
   }
