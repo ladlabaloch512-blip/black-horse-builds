@@ -21,7 +21,7 @@ if(nav){
 /* ---------- cart ---------- */
 var PROD={
   'black24':{name:'Black Horse Vital Honey - Black Pack',desc:'Box of 24 Sachets (10g each)',price:5,img:'../assets/boxes-web.jpg'},
-  'yellow24':{name:'Black Horse Vital Honey - Yellow Pack',desc:'Box of 24 Sachets (10g each)',price:5,img:'assets/yellow-pack.webp'}
+  'yellow24':{name:'Black Horse Vital Honey - Yellow Pack',desc:'Box of 24 Sachets (10g each)',price:5,img:'assets/yellow-pack.webp?v=20261120a'}
 };
 var KEY='bh-final-cart';
 var cart={};
@@ -88,7 +88,11 @@ function renderCart(){
   var ids=Object.keys(cart);
   var sumEl=document.getElementById('cart-summary');
   if(!ids.length){
-    host.innerHTML='<div class="cart-empty"><p>Your cart is empty.</p><p style="margin-top:14px"><a class="btn-gold" href="index.html#range">SEE THE RANGE</a></p></div>';
+    host.innerHTML='<div class="cart-empty"><p>Your cart is empty.</p></div>'+
+    '<div class="range-grid">'+
+    '<div class="rcard"><div class="rimg"><img src="../assets/boxes-web.jpg" alt="Black Horse Vital Honey - Black Pack"></div><div class="rbody"><div class="pack">The Black Pack</div><h3>Black Horse Vital Honey</h3><p class="desc">Box of 24 Sachets (10g each). 100% natural, with Royal Jelly, Panax Ginseng and Rainforest Herbs.</p><div class="rrow"><span class="price">$5</span><button type="button" class="btn-gold" data-add="black24">ADD TO CART</button></div></div></div>'+
+    '<div class="rcard"><div class="rimg"><img src="assets/yellow-pack.webp" alt="Black Horse Vital Honey - Yellow Pack"></div><div class="rbody"><div class="pack">The Yellow Pack</div><h3>Black Horse Vital Honey</h3><p class="desc">Box of 24 Sachets (10g each). 100% natural, with Royal Jelly, Panax Ginseng and Rainforest Herbs.</p><div class="rrow"><span class="price">$5</span><button type="button" class="btn-gold" data-add="yellow24">ADD TO CART</button></div></div></div>'+
+    '</div>';
     if(sumEl)sumEl.style.display='none';return;
   }
   if(sumEl)sumEl.style.display='';
@@ -110,6 +114,7 @@ function renderCheckout(){
     return '<div class="co-item"><span>'+p.name+' &times; '+cart[id]+'</span><span>'+money(p.price*cart[id])+'</span></div>';
   }).join(''):'<div class="co-item"><span>Your cart is empty.</span><span></span></div>';
   var tt=document.getElementById('co-total');if(tt)tt.textContent=money(total());
+  var tm=document.getElementById('co-total-m');if(tm)tm.textContent=money(total());
 }
 var coForm=document.getElementById('co-form');
 if(coForm){

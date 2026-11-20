@@ -227,6 +227,31 @@ footer.site .ftag{color:#e9c766;font-size:14px;letter-spacing:.05em;margin-top:4
   .benefits{grid-template-columns:1fr}
   .fgrid{grid-template-columns:1fr}
 }
+/* ===== FIX ROUND R-ANALYSIS-FIX (2026-11-20) ===== */
+/* P0 DRAWER: the overlay is appended to <body> (root stacking context,
+   z 290) while the drawer lives inside header.site (own stacking
+   context, z 200), so the overlay painted OVER the drawer and ate
+   every tap. When the drawer is open, the header rises above it. */
+body.nav-open header.site{z-index:400}
+/* Item 5: the JS-inserted close button must never show on desktop
+   (it rendered as a stray light bar left of Home); the <=900px drawer
+   rule still shows it inside the drawer */
+@media(min-width:901px){.nav-close{display:none}}
+/* Item 1: compact checkout total, small screens only */
+.co-compact-total{display:none}
+@media(max-width:900px){
+  .co-compact-total{display:flex;justify-content:space-between;gap:14px;border:1.5px solid #d9bc6a;border-radius:6px;padding:12px 16px;margin:4px 0 14px;font-weight:700;font-size:17.5px;background:#101013}
+}
+/* Item 6: blog Men's Health thumbnail, couple in frame */
+.bcard img.pos-low{object-position:center 82%}
+/* Item 15: thank-you seal reads as one mark on mobile */
+@media(max-width:700px){
+  .ty-seal{width:74px;height:74px;font-size:40px}
+  /* Item 10: tighter section spacing on mobile */
+  .sec{padding:42px 0}
+  .newsletter{padding:40px 20px}
+  .page-hero{padding:44px 20px 40px}
+}
 /* ===== FIX ROUND R-CLIENT-VIDEO-FIX (2026-11-19) ===== */
 /* B10 marquee: hold at the clean start of the line on every loop */
 @keyframes bhStart{0%{transform:translateX(0)}14%{transform:translateX(0)}100%{transform:translateX(-50%)}}
