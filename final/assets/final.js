@@ -9,7 +9,6 @@ var nav=document.querySelector('nav.mainnav');
 if(nav){
   var close=document.createElement('button');close.className='nav-close';close.setAttribute('aria-label','Close menu');close.innerHTML='&times;';
   nav.insertBefore(close,nav.firstChild);
-  var cartL=document.createElement('a');cartL.href='cart.html';cartL.textContent='Cart';nav.appendChild(cartL);
   var overlay=null;
   function openNav(){document.body.classList.add('nav-open');if(!overlay){overlay=document.createElement('div');overlay.className='nav-overlay';overlay.addEventListener('click',closeNav);document.body.appendChild(overlay);}}
   function closeNav(){document.body.classList.remove('nav-open');if(overlay){overlay.remove();overlay=null;}}
@@ -78,10 +77,20 @@ document.addEventListener('click',function(e){
     var cid=cs.getAttribute('data-cstep');
     cart[cid]=(cart[cid]||0)+parseInt(cs.getAttribute('data-d'),10);
     if(cart[cid]<=0)delete cart[cid];
-    save();badge();renderCart();renderCheckout();
+    save();var topBtn=document.getElementById('top-float');
+if(topBtn){
+  window.addEventListener('scroll',function(){topBtn.classList.toggle('show',window.scrollY>400);},{passive:true});
+  topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+}
+badge();renderCart();renderCheckout();
   }
   var rm=e.target.closest('[data-remove]');
-  if(rm){delete cart[rm.getAttribute('data-remove')];save();badge();renderCart();renderCheckout();}
+  if(rm){delete cart[rm.getAttribute('data-remove')];save();var topBtn=document.getElementById('top-float');
+if(topBtn){
+  window.addEventListener('scroll',function(){topBtn.classList.toggle('show',window.scrollY>400);},{passive:true});
+  topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+}
+badge();renderCart();renderCheckout();}
 });
 /* ---------- cart page ---------- */
 function renderCart(){
@@ -213,5 +222,10 @@ document.querySelectorAll('[data-demo-form]').forEach(function(f){
     f.reset();
   });
 });
+var topBtn=document.getElementById('top-float');
+if(topBtn){
+  window.addEventListener('scroll',function(){topBtn.classList.toggle('show',window.scrollY>400);},{passive:true});
+  topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+}
 badge();renderCart();renderCheckout();
 })();
