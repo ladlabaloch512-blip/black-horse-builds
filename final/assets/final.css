@@ -340,5 +340,5 @@ html{scroll-behavior:smooth}
 @keyframes authPulse{0%{box-shadow:0 0 0 0 rgba(201,154,36,.45)}70%{box-shadow:0 0 0 16px rgba(201,154,36,0)}100%{box-shadow:0 0 0 0 rgba(201,154,36,0)}}
 @media(max-width:700px){.auth-badge{position:static;transform:none;margin:18px auto 0}}
 .honeystrip{height:40px;overflow:hidden;opacity:.85}
-.honeystrip svg{display:block;animation:hexDrift 26s linear infinite}
+.honeystrip svg{display:block;width:calc(100% + 46px);animation:hexDrift 26s linear infinite}
 @keyframes hexDrift{from{transform:translateX(0)}to{transform:translateX(-46px)}}
