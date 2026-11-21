@@ -67,7 +67,7 @@ button.btn-gold,button.btn-line,button.btn-dark{font-family:inherit}
 .benefit .bword{font-family:'Playfair Display',Georgia,serif;font-size:21px;color:#e9c766}
 .benefit p{font-size:14.5px;color:#cfc39f;margin-top:6px}
 /* product block */
-.prod{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.prod{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
 .prod h2{font-size:clamp(28px,3.6vw,40px);line-height:1.15}
 .prod h4{font-size:15px;letter-spacing:.18em;color:#e9c766;text-transform:uppercase;margin:24px 0 8px}
 .prod p{color:#e6ddc4}
@@ -268,9 +268,7 @@ body.nav-open header.site{z-index:400}
   .page-hero{padding:44px 20px 40px}
 }
 /* ===== FIX ROUND R-CLIENT-VIDEO-FIX (2026-11-19) ===== */
-/* B10 marquee: hold at the clean start of the line on every loop */
-@keyframes bhStart{0%{transform:translateX(0)}14%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.topbar .bh-track{animation:bhStart 34s linear infinite!important}
+/* R-HMP-ALIGN: B10 hold override removed - the seamless linear loop runs the track */
 /* B4 blend cards: one system, equal heights, titles in one band */
 .blend-grid{align-items:stretch}
 .bcard2{display:flex;flex-direction:column}
@@ -330,3 +328,17 @@ html{scroll-behavior:smooth}
 .top-float{right:20px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s ease}
 .top-float svg{width:24px;height:24px}
 .top-float.show{opacity:1;pointer-events:auto}
+
+/* R-HMP-ALIGN addendum: authentic badge + honeycomb strips (Products) */
+.page-hero{position:relative}
+.auth-badge{position:absolute;right:4%;top:50%;transform:translateY(-50%);width:132px;height:132px;pointer-events:none}
+.auth-badge .auth-ring{width:100%;height:100%;display:block;animation:authSpin 14s linear infinite}
+.auth-badge .auth-ring text{fill:#e9c766;font-size:13px;font-weight:700;letter-spacing:2px}
+.auth-badge img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;object-fit:cover;border-radius:50%;border:1.5px solid #c79a24}
+.auth-badge::after{content:"";position:absolute;inset:0;border-radius:50%;animation:authPulse 2.6s ease-out infinite}
+@keyframes authSpin{to{transform:rotate(360deg)}}
+@keyframes authPulse{0%{box-shadow:0 0 0 0 rgba(201,154,36,.45)}70%{box-shadow:0 0 0 16px rgba(201,154,36,0)}100%{box-shadow:0 0 0 0 rgba(201,154,36,0)}}
+@media(max-width:700px){.auth-badge{position:static;transform:none;margin:18px auto 0}}
+.honeystrip{height:40px;overflow:hidden;opacity:.85}
+.honeystrip svg{display:block;animation:hexDrift 26s linear infinite}
+@keyframes hexDrift{from{transform:translateX(0)}to{transform:translateX(-46px)}}

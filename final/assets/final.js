@@ -77,7 +77,19 @@ document.addEventListener('click',function(e){
     var cid=cs.getAttribute('data-cstep');
     cart[cid]=(cart[cid]||0)+parseInt(cs.getAttribute('data-d'),10);
     if(cart[cid]<=0)delete cart[cid];
-    save();var topBtn=document.getElementById('top-float');
+    save();/* marquee fill: clone track spans (even count) until half the track covers the bar */
+function fillMarquee(){
+  var bar=document.querySelector('.topbar.bh-marquee');if(!bar)return;
+  var track=bar.querySelector('.bh-track');if(!track||!track.children.length)return;
+  var spanW=track.children[0].offsetWidth;if(!spanW)return;
+  var need=2*Math.ceil(bar.clientWidth/spanW);
+  if(need<2)need=2; if(need>12)need=12;
+  var first=track.children[0];
+  while(track.children.length<need)track.appendChild(first.cloneNode(true));
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fillMarquee);else fillMarquee();
+window.addEventListener('resize',fillMarquee);
+var topBtn=document.getElementById('top-float');
 if(topBtn){
   window.addEventListener('scroll',function(){topBtn.classList.toggle('show',window.scrollY>400);},{passive:true});
   topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
@@ -85,7 +97,19 @@ if(topBtn){
 badge();renderCart();renderCheckout();
   }
   var rm=e.target.closest('[data-remove]');
-  if(rm){delete cart[rm.getAttribute('data-remove')];save();var topBtn=document.getElementById('top-float');
+  if(rm){delete cart[rm.getAttribute('data-remove')];save();/* marquee fill: clone track spans (even count) until half the track covers the bar */
+function fillMarquee(){
+  var bar=document.querySelector('.topbar.bh-marquee');if(!bar)return;
+  var track=bar.querySelector('.bh-track');if(!track||!track.children.length)return;
+  var spanW=track.children[0].offsetWidth;if(!spanW)return;
+  var need=2*Math.ceil(bar.clientWidth/spanW);
+  if(need<2)need=2; if(need>12)need=12;
+  var first=track.children[0];
+  while(track.children.length<need)track.appendChild(first.cloneNode(true));
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fillMarquee);else fillMarquee();
+window.addEventListener('resize',fillMarquee);
+var topBtn=document.getElementById('top-float');
 if(topBtn){
   window.addEventListener('scroll',function(){topBtn.classList.toggle('show',window.scrollY>400);},{passive:true});
   topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
@@ -229,6 +253,18 @@ document.querySelectorAll('[data-demo-form]').forEach(function(f){
     f.reset();
   });
 });
+/* marquee fill: clone track spans (even count) until half the track covers the bar */
+function fillMarquee(){
+  var bar=document.querySelector('.topbar.bh-marquee');if(!bar)return;
+  var track=bar.querySelector('.bh-track');if(!track||!track.children.length)return;
+  var spanW=track.children[0].offsetWidth;if(!spanW)return;
+  var need=2*Math.ceil(bar.clientWidth/spanW);
+  if(need<2)need=2; if(need>12)need=12;
+  var first=track.children[0];
+  while(track.children.length<need)track.appendChild(first.cloneNode(true));
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fillMarquee);else fillMarquee();
+window.addEventListener('resize',fillMarquee);
 var topBtn=document.getElementById('top-float');
 if(topBtn){
   window.addEventListener('scroll',function(){topBtn.classList.toggle('show',window.scrollY>400);},{passive:true});
