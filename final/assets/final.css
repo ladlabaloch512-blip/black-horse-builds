@@ -1,4 +1,4 @@
-/* Black Horse FINAL site - shared stylesheet (built on variant-1's systems).
+/* Hard Man Power FINAL site - shared stylesheet (built on variant-1's systems).
    Black and gold only. Content is visible by default; nothing is gated on
    scroll reveal or reduced-motion. */
 *{margin:0;padding:0;box-sizing:border-box}
@@ -288,3 +288,14 @@ body.nav-open header.site{z-index:400}
   .orow .qty{justify-self:start}
   .orow .btn-gold{justify-self:end;padding:11px 18px}
 }
+
+/* R-HMP-CONVERT additions */
+.bicon{width:64px;height:64px;margin:0 auto 12px;border:1.5px solid #d9bc6a;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#e9c766}
+.bicon svg{width:30px;height:30px}
+.pimg img{width:100%;border-radius:10px;border:1.5px solid #d9bc6a;display:block}
+.posters{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.posters img{width:100%;border-radius:10px;border:1.5px solid #d9bc6a;display:block}
+.blines{list-style:none;margin:16px 0}
+.blines li{padding:8px 0;border-bottom:1px solid #26262b;color:#d8d2c0;font-size:16px}
+.blines li:before{content:"\25C6";color:#c9a227;margin-right:10px;font-size:11px}
+@media(max-width:700px){.posters{grid-template-columns:1fr}}

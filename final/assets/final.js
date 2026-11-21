@@ -1,4 +1,4 @@
-/* Black Horse FINAL site - shared systems (built on variant-1's working
+/* Hard Man Power FINAL site - shared systems (built on variant-1's working
    systems): mobile drawer, priced cart, FAQ accordion, gallery slider,
    blog category filter, honest demo forms. */
 (function(){
@@ -20,8 +20,8 @@ if(nav){
 }
 /* ---------- cart ---------- */
 var PROD={
-  'black24':{name:'Black Horse Vital Honey - Black Pack',desc:'Box of 24 Sachets (10g each)',price:5,img:'assets/pack-black.jpg'},
-  'yellow24':{name:'Black Horse Vital Honey - Yellow Pack',desc:'Box of 24 Sachets (10g each)',price:5,img:'assets/pack-yellow.jpg'}
+  'black24':{name:'Royal Honey VIP',desc:'Box of 12 Sachets (20g each)',price:5,img:'assets/product-royal-box.jpg'},
+  'yellow24':{name:'Black Bull Extreme',desc:'Spouted Pouch, 22g (15g)',price:5,img:'assets/product-pouch.jpg'}
 };
 var KEY='bh-final-cart';
 var cart={};
@@ -90,8 +90,8 @@ function renderCart(){
   if(!ids.length){
     host.innerHTML='<div class="cart-empty"><p>Your cart is empty.</p></div>'+
     '<div class="range-grid">'+
-    '<div class="rcard"><div class="rimg"><img src="assets/pack-black.jpg" alt="Black Horse Vital Honey, Black Pack, box of 24 sachets"></div><div class="rbody"><div class="pack">The Black Pack</div><h3>Black Horse Vital Honey</h3><p class="desc">Box of 24 Sachets (10g each). 100% natural, with Royal Jelly, Panax Ginseng and Rainforest Herbs.</p><div class="rrow"><span class="price">$5</span><button type="button" class="btn-gold" data-add="black24">ADD TO CART</button></div></div></div>'+
-    '<div class="rcard"><div class="rimg"><img src="assets/pack-yellow.jpg" alt="Black Horse Vital Honey, Yellow Pack, box of 24 sachets"></div><div class="rbody"><div class="pack">The Yellow Pack</div><h3>Black Horse Vital Honey</h3><p class="desc">Box of 24 Sachets (10g each). 100% natural, with Royal Jelly, Panax Ginseng and Rainforest Herbs.</p><div class="rrow"><span class="price">$5</span><button type="button" class="btn-gold" data-add="yellow24">ADD TO CART</button></div></div></div>'+
+    '<div class="rcard"><div class="rimg"><img src="assets/product-royal-box.jpg" alt="Royal Honey VIP, box of 12 sachets"></div><div class="rbody"><div class="pack">Royal Honey VIP</div><h3>Royal Honey VIP</h3><p class="desc">Box of 12 Sachets (20g each). The Ultimate Power Source.</p><div class="rrow"><span class="price">$5</span><button type="button" class="btn-gold" data-add="black24">ADD TO CART</button></div></div></div>'+
+    '<div class="rcard"><div class="rimg"><img src="assets/product-pouch.jpg" alt="Black Bull Extreme, spouted pouch"></div><div class="rbody"><div class="pack">Black Bull Extreme</div><h3>Black Bull Extreme</h3><p class="desc">Spouted Pouch, 22g (15g). Don\'t Quit ...</p><div class="rrow"><span class="price">$5</span><button type="button" class="btn-gold" data-add="yellow24">ADD TO CART</button></div></div></div>'+
     '</div>';
     if(sumEl)sumEl.style.display='none';return;
   }
