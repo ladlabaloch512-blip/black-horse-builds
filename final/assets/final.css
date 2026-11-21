@@ -103,14 +103,17 @@ button.btn-gold,button.btn-line,button.btn-dark{font-family:inherit}
 .fq-item{border:1.5px solid #d9bc6a;border-radius:8px;background:#101013;margin-bottom:12px;overflow:hidden}
 .fq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:14px;background:none;border:0;cursor:pointer;text-align:left;padding:16px 18px;font:inherit;font-weight:600;font-size:16.5px;color:#f2ead6}
 .fq-q .mark{color:#e9c766;font-size:22px;font-weight:700;flex:none}
-.fq-a{overflow:hidden}
+.fq-a{overflow:hidden;transition:height .3s ease}
 .fq-a p{padding:0 18px 16px;color:#e6ddc4}
 .fq-more-link{text-align:center;margin-top:20px}
 /* reviews */
 .reviews-box{max-width:760px;margin:34px auto 0;border:1.5px dashed #c79a24;border-radius:8px;padding:30px 24px;text-align:center;color:#cfc39f;background:#101013}
 /* blog cards */
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
-.bcard{border:1.5px solid #d9bc6a;background:#101013;border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.bcard{border:1.5px solid #d9bc6a;background:#101013;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;position:relative}
+.bcard a.read::after{content:"";position:absolute;inset:0}
+.rcard[data-card-link]{cursor:pointer}
+.prod[id]{scroll-margin-top:96px}
 .bcard img{width:100%;height:170px;object-fit:cover;object-position:center}
 .bcard .bbody{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
 .bcard .cat{color:#e9c766;font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
@@ -124,6 +127,16 @@ button.btn-gold,button.btn-line,button.btn-dark{font-family:inherit}
 .sidecats a{display:block;padding:9px 10px;border-radius:5px;color:#e6ddc4;font-weight:500}
 .sidecats a.active{background:#0a0a0a;color:#e9c766}
 .blog-cat-select{display:none;width:100%;padding:12px;border:1.5px solid #c79a24;border-radius:6px;font:inherit;background:#141414;color:#f2ead6;margin-bottom:16px}
+/* mobile category dropdown (JS-enhanced; the native select above is the no-JS fallback) */
+.cat-dd{display:none;position:relative;margin-bottom:16px}
+.cat-dd-btn{width:100%;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;border:1.5px solid #c79a24;border-radius:6px;background:#141414;color:#f2ead6;font:inherit;cursor:pointer;text-align:left}
+.cat-dd-caret{width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:7px solid #e9c766;flex:none;transition:transform .28s ease}
+.cat-dd.open .cat-dd-caret{transform:rotate(180deg)}
+.cat-dd-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .28s ease}
+.cat-dd-inner{overflow:hidden;min-height:0}
+.cat-dd-list{margin-top:8px;border:1.5px solid #c79a24;border-radius:6px;background:#101013;padding:6px}
+.cat-dd-opt{display:block;width:100%;padding:11px 12px;background:none;border:0;color:#e6ddc4;font:inherit;text-align:left;cursor:pointer;border-radius:4px}
+.cat-dd-opt.active{color:#e9c766;font-weight:700}
 /* newsletter */
 .newsletter{background:#0a0a0a;color:#f2ead6;text-align:center;padding:56px 24px}
 .newsletter h2{color:#e9c766;font-size:clamp(26px,3.4vw,36px)}
@@ -220,6 +233,8 @@ footer.site .ftag{color:#e9c766;font-size:14px;letter-spacing:.05em;margin-top:4
   .blog-layout{grid-template-columns:1fr}
   .sidecats{display:none}
   .blog-cat-select{display:block}
+  html.js .blog-cat-select{display:none}
+  html.js .cat-dd{display:block}
   .hero .hero-in{padding:64px 20px 72px}
 }
 @media(max-width:560px){

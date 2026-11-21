@@ -3,6 +3,7 @@
    blog category filter, honest demo forms. */
 (function(){
 'use strict';
+document.documentElement.classList.add('js');
 /* ---------- drawer ---------- */
 var nav=document.querySelector('nav.mainnav');
 if(nav){
@@ -125,26 +126,28 @@ if(coForm){
     window.location.href='thank-you.html';
   });
 }
-/* ---------- faq accordion (progressive: answers visible with JS off) ---------- */
+/* ---------- faq accordion (progressive: answers visible with JS off; smooth height animation) ---------- */
 var fqItems=document.querySelectorAll('.fq-item');
 if(fqItems.length){
+  function openA(a){a.style.height=a.scrollHeight+'px';setTimeout(function(){if(a.parentElement.classList.contains('open'))a.style.height='auto';},340);}
+  function closeA(a){if(a.style.height==='auto'||a.style.height===''){a.style.height=a.scrollHeight+'px';void a.offsetHeight;}a.style.height='0px';}
   fqItems.forEach(function(item,idx){
     var q=item.querySelector('.fq-q'),a=item.querySelector('.fq-a');
     if(!q||!a)return;
     a.style.height='0px';
     function setMark(){q.querySelector('.mark').textContent=item.classList.contains('open')?'\u2212':'+';}
-    if(idx===0){item.classList.add('open');a.style.height=a.scrollHeight+'px';}
+    if(idx===0){item.classList.add('open');a.style.height='auto';}
     setMark();
     q.addEventListener('click',function(){
       var wasOpen=item.classList.contains('open');
-      fqItems.forEach(function(o){if(o!==item&&o.classList.contains('open')){o.classList.remove('open');var oa=o.querySelector('.fq-a');oa.style.height='0px';var om=o.querySelector('.mark');if(om)om.textContent='+';}});
-      if(wasOpen){item.classList.remove('open');a.style.height='0px';}
-      else{item.classList.add('open');a.style.height=a.scrollHeight+'px';}
+      fqItems.forEach(function(o){if(o!==item&&o.classList.contains('open')){o.classList.remove('open');closeA(o.querySelector('.fq-a'));var om=o.querySelector('.mark');if(om)om.textContent='+';}});
+      if(wasOpen){item.classList.remove('open');closeA(a);}
+      else{item.classList.add('open');openA(a);}
       setMark();
     });
   });
   window.addEventListener('resize',function(){
-    fqItems.forEach(function(item){if(item.classList.contains('open')){var a=item.querySelector('.fq-a');a.style.height=a.scrollHeight+'px';}});
+    fqItems.forEach(function(item){var a=item.querySelector('.fq-a');if(item.classList.contains('open')&&a.style.height!=='auto')a.style.height=a.scrollHeight+'px';});
   });
 }
 /* ---------- gallery slider ---------- */
@@ -176,13 +179,31 @@ if(blogCards.length){
     blogCards.forEach(function(c){c.style.display=(cat==='all'||c.getAttribute('data-cat')===cat)?'':'none';});
     document.querySelectorAll('.sidecats a').forEach(function(a){a.classList.toggle('active',a.getAttribute('data-filter')===cat);});
     var sel=document.getElementById('blog-cat-select');if(sel)sel.value=cat;
+    var ddLabel=document.getElementById('cat-dd-label');
+    if(ddLabel){var m=document.querySelector('.cat-dd-opt[data-cat="'+cat+'"]');if(m)ddLabel.textContent=m.textContent;}
+    document.querySelectorAll('.cat-dd-opt').forEach(function(o){o.classList.toggle('active',o.getAttribute('data-cat')===cat);});
   }
   document.querySelectorAll('.sidecats a').forEach(function(a){
     a.addEventListener('click',function(e){e.preventDefault();applyFilter(a.getAttribute('data-filter'));});
   });
   var sel=document.getElementById('blog-cat-select');
   if(sel)sel.addEventListener('change',function(){applyFilter(sel.value);});
+  var dd=document.getElementById('cat-dd');
+  if(dd){
+    var ddBtn=document.getElementById('cat-dd-btn');
+    function closeDd(){dd.classList.remove('open');ddBtn.setAttribute('aria-expanded','false');}
+    ddBtn.addEventListener('click',function(){var open=dd.classList.toggle('open');ddBtn.setAttribute('aria-expanded',open?'true':'false');});
+    dd.querySelectorAll('.cat-dd-opt').forEach(function(o){o.addEventListener('click',function(){applyFilter(o.getAttribute('data-cat'));closeDd();});});
+    document.addEventListener('click',function(e){if(!dd.contains(e.target))closeDd();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeDd();});
+  }
 }
+/* ---------- whole-card links (product cards; the button inside still adds to cart) ---------- */
+document.querySelectorAll('[data-card-link]').forEach(function(card){
+  var url=card.getAttribute('data-card-link');
+  card.addEventListener('click',function(e){if(e.target.closest('button,a'))return;window.location.href=url;});
+  card.addEventListener('keydown',function(e){if(e.key==='Enter'&&document.activeElement===card)window.location.href=url;});
+});
 /* ---------- honest demo forms ---------- */
 document.querySelectorAll('[data-demo-form]').forEach(function(f){
   f.addEventListener('submit',function(e){
