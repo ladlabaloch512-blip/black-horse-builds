@@ -111,8 +111,7 @@ button.btn-gold,button.btn-line,button.btn-dark{font-family:inherit}
 /* blog cards */
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
 .bcard{border:1.5px solid #d9bc6a;background:#101013;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;position:relative}
-.bcard a.read::after{content:"";position:absolute;inset:0;z-index:3}
-.bcard img{pointer-events:none}
+.bcard{cursor:pointer}
 .rcard[data-card-link]{cursor:pointer}
 .prod[id]{scroll-margin-top:96px}
 .bcard img{width:100%;height:170px;object-fit:cover;object-position:center}

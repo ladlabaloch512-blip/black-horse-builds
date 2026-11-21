@@ -213,6 +213,13 @@ document.querySelectorAll('[data-card-link]').forEach(function(card){
   card.addEventListener('click',function(e){if(e.target.closest('button,a'))return;window.location.href=url;});
   card.addEventListener('keydown',function(e){if(e.key==='Enter'&&document.activeElement===card)window.location.href=url;});
 });
+document.querySelectorAll('.bcard').forEach(function(card){
+  var link=card.querySelector('a.read');if(!link)return;
+  card.addEventListener('click',function(e){
+    if(e.target.closest('a,button'))return;
+    window.location.href=link.getAttribute('href');
+  });
+});
 /* ---------- honest demo forms ---------- */
 document.querySelectorAll('[data-demo-form]').forEach(function(f){
   f.addEventListener('submit',function(e){
